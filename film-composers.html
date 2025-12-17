@@ -1,29 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Film Composers: Active Years Timeline</title>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Composers Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* This ensures the timeline uses most of the screen space */
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --row-height: 28px;
+            /* Compact rows */
+            --timeline-start: 1920;
+            --timeline-end: 2030;
+            --total-years: calc(var(--timeline-end) - var(--timeline-start));
+            --name-width: 200px;
+        }
+
         body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
             margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        #timeline_div {
-            width: 100%;
-            height: 6000px;
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.95);
         }
 
-        /* Set a generous height for 100 entries */
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* TIMELINE CONTAINER */
+        .timeline-container {
+            position: relative;
+            padding: 0 2rem 2rem 2rem;
+        }
+
+        /* STICKY HEADER (YEARS) */
+        .timeline-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(5px);
+            display: flex;
+            padding-left: var(--name-width);
+            /* Offset for names */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .year-marker {
+            position: absolute;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* GRID LINES (Background) */
+        .grid-lines {
+            position: absolute;
+            top: 40px;
+            /* Below header */
+            bottom: 0;
+            left: calc(2rem + var(--name-width));
+            right: 2rem;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .grid-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            border-left: 1px dashed rgba(255, 255, 255, 0.05);
+        }
+
+        /* COMPOSER ROWS */
+        .composer-row {
+            display: flex;
+            align-items: center;
+            height: var(--row-height);
+            position: relative;
+            z-index: 1;
+        }
+
+        .composer-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .composer-name {
+            width: var(--name-width);
+            flex-shrink: 0;
+            padding-right: 1rem;
+            box-sizing: border-box;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .composer-name a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .composer-name a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .timeline-track {
+            flex-grow: 1;
+            position: relative;
+            height: 100%;
+        }
+
+        .bar {
+            position: absolute;
+            height: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            border-radius: 6px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .composer-row:hover .bar {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        }
     </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">&larr; Back to Menu</a>
+        <h1>Film Composers: Active Years</h1>
+    </header>
+
+    <div class="timeline-container" id="timelineContainer">
+        <!-- Header and Grid will be injected here -->
+        <div class="timeline-header" id="yearHeader">
+            <!-- Years injected by JS -->
+        </div>
+        <div class="grid-lines" id="gridLines">
+            <!-- Grid lines injected by JS -->
+        </div>
+
+        <div id="composersList">
+            <!-- Rows injected by JS -->
+        </div>
+    </div>
 
     <script type="text/javascript">
+        // --- DATA ---
         const filmComposerData = [
-            // Using 2026 for 'Present' since the current year is 2025.
             ['John Williams', 1958, 2026, 'https://en.wikipedia.org/wiki/John_Williams'],
             ['Ennio Morricone', 1961, 2020, 'https://en.wikipedia.org/wiki/Ennio_Morricone'],
             ['Bernard Herrmann', 1941, 1975, 'https://en.wikipedia.org/wiki/Bernard_Herrmann'],
@@ -117,83 +279,96 @@
             ['Shirley Walker', 1979, 2006, 'https://en.wikipedia.org/wiki/Shirley_Walker']
         ];
 
+        // --- CONFIG ---
+        const CONFIG = {
+            minYear: 1920,
+            maxYear: 2030,
+        };
 
-        // Sort the data by Start Year (Index 1) ascending
-        filmComposerData.sort((a, b) => a[1] - b[1]);
+        const totalYears = CONFIG.maxYear - CONFIG.minYear;
+        const yearHeader = document.getElementById('yearHeader');
+        const composersList = document.getElementById('composersList');
+        const gridLines = document.getElementById('gridLines');
 
-        google.charts.load('current', { 'packages': ['timeline'] });
-        google.charts.setOnLoadCallback(drawChart);
+        // --- RENDER FUNCTIONS ---
 
-        function drawChart() {
-            var container = document.getElementById('timeline_div');
-            var chart = new google.visualization.Timeline(container);
-            var dataTable = new google.visualization.DataTable();
-
-            // Define the columns:
-            // 1. Row Label (Composer Name) - This forces a new row for each unique name
-            // 2. Bar Label (Composer Name) - Usually redundant if it's the same, so we can hide or reuse it
-            // 3. Tooltip (Hidden)
-            // 4. Start Date
-            // 5. End Date
-            dataTable.addColumn({ type: 'string', id: 'Composer' });
-            dataTable.addColumn({ type: 'string', role: 'tooltip', p: { html: true } }); // Tooltip with URL
-            dataTable.addColumn({ type: 'date', id: 'Start' });
-            dataTable.addColumn({ type: 'date', id: 'End' });
-
-            // LOOP
-            filmComposerData.forEach(item => {
-                const [name, startYear, endYear, url] = item;
-                dataTable.addRow([
-                    name,   // Row label
-                    url,    // Tooltip content
-                    new Date(startYear, 0, 1),
-                    new Date(endYear, 11, 31)
-                ]);
-            });
-
-            // Set height dynamically based on number of rows (e.g. 50px per row)
-            // Since we now have one row per composer, we need more vertical space.
-            const rowHeight = 45;
-            const chartHeight = (filmComposerData.length * rowHeight) + 50;
-            container.style.height = chartHeight + 'px';
-
-            var options = {
-                // By default, Google Timeline sorts alpha-numerically by row label.
-                // We must disable this behavior to respect our array's sort order.
-                // Unfortunately, Google Charts doesn't have a simple 'sort: none' flag for Timelines.
-                // However, by providing rows in order and identifying them uniquely, it usually respects order.
-                // There isn't a direct "preserveRowOrder" option in the standard API, 
-                // but passing the data in the correct order is the first step.
-                height: chartHeight,
-                timeline: {
-                    showRowLabels: true,
-                    groupByRowLabel: true, // Group same names (we only have unique names now)
-                    barLabelStyle: { fontSize: 14 }
-                },
-                tooltip: { isHtml: false }
-            };
-
-            // Add listener
-            google.visualization.events.addListener(chart, 'select', function () {
-                var selection = chart.getSelection();
-                if (selection.length > 0) {
-                    var row = selection[0].row;
-                    var url = dataTable.getValue(row, 1); // URL is col 1
-                    if (url) window.open(url, '_blank');
-                }
-            });
-
-            chart.draw(dataTable, options);
+        function getPercent(year) {
+            return ((year - CONFIG.minYear) / totalYears) * 100;
         }
-    </script>
-</head>
 
-<body>
-    <h1>Film Composers: Active Years (1920s - Present)</h1>
-    <p>Click on any composer's bar to visit their Wikipedia page.</p>
-    <div id="timeline_div"></div>
-    <div style="font-size: small; margin-top: 20px;">*Bars represent the 'Active' years, ending in 2025 for currently
-        active composers.</div>
+        function createHeaders() {
+            // Create decade markers
+            for (let year = CONFIG.minYear; year <= CONFIG.maxYear; year += 10) {
+                const percent = getPercent(year);
+
+                // Header Year
+                const marker = document.createElement('div');
+                marker.className = 'year-marker';
+                marker.innerText = year;
+                marker.style.left = `calc(${percent}% + var(--name-width))`; // Offset by name width
+                yearHeader.appendChild(marker);
+
+                // Grid Line
+                if (year < CONFIG.maxYear) {
+                    const line = document.createElement('div');
+                    line.className = 'grid-line';
+                    line.style.left = `${percent}%`;
+                    gridLines.appendChild(line);
+                }
+            }
+        }
+
+        function renderRows() {
+            // Sort Chronologically
+            filmComposerData.sort((a, b) => a[1] - b[1]);
+
+            filmComposerData.forEach(item => {
+                const [name, start, end, url] = item;
+
+                // Row Container
+                const row = document.createElement('div');
+                row.className = 'composer-row';
+
+                // Name Link
+                const nameDiv = document.createElement('div');
+                nameDiv.className = 'composer-name';
+
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = "_blank";
+                link.innerText = name;
+                nameDiv.appendChild(link);
+                row.appendChild(nameDiv);
+
+                // Track & Bar
+                const track = document.createElement('div');
+                track.className = 'timeline-track';
+
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+
+                const startPct = getPercent(start);
+                const endPct = getPercent(end > 2025 ? 2025 : end); // Cap visual bar at 2025
+                const widthPct = endPct - startPct;
+
+                bar.style.left = `${startPct}%`;
+                bar.style.width = `${widthPct}%`; // Min width handled by CSS if needed
+
+                // Tooltip on hover (Browser default or custom)
+                bar.title = `${name}: ${start} - ${end > 2025 ? 'Present' : end}`;
+
+                track.appendChild(bar);
+                row.appendChild(track);
+
+                composersList.appendChild(row);
+            });
+        }
+
+        // --- INIT ---
+        createHeaders();
+        renderRows();
+
+    </script>
 </body>
 
 </html>
