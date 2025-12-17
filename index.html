@@ -1,199 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Film Composers: Active Years Timeline</title>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timelines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* This ensures the timeline uses most of the screen space */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-hover: rgba(255, 255, 255, 0.1);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+        }
+
         body {
+            font-family: 'Outfit', sans-serif;
             margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
+            padding: 0;
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        #timeline_div {
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        main {
             width: 100%;
-            height: 6000px;
+            max-width: 800px;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
         }
 
-        /* Set a generous height for 100 entries */
-    </style>
+        a.card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    <script type="text/javascript">
-        const filmComposerData = [
-            // Using 2026 for 'Present' since the current year is 2025.
-            ['John Williams', 1958, 2026, 'https://en.wikipedia.org/wiki/John_Williams'],
-            ['Ennio Morricone', 1961, 2020, 'https://en.wikipedia.org/wiki/Ennio_Morricone'],
-            ['Bernard Herrmann', 1941, 1975, 'https://en.wikipedia.org/wiki/Bernard_Herrmann'],
-            ['Hans Zimmer', 1984, 2026, 'https://en.wikipedia.org/wiki/Hans_Zimmer'],
-            ['Jerry Goldsmith', 1957, 2004, 'https://en.wikipedia.org/wiki/Jerry_Goldsmith'],
-            ['Max Steiner', 1929, 1965, 'https://en.wikipedia.org/wiki/Max_Steiner'],
-            ['John Barry', 1960, 2001, 'https://en.wikipedia.org/wiki/John_Barry_(composer)'],
-            ['Henry Mancini', 1952, 1994, 'https://en.wikipedia.org/wiki/Henry_Mancini'],
-            ['Maurice Jarre', 1958, 2001, 'https://en.wikipedia.org/wiki/Maurice_Jarre'],
-            ['Nino Rota', 1933, 1979, 'https://en.wikipedia.org/wiki/Nino_Rota'],
-            ['Erich Wolfgang Korngold', 1934, 1957, 'https://en.wikipedia.org/wiki/Erich_Wolfgang_Korngold'],
-            ['Alfred Newman', 1930, 1970, 'https://en.wikipedia.org/wiki/Alfred_Newman_(composer)'],
-            ['Franz Waxman', 1930, 1967, 'https://en.wikipedia.org/wiki/Franz_Waxman'],
-            ['Dimitri Tiomkin', 1929, 1971, 'https://en.wikipedia.org/wiki/Dimitri_Tiomkin'],
-            ['Miklós Rózsa', 1937, 1982, 'https://en.wikipedia.org/wiki/Mikl%C3%B3s_R%C3%B3zsa'],
-            ['Victor Young', 1923, 1956, 'https://en.wikipedia.org/wiki/Victor_Young'],
-            ['Hugo Friedhofer', 1937, 1971, 'https://en.wikipedia.org/wiki/Hugo_Friedhofer'],
-            ['Bronislaw Kaper', 1930, 1968, 'https://en.wikipedia.org/wiki/Bronislau_Kaper'],
-            ['Herbert Stothart', 1929, 1949, 'https://en.wikipedia.org/wiki/Herbert_Stothart'],
-            ['David Raksin', 1935, 1989, 'https://en.wikipedia.org/wiki/David_Raksin'],
-            ['Alex North', 1951, 1987, 'https://en.wikipedia.org/wiki/Alex_North'],
-            ['Elmer Bernstein', 1951, 2004, 'https://en.wikipedia.org/wiki/Elmer_Bernstein'],
-            ['Leonard Bernstein', 1954, 1954, 'https://en.wikipedia.org/wiki/Leonard_Bernstein'],
-            ['Aaron Copland', 1939, 1961, 'https://en.wikipedia.org/wiki/Aaron_Copland'],
-            ['Roy Webb', 1929, 1961, 'https://en.wikipedia.org/wiki/Roy_Webb'],
-            ['Lalo Schifrin', 1964, 2026, 'https://en.wikipedia.org/wiki/Lalo_Schifrin'],
-            ['Michel Legrand', 1955, 2018, 'https://en.wikipedia.org/wiki/Michel_Legrand'],
-            ['Georges Delerue', 1952, 1992, 'https://en.wikipedia.org/wiki/Georges_Delerue'],
-            ['Francis Lai', 1965, 2018, 'https://en.wikipedia.org/wiki/Francis_Lai'],
-            ['Jerry Fielding', 1962, 1980, 'https://en.wikipedia.org/wiki/Jerry_Fielding'],
-            ['Quincy Jones', 1964, 1985, 'https://en.wikipedia.org/wiki/Quincy_Jones'],
-            ['Dave Grusin', 1967, 2026, 'https://en.wikipedia.org/wiki/Dave_Grusin'],
-            ['Bill Conti', 1969, 2026, 'https://en.wikipedia.org/wiki/Bill_Conti'],
-            ['Jack Nitzsche', 1965, 1995, 'https://en.wikipedia.org/wiki/Jack_Nitzsche'],
-            ['Malcolm Arnold', 1947, 1969, 'https://en.wikipedia.org/wiki/Malcolm_Arnold'],
-            ['John Carpenter', 1974, 2026, 'https://en.wikipedia.org/wiki/John_Carpenter'],
-            ['Pino Donaggio', 1973, 2026, 'https://en.wikipedia.org/wiki/Pino_Donaggio'],
-            ['Mike Oldfield', 1973, 2026, 'https://en.wikipedia.org/wiki/Mike_Oldfield'],
-            ['James Horner', 1978, 2015, 'https://en.wikipedia.org/wiki/James_Horner'],
-            ['Alan Silvestri', 1972, 2026, 'https://en.wikipedia.org/wiki/Alan_Silvestri'],
-            ['Danny Elfman', 1985, 2026, 'https://en.wikipedia.org/wiki/Danny_Elfman'],
-            ['Basil Poledouris', 1973, 2006, 'https://en.wikipedia.org/wiki/Basil_Poledouris'],
-            ['Michael Kamen', 1976, 2003, 'https://en.wikipedia.org/wiki/Michael_Kamen'],
-            ['Howard Shore', 1978, 2026, 'https://en.wikipedia.org/wiki/Howard_Shore'],
-            ['Thomas Newman', 1984, 2026, 'https://en.wikipedia.org/wiki/Thomas_Newman'],
-            ['James Newton Howard', 1985, 2026, 'https://en.wikipedia.org/wiki/James_Newton_Howard'],
-            ['Randy Newman', 1981, 2026, 'https://en.wikipedia.org/wiki/Randy_Newman'],
-            ['Marc Shaiman', 1989, 2026, 'https://en.wikipedia.org/wiki/Marc_Shaiman'],
-            ['Alan Menken', 1986, 2026, 'https://en.wikipedia.org/wiki/Alan_Menken'],
-            ['Mark Isham', 1983, 2026, 'https://en.wikipedia.org/wiki/Mark_Isham'],
-            ['Rachel Portman', 1982, 2026, 'https://en.wikipedia.org/wiki/Rachel_Portman'],
-            ['Gabriel Yared', 1975, 2026, 'https://en.wikipedia.org/wiki/Gabriel_Yared'],
-            ['Patrick Doyle', 1989, 2026, 'https://en.wikipedia.org/wiki/Patrick_Doyle'],
-            ['George Fenton', 1971, 2026, 'https://en.wikipedia.org/wiki/George_Fenton'],
-            ['Trevor Jones', 1979, 2026, 'https://en.wikipedia.org/wiki/Trevor_Jones_(composer)'],
-            ['Randy Edelman', 1973, 2026, 'https://en.wikipedia.org/wiki/Randy_Edelman'],
-            ['Graeme Revell', 1989, 2026, 'https://en.wikipedia.org/wiki/Graeme_Revell'],
-            ['Christopher Young', 1982, 2026, 'https://en.wikipedia.org/wiki/Christopher_Young'],
-            ['David Arnold', 1993, 2026, 'https://en.wikipedia.org/wiki/David_Arnold'],
-            ['Alexandre Desplat', 1985, 2026, 'https://en.wikipedia.org/wiki/Alexandre_Desplat'],
-            ['Michael Giacchino', 1997, 2026, 'https://en.wikipedia.org/wiki/Michael_Giacchino'],
-            ['John Powell', 1990, 2026, 'https://en.wikipedia.org/wiki/John_Powell_(film_composer)'],
-            ['Harry Gregson-Williams', 1990, 2026, 'https://en.wikipedia.org/wiki/Harry_Gregson-Williams'],
-            ['Clint Mansell', 1996, 2026, 'https://en.wikipedia.org/wiki/Clint_Mansell'],
-            ['Elliot Goldenthal', 1979, 2026, 'https://en.wikipedia.org/wiki/Elliot_Goldenthal'],
-            ['Ludwig Göransson', 2008, 2026, 'https://en.wikipedia.org/wiki/Ludwig_G%C3%B6ransson'],
-            ['Craig Armstrong', 1995, 2026, 'https://en.wikipedia.org/wiki/Craig_Armstrong_(composer)'],
-            ['Jonny Greenwood', 2003, 2026, 'https://en.wikipedia.org/wiki/Jonny_Greenwood'],
-            ['Max Richter', 2003, 2026, 'https://en.wikipedia.org/wiki/Max_Richter'],
-            ['Nicholas Britell', 2008, 2026, 'https://en.wikipedia.org/wiki/Nicholas_Britell'],
-            ['Dario Marianelli', 1994, 2026, 'https://en.wikipedia.org/wiki/Dario_Marianelli'],
-            ['Mychael Danna', 1987, 2026, 'https://en.wikipedia.org/wiki/Mychael_Danna'],
-            ['Carter Burwell', 1984, 2026, 'https://en.wikipedia.org/wiki/Carter_Burwell'],
-            ['Marco Beltrami', 1994, 2026, 'https://en.wikipedia.org/wiki/Marco_Beltrami'],
-            ['Ernest Gold', 1945, 1992, 'https://en.wikipedia.org/wiki/Ernest_Gold_(composer)'],
-            ['Ramin Djawadi', 2004, 2026, 'https://en.wikipedia.org/wiki/Ramin_Djawadi'],
-            ['Jóhann Jóhannsson', 2000, 2018, 'https://en.wikipedia.org/wiki/J%C3%B3hann_J%C3%B3hannsson'],
-            ['Mica Levi', 2013, 2026, 'https://en.wikipedia.org/wiki/Mica_Levi'],
-            ['Daniel Pemberton', 1994, 2026, 'https://en.wikipedia.org/wiki/Daniel_Pemberton'],
-            ['Vangelis', 1970, 2022, 'https://en.wikipedia.org/wiki/Vangelis'],
-            ['Wendy Carlos', 1971, 1982, 'https://en.wikipedia.org/wiki/Wendy_Carlos'],
-            ['Giorgio Moroder', 1978, 2026, 'https://en.wikipedia.org/wiki/Giorgio_Moroder'],
-            ['Tangerine Dream', 1977, 2026, 'https://en.wikipedia.org/wiki/Tangerine_Dream'],
-            ['Joe Hisaishi', 1974, 2026, 'https://en.wikipedia.org/wiki/Joe_Hisaishi'],
-            ['Ryuichi Sakamoto', 1983, 2023, 'https://en.wikipedia.org/wiki/Ryuichi_Sakamoto'],
-            ['Toru Takemitsu', 1956, 1996, 'https://en.wikipedia.org/wiki/Toru_Takemitsu'],
-            ['Akira Ifukube', 1947, 1995, 'https://en.wikipedia.org/wiki/Akira_Ifukube'],
-            ['A.R. Rahman', 1992, 2026, 'https://en.wikipedia.org/wiki/A._R._Rahman'],
-            ['Shigeru Umebayashi', 1985, 2026, 'https://en.wikipedia.org/wiki/Shigeru_Umebayashi'],
-            ['Zbigniew Preisner', 1981, 2026, 'https://en.wikipedia.org/wiki/Zbigniew_Preisner'],
-            ['Wojciech Kilar', 1959, 2013, 'https://en.wikipedia.org/wiki/Wojciech_Kilar'],
-            ['Eduard Artemyev', 1963, 2022, 'https://en.wikipedia.org/wiki/Eduard_Artemyev'],
-            ['Gustavo Santaolalla', 1999, 2026, 'https://en.wikipedia.org/wiki/Gustavo_Santaolalla'],
-            ['Alberto Iglesias', 1980, 2026, 'https://en.wikipedia.org/wiki/Alberto_Iglesias'],
-            ['Philip Glass', 1978, 2026, 'https://en.wikipedia.org/wiki/Philip_Glass'],
-            ['Michael Nyman', 1976, 2026, 'https://en.wikipedia.org/wiki/Michael_Nyman'],
-            ['Angelo Badalamenti', 1973, 2019, 'https://en.wikipedia.org/wiki/Angelo_Badalamenti'],
-            ['Eric Serra', 1981, 2026, 'https://en.wikipedia.org/wiki/Eric_Serra'],
-            ['Lisa Gerrard', 1999, 2026, 'https://en.wikipedia.org/wiki/Lisa_Gerrard'],
-            ['Shirley Walker', 1979, 2006, 'https://en.wikipedia.org/wiki/Shirley_Walker']
-        ];
+        a.card:hover {
+            background: var(--card-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent);
+        }
 
-        google.charts.load('current', { 'packages': ['timeline'] });
-        google.charts.setOnLoadCallback(drawChart);
+        .card h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
 
-        function drawChart() {
-            var data = new google.visualization.DataTable();
+        .card p {
+            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
 
-            // Define the columns: Category, Name, URL (Tooltip), Start Date, End Date
-            data.addColumn('string', 'Category');
-            data.addColumn('string', 'Event Name');
-            data.addColumn({ type: 'string', role: 'tooltip', p: { html: true } }); // Hidden column for link
-            data.addColumn('date', 'Start Date');
-            data.addColumn('date', 'End Date');
+        .card .arrow {
+            margin-top: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-            // --- 2. CONVERT RAW DATA FOR THE CHART ---
-            // Loop through the raw data and add rows to the DataTable
-            filmComposerData.forEach(item => {
-                const [name, startYear, endYear, url] = item;
+        .card .arrow span {
+            transition: transform 0.3s ease;
+        }
 
-                // Note: Months in JavaScript Date() are 0-indexed (Jan=0, Dec=11). 
-                // We use 0, 1 for Jan 1 and Dec 31 for rough year boundaries.
-                data.addRow([
-                    'Composer', // All items share the same category
-                    name,
-                    url,        // The URL is passed as the tooltip content
-                    new Date(startYear, 0, 1),
-                    new Date(endYear, 11, 31)
-                ]);
-            });
+        a.card:hover .arrow span {
+            transform: translateX(5px);
+        }
 
-            // Set height dynamically based on number of rows (100 rows * 40px height per row)
-            const chartHeight = filmComposerData.length * 40 + 50;
-            document.getElementById('timeline_div').style.height = chartHeight + 'px';
-
-            var options = {
-                timeline: { colorByRowLabel: false }, // Bars are colored by category
-                height: chartHeight,
-                tooltip: { isHtml: false } // Set to false to hide the raw URL in the tooltip
-            };
-
-            var chart = new google.visualization.Timeline(document.getElementById('timeline_div'));
-
-            // --- 3. ADD THE CLICK HANDLER FOR LINKS ---
-            google.visualization.events.addListener(chart, 'select', selectHandler);
-
-            function selectHandler() {
-                var selection = chart.getSelection();
-                if (selection.length > 0) {
-                    var row = selection[0].row;
-                    // URL is in the third column (index 2: Category=0, Name=1, URL=2)
-                    var url = data.getValue(row, 2);
-
-                    if (url && url !== "") {
-                        window.open(url, '_blank');
-                    }
-                }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
             }
 
-            chart.draw(data, options);
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-    </script>
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Film Composers: Active Years (1920s - Present)</h1>
-    <p>Click on any composer's bar to visit their Wikipedia page.</p>
-    <div id="timeline_div"></div>
-    <div style="font-size: small; margin-top: 20px;">*Bars represent the 'Active' years, ending in 2025 for currently
-        active composers.</div>
+    <header>
+        <h1>Timelines</h1>
+        <p class="subtitle">A visual collection of history and data</p>
+    </header>
+
+    <main>
+        <a href="film-composers.html" class="card">
+            <div>
+                <h2>Film Composers</h2>
+                <p>Timeline of active years for major film composers.</p>
+            </div>
+            <div class="arrow">View Timeline <span>&rarr;</span></div>
+        </a>
+    </main>
 </body>
 
 </html>
