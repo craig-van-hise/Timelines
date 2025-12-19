@@ -1,0 +1,105 @@
+{
+  "composer": "Alfred Newman",
+  "filmography": [
+    {
+      "title": "King Kong",
+      "release_date": "1933"
+    },
+    {
+      "title": "The Adventures of Robin Hood",
+      "release_date": "1938"
+    },
+    {
+      "title": "Gone with the Wind",
+      "release_date": "1939"
+    },
+    {
+      "title": "Laura",
+      "release_date": "1944"
+    },
+    {
+      "title": "Sunset Boulevard",
+      "release_date": "1950"
+    },
+    {
+      "title": "A Streetcar Named Desire",
+      "release_date": "1951"
+    },
+    {
+      "title": "High Noon",
+      "release_date": "1952"
+    },
+    {
+      "title": "On the Waterfront",
+      "release_date": "1954"
+    },
+    {
+      "title": "Vertigo",
+      "release_date": "1958"
+    },
+    {
+      "title": "Ben-Hur",
+      "release_date": "1959"
+    },
+    {
+      "title": "Psycho",
+      "release_date": "1960"
+    },
+    {
+      "title": "The Magnificent Seven",
+      "release_date": "1960"
+    },
+    {
+      "title": "Lawrence of Arabia",
+      "release_date": "1962"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "release_date": "1962"
+    },
+    {
+      "title": "How the West Was Won",
+      "release_date": "1962"
+    },
+    {
+      "title": "The Pink Panther",
+      "release_date": "1964"
+    },
+    {
+      "title": "Planet of the Apes",
+      "release_date": "1968"
+    },
+    {
+      "title": "The Godfather",
+      "release_date": "1972"
+    },
+    {
+      "title": "Chinatown",
+      "release_date": "1974"
+    },
+    {
+      "title": "Jaws",
+      "release_date": "1975"
+    },
+    {
+      "title": "Star Wars",
+      "release_date": "1977"
+    },
+    {
+      "title": "On Golden Pond",
+      "release_date": "1981"
+    },
+    {
+      "title": "E.T. the Extra-Terrestrial",
+      "release_date": "1982"
+    },
+    {
+      "title": "Out of Africa",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Mission",
+      "release_date": "1986"
+    }
+  ]
+}

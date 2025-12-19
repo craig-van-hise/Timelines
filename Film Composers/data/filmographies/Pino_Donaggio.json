@@ -1,0 +1,465 @@
+{
+  "composer": "Pino Donaggio",
+  "filmography": [
+    {
+      "title": "Don't Look Now",
+      "release_date": "1973"
+    },
+    {
+      "title": "Smiling Maniacs(Corruzione al palazzo di giustizia)",
+      "release_date": "1975"
+    },
+    {
+      "title": "A Whisper in the Dark(Un sussurro nel buio)",
+      "release_date": "1976"
+    },
+    {
+      "title": "Haunts",
+      "release_date": "1976"
+    },
+    {
+      "title": "Carrie",
+      "release_date": "1976"
+    },
+    {
+      "title": "Damned in Venice(Nero veneziano)",
+      "release_date": "1978"
+    },
+    {
+      "title": "Piranha",
+      "release_date": "1978"
+    },
+    {
+      "title": "China 9, Liberty 37",
+      "release_date": "1978"
+    },
+    {
+      "title": "Tourist Trap",
+      "release_date": "1979"
+    },
+    {
+      "title": "Home Movies",
+      "release_date": "1979"
+    },
+    {
+      "title": "Skin Deep(Senza buccia)",
+      "release_date": "1979"
+    },
+    {
+      "title": "Dressed to Kill",
+      "release_date": "1980"
+    },
+    {
+      "title": "Desire: The Inner Life(Desideria: La vita interiore)",
+      "release_date": "1980"
+    },
+    {
+      "title": "The Howling",
+      "release_date": "1981"
+    },
+    {
+      "title": "The Black Cat",
+      "release_date": "1981"
+    },
+    {
+      "title": "The Fan",
+      "release_date": "1981"
+    },
+    {
+      "title": "Blow Out",
+      "release_date": "1981"
+    },
+    {
+      "title": "Tex",
+      "release_date": "1982"
+    },
+    {
+      "title": "Beyond the Door",
+      "release_date": "1982"
+    },
+    {
+      "title": "Vatican Conspiracy(Morte in Vaticano)",
+      "release_date": "1982"
+    },
+    {
+      "title": "Street of Mirrors(Via degli specchi)",
+      "release_date": "1982"
+    },
+    {
+      "title": "Hercules",
+      "release_date": "1983"
+    },
+    {
+      "title": "The World of Don Camillo",
+      "release_date": "1983"
+    },
+    {
+      "title": "Over the Brooklyn Bridge",
+      "release_date": "1984"
+    },
+    {
+      "title": "Body Double",
+      "release_date": "1984"
+    },
+    {
+      "title": "Nothing Left to Do But Cry(Non ci resta che piangere)",
+      "release_date": "1984"
+    },
+    {
+      "title": "The Lie",
+      "release_date": "1985"
+    },
+    {
+      "title": "D\u00e9j\u00e0 Vu",
+      "release_date": "1985"
+    },
+    {
+      "title": "Ordeal by Innocence",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Adventures of Hercules",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Berlin Affair",
+      "release_date": "1985"
+    },
+    {
+      "title": "Nothing Underneath",
+      "release_date": "1985"
+    },
+    {
+      "title": "Savage Dawn",
+      "release_date": "1985"
+    },
+    {
+      "title": "Crawlspace",
+      "release_date": "1986"
+    },
+    {
+      "title": "The Moro Affair",
+      "release_date": "1986"
+    },
+    {
+      "title": "7 chili in 7 giorni",
+      "release_date": "1986"
+    },
+    {
+      "title": "Hotel Colonial",
+      "release_date": "1987"
+    },
+    {
+      "title": "The Barbarians",
+      "release_date": "1987"
+    },
+    {
+      "title": "Gor",
+      "release_date": "1987"
+    },
+    {
+      "title": "Jenatsch",
+      "release_date": "1987"
+    },
+    {
+      "title": "Going Bananas",
+      "release_date": "1987"
+    },
+    {
+      "title": "Devils of Monza",
+      "release_date": "1987"
+    },
+    {
+      "title": "Scirocco",
+      "release_date": "1987"
+    },
+    {
+      "title": "Dancers",
+      "release_date": "1987"
+    },
+    {
+      "title": "Phantom of Death",
+      "release_date": "1988"
+    },
+    {
+      "title": "Zelly and Me",
+      "release_date": "1988"
+    },
+    {
+      "title": "Catacombs",
+      "release_date": "1988"
+    },
+    {
+      "title": "Appointment with Death",
+      "release_date": "1988"
+    },
+    {
+      "title": "Kansas",
+      "release_date": "1988"
+    },
+    {
+      "title": "High Frequency",
+      "release_date": "1988"
+    },
+    {
+      "title": "The Gamble",
+      "release_date": "1988"
+    },
+    {
+      "title": "Outlaw of Gor",
+      "release_date": "1988"
+    },
+    {
+      "title": "Night Game",
+      "release_date": "1989"
+    },
+    {
+      "title": "Indio",
+      "release_date": "1989"
+    },
+    {
+      "title": "Ritual of Love",
+      "release_date": "1989"
+    },
+    {
+      "title": "Meridian: Kiss of the Beast",
+      "release_date": "1990"
+    },
+    {
+      "title": "Two Evil Eyes",
+      "release_date": "1990"
+    },
+    {
+      "title": "The Devil's Daughter",
+      "release_date": "1991"
+    },
+    {
+      "title": "Indio 2: The Revolt",
+      "release_date": "1991"
+    },
+    {
+      "title": "A Demon in My View\u00a0(fr)",
+      "release_date": "1991"
+    },
+    {
+      "title": "Un amore sconosciuto",
+      "release_date": "1991"
+    },
+    {
+      "title": "All Ladies Do It",
+      "release_date": "1992"
+    },
+    {
+      "title": "Raising Cain",
+      "release_date": "1992"
+    },
+    {
+      "title": "A Fine Romance",
+      "release_date": "1992"
+    },
+    {
+      "title": "Trauma",
+      "release_date": "1993"
+    },
+    {
+      "title": "Where Are You? I'm Here",
+      "release_date": "1993"
+    },
+    {
+      "title": "Giovanni Falcone",
+      "release_date": "1993"
+    },
+    {
+      "title": "Oblivion",
+      "release_date": "1994"
+    },
+    {
+      "title": "Troublemakers",
+      "release_date": "1994"
+    },
+    {
+      "title": "Power and Lovers",
+      "release_date": "1994"
+    },
+    {
+      "title": "Un eroe borghese",
+      "release_date": "1995"
+    },
+    {
+      "title": "State Secret",
+      "release_date": "1995"
+    },
+    {
+      "title": "Mollo tutto",
+      "release_date": "1995"
+    },
+    {
+      "title": "Palermo - Milan One Way",
+      "release_date": "1995"
+    },
+    {
+      "title": "Soldato ignoto",
+      "release_date": "1995"
+    },
+    {
+      "title": "Never Talk to Strangers",
+      "release_date": "1995"
+    },
+    {
+      "title": "Oblivion 2: Backlash",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Mysterious Enchanter",
+      "release_date": "1996"
+    },
+    {
+      "title": "Festival",
+      "release_date": "1996"
+    },
+    {
+      "title": "Marching in Darkness",
+      "release_date": "1996"
+    },
+    {
+      "title": "Squillo",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Game Bag",
+      "release_date": "1997"
+    },
+    {
+      "title": "La terza luna",
+      "release_date": "1997"
+    },
+    {
+      "title": "Snake Eyes",
+      "release_date": "1998"
+    },
+    {
+      "title": "Monella",
+      "release_date": "1998"
+    },
+    {
+      "title": "Gunslinger's Revenge",
+      "release_date": "1998"
+    },
+    {
+      "title": "Prima del tramonto",
+      "release_date": "1999"
+    },
+    {
+      "title": "A Respectable Man",
+      "release_date": "1999"
+    },
+    {
+      "title": "Terra bruciata",
+      "release_date": "1999"
+    },
+    {
+      "title": "Trasgredire",
+      "release_date": "2000"
+    },
+    {
+      "title": "Up at the Villa",
+      "release_date": "2000"
+    },
+    {
+      "title": "On the Beach Beyond the Pier",
+      "release_date": "2000"
+    },
+    {
+      "title": "Tra due mondi",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Order",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Bankers of God: The Calvi Affair",
+      "release_date": "2002"
+    },
+    {
+      "title": "Soul Mate",
+      "release_date": "2002"
+    },
+    {
+      "title": "Pontormo \u2013 Un amore eretico",
+      "release_date": "2004"
+    },
+    {
+      "title": "Seed of Chucky",
+      "release_date": "2004"
+    },
+    {
+      "title": "Do You Like Hitchcock?",
+      "release_date": "2005"
+    },
+    {
+      "title": "Our Land",
+      "release_date": "2006"
+    },
+    {
+      "title": "Anthony, Warrior of God",
+      "release_date": "2006"
+    },
+    {
+      "title": "Guido che sfid\u00f2 le Brigate Rosse",
+      "release_date": "2007"
+    },
+    {
+      "title": "Milano Palermo \u2013 Il ritorno",
+      "release_date": "2007"
+    },
+    {
+      "title": "At a Glance",
+      "release_date": "2008"
+    },
+    {
+      "title": "Winter in Wartime",
+      "release_date": "2008"
+    },
+    {
+      "title": "Sotto il vestito niente \u2013 L'ultima sfilata",
+      "release_date": "2011"
+    },
+    {
+      "title": "Passion",
+      "release_date": "2012"
+    },
+    {
+      "title": "Patrick",
+      "release_date": "2013"
+    },
+    {
+      "title": "La buca",
+      "release_date": "2014"
+    },
+    {
+      "title": "La grande rabbia",
+      "release_date": "2016"
+    },
+    {
+      "title": "Where I've Never Lived",
+      "release_date": "2017"
+    },
+    {
+      "title": "My Name Is Thomas",
+      "release_date": "2018"
+    },
+    {
+      "title": "Mare di grano",
+      "release_date": "2018"
+    },
+    {
+      "title": "Domino",
+      "release_date": "2019"
+    },
+    {
+      "title": "Spin Me Round",
+      "release_date": "2022"
+    }
+  ]
+}

@@ -1,0 +1,665 @@
+{
+  "composer": "Mark Isham",
+  "filmography": [
+    {
+      "title": "Never Cry Wolf",
+      "release_date": "1983"
+    },
+    {
+      "title": "Country",
+      "release_date": "1984"
+    },
+    {
+      "title": "Mrs. Soffel",
+      "release_date": "1984"
+    },
+    {
+      "title": "The Times of Harvey Milk",
+      "release_date": "1984"
+    },
+    {
+      "title": "Trouble in Mind",
+      "release_date": "1985"
+    },
+    {
+      "title": "Portraits of Anorexia",
+      "release_date": "1985"
+    },
+    {
+      "title": "Rabbit Ears: The Steadfast Tin Soldier",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Making of Liberty",
+      "release_date": "1986"
+    },
+    {
+      "title": "The Hitcher",
+      "release_date": "1986"
+    },
+    {
+      "title": "Made in Heaven",
+      "release_date": "1987"
+    },
+    {
+      "title": "The Moderns",
+      "release_date": "1988"
+    },
+    {
+      "title": "C.A.T. Squad: Python Wolf",
+      "release_date": "1988"
+    },
+    {
+      "title": "The Beast",
+      "release_date": "1988"
+    },
+    {
+      "title": "Everybody Wins",
+      "release_date": "1990"
+    },
+    {
+      "title": "Love at Large",
+      "release_date": "1990"
+    },
+    {
+      "title": "Reversal of Fortune",
+      "release_date": "1990"
+    },
+    {
+      "title": "Tibet",
+      "release_date": "1990"
+    },
+    {
+      "title": "Mortal Thoughts",
+      "release_date": "1991"
+    },
+    {
+      "title": "Crooked Hearts",
+      "release_date": "1991"
+    },
+    {
+      "title": "Point Break",
+      "release_date": "1991"
+    },
+    {
+      "title": "Little Man Tate",
+      "release_date": "1991"
+    },
+    {
+      "title": "Billy Bathgate",
+      "release_date": "1991"
+    },
+    {
+      "title": "A Midnight Clear",
+      "release_date": "1992"
+    },
+    {
+      "title": "Sketch Artist",
+      "release_date": "1992"
+    },
+    {
+      "title": "Cool World",
+      "release_date": "1992"
+    },
+    {
+      "title": "A River Runs Through It",
+      "release_date": "1992"
+    },
+    {
+      "title": "The Public Eye",
+      "release_date": "1992"
+    },
+    {
+      "title": "Of Mice and Men",
+      "release_date": "1992"
+    },
+    {
+      "title": "Nowhere to Run",
+      "release_date": "1993"
+    },
+    {
+      "title": "Fire in the Sky",
+      "release_date": "1993"
+    },
+    {
+      "title": "Made in America",
+      "release_date": "1993"
+    },
+    {
+      "title": "Short Cuts",
+      "release_date": "1993"
+    },
+    {
+      "title": "Romeo Is Bleeding",
+      "release_date": "1993"
+    },
+    {
+      "title": "Hawaii: Born in Paradise",
+      "release_date": "1993"
+    },
+    {
+      "title": "Hidden Hawaii",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Getaway",
+      "release_date": "1994"
+    },
+    {
+      "title": "The Browning Version",
+      "release_date": "1994"
+    },
+    {
+      "title": "Mrs. Parker and the Vicious Circle",
+      "release_date": "1994"
+    },
+    {
+      "title": "Quiz Show",
+      "release_date": "1994"
+    },
+    {
+      "title": "Timecop",
+      "release_date": "1994"
+    },
+    {
+      "title": "Nell",
+      "release_date": "1994"
+    },
+    {
+      "title": "Safe Passage",
+      "release_date": "1994"
+    },
+    {
+      "title": "Chicago Hope",
+      "release_date": "1994"
+    },
+    {
+      "title": "Miami Rhapsody",
+      "release_date": "1995"
+    },
+    {
+      "title": "Waterworld",
+      "release_date": "1995"
+    },
+    {
+      "title": "Losing Isaiah",
+      "release_date": "1995"
+    },
+    {
+      "title": "The Net",
+      "release_date": "1995"
+    },
+    {
+      "title": "Home for the Holidays",
+      "release_date": "1995"
+    },
+    {
+      "title": "Last Dance",
+      "release_date": "1996"
+    },
+    {
+      "title": "Gotti",
+      "release_date": "1996"
+    },
+    {
+      "title": "Fly Away Home",
+      "release_date": "1996"
+    },
+    {
+      "title": "Night Falls on Manhattan",
+      "release_date": "1996"
+    },
+    {
+      "title": "EZ Streets",
+      "release_date": "1996"
+    },
+    {
+      "title": "Afterglow",
+      "release_date": "1997"
+    },
+    {
+      "title": "Kiss the Girls",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Defenders: Payback",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Education of Little Tree",
+      "release_date": "1997"
+    },
+    {
+      "title": "Michael Hayes",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Defenders: Choice of Evils",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Gingerbread Man",
+      "release_date": "1998"
+    },
+    {
+      "title": "Blade",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Defenders: Taking the First",
+      "release_date": "1998"
+    },
+    {
+      "title": "Free Money",
+      "release_date": "1998"
+    },
+    {
+      "title": "From the Earth to the Moon",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Blood Tide",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Cowboy and the Ballerina",
+      "release_date": "1998"
+    },
+    {
+      "title": "At First Sight",
+      "release_date": "1999"
+    },
+    {
+      "title": "Varsity Blues",
+      "release_date": "1999"
+    },
+    {
+      "title": "Breakfast of Champions",
+      "release_date": "1999"
+    },
+    {
+      "title": "October Sky",
+      "release_date": "1999"
+    },
+    {
+      "title": "Body Shots",
+      "release_date": "1999"
+    },
+    {
+      "title": "Family Law",
+      "release_date": "1999"
+    },
+    {
+      "title": "Galapagos",
+      "release_date": "1999"
+    },
+    {
+      "title": "Rules of Engagement",
+      "release_date": "2000"
+    },
+    {
+      "title": "Where the Money Is",
+      "release_date": "2000"
+    },
+    {
+      "title": "Trixie",
+      "release_date": "2000"
+    },
+    {
+      "title": "Men of Honor",
+      "release_date": "2000"
+    },
+    {
+      "title": "Save the Last Dance",
+      "release_date": "2001"
+    },
+    {
+      "title": "Life as a House",
+      "release_date": "2001"
+    },
+    {
+      "title": "Hardball",
+      "release_date": "2001"
+    },
+    {
+      "title": "Don't Say a Word",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Majestic",
+      "release_date": "2001"
+    },
+    {
+      "title": "From the Ground Up",
+      "release_date": "2001"
+    },
+    {
+      "title": "Impostor",
+      "release_date": "2002"
+    },
+    {
+      "title": "Moonlight Mile",
+      "release_date": "2002"
+    },
+    {
+      "title": "The Cooler",
+      "release_date": "2003"
+    },
+    {
+      "title": "Spartan",
+      "release_date": "2004"
+    },
+    {
+      "title": "Miracle",
+      "release_date": "2004"
+    },
+    {
+      "title": "Highwaymen",
+      "release_date": "2004"
+    },
+    {
+      "title": "Twisted",
+      "release_date": "2004"
+    },
+    {
+      "title": "Crash",
+      "release_date": "2004"
+    },
+    {
+      "title": "Racing Stripes",
+      "release_date": "2005"
+    },
+    {
+      "title": "Kicking & Screaming",
+      "release_date": "2005"
+    },
+    {
+      "title": "In Her Shoes",
+      "release_date": "2005"
+    },
+    {
+      "title": "Running Scared",
+      "release_date": "2006"
+    },
+    {
+      "title": "Eight Below",
+      "release_date": "2006"
+    },
+    {
+      "title": "Invincible",
+      "release_date": "2006"
+    },
+    {
+      "title": "Bobby",
+      "release_date": "2006"
+    },
+    {
+      "title": "The Black Dahlia",
+      "release_date": "2006"
+    },
+    {
+      "title": "Freedom Writers",
+      "release_date": "2007"
+    },
+    {
+      "title": "In the Valley of Elah",
+      "release_date": "2007"
+    },
+    {
+      "title": "Lions for Lambs",
+      "release_date": "2007"
+    },
+    {
+      "title": "Gracie",
+      "release_date": "2007"
+    },
+    {
+      "title": "Reservation Road",
+      "release_date": "2007"
+    },
+    {
+      "title": "No Reservations",
+      "release_date": "2007"
+    },
+    {
+      "title": "Next",
+      "release_date": "2007"
+    },
+    {
+      "title": "The Mist",
+      "release_date": "2007"
+    },
+    {
+      "title": "The Black Donnellys",
+      "release_date": "2007"
+    },
+    {
+      "title": "Pride and Glory",
+      "release_date": "2008"
+    },
+    {
+      "title": "The Express: The Ernie Davis Story",
+      "release_date": "2008"
+    },
+    {
+      "title": "The Secret Life of Bees",
+      "release_date": "2008"
+    },
+    {
+      "title": "Crash",
+      "release_date": "2008"
+    },
+    {
+      "title": "Crossing Over",
+      "release_date": "2009"
+    },
+    {
+      "title": "Not Forgotten",
+      "release_date": "2009"
+    },
+    {
+      "title": "Bad Lieutenant: Port of Call New Orleans",
+      "release_date": "2009"
+    },
+    {
+      "title": "Fame",
+      "release_date": "2009"
+    },
+    {
+      "title": "The Crazies",
+      "release_date": "2010"
+    },
+    {
+      "title": "The Conspirator",
+      "release_date": "2010"
+    },
+    {
+      "title": "The Mechanic",
+      "release_date": "2011"
+    },
+    {
+      "title": "Dolphin Tale",
+      "release_date": "2011"
+    },
+    {
+      "title": "Warrior",
+      "release_date": "2011"
+    },
+    {
+      "title": "Once Upon a Time",
+      "release_date": "2011"
+    },
+    {
+      "title": "\"Morning\"",
+      "release_date": "2011"
+    },
+    {
+      "title": "The Factory",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Lucky One",
+      "release_date": "2012"
+    },
+    {
+      "title": "Beauty and the Beast",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Conjuring",
+      "release_date": "2013"
+    },
+    {
+      "title": "The Inevitable Defeat of Mister and Pete",
+      "release_date": "2013"
+    },
+    {
+      "title": "42",
+      "release_date": "2013"
+    },
+    {
+      "title": "Homefront",
+      "release_date": "2013"
+    },
+    {
+      "title": "Once Upon a Time in Wonderland",
+      "release_date": "2013"
+    },
+    {
+      "title": "Beyond the Lights",
+      "release_date": "2014"
+    },
+    {
+      "title": "The Longest Ride",
+      "release_date": "2015"
+    },
+    {
+      "title": "Blood & Oil",
+      "release_date": "2015"
+    },
+    {
+      "title": "American Crime",
+      "release_date": "2015"
+    },
+    {
+      "title": "A Family Man",
+      "release_date": "2016"
+    },
+    {
+      "title": "Mr. Church",
+      "release_date": "2016"
+    },
+    {
+      "title": "Mechanic: Resurrection",
+      "release_date": "2016"
+    },
+    {
+      "title": "The Accountant",
+      "release_date": "2016"
+    },
+    {
+      "title": "Fallen",
+      "release_date": "2016"
+    },
+    {
+      "title": "Megan Leavey",
+      "release_date": "2017"
+    },
+    {
+      "title": "Dirty Dancing",
+      "release_date": "2017"
+    },
+    {
+      "title": "Black Mirror",
+      "release_date": "2017"
+    },
+    {
+      "title": "Philip K. Dick's Electric Dreams",
+      "release_date": "2017"
+    },
+    {
+      "title": "Let It Fall: Los Angeles 1982\u20131992",
+      "release_date": "2017"
+    },
+    {
+      "title": "Duck Duck Goose",
+      "release_date": "2018"
+    },
+    {
+      "title": "Marvel's Cloak & Dagger",
+      "release_date": "2018"
+    },
+    {
+      "title": "Bolden",
+      "release_date": "2019"
+    },
+    {
+      "title": "A Dog's Journey",
+      "release_date": "2019"
+    },
+    {
+      "title": "Togo",
+      "release_date": "2019"
+    },
+    {
+      "title": "Godfather of Harlem",
+      "release_date": "2019"
+    },
+    {
+      "title": "Bill & Ted Face the Music",
+      "release_date": "2020"
+    },
+    {
+      "title": "Honest Thief",
+      "release_date": "2020"
+    },
+    {
+      "title": "Little Fires Everywhere",
+      "release_date": "2020"
+    },
+    {
+      "title": "Amazing Stories",
+      "release_date": "2020"
+    },
+    {
+      "title": "Judas and the Black Messiah",
+      "release_date": "2021"
+    },
+    {
+      "title": "Needle in a Timestack",
+      "release_date": "2021"
+    },
+    {
+      "title": "The Nevers",
+      "release_date": "2021"
+    },
+    {
+      "title": "Sex/Life",
+      "release_date": "2021"
+    },
+    {
+      "title": "Blacklight",
+      "release_date": "2022"
+    },
+    {
+      "title": "The Unbearable Weight of Massive Talent",
+      "release_date": "2022"
+    },
+    {
+      "title": "The Cleaning Lady",
+      "release_date": "2022"
+    },
+    {
+      "title": "Shooting Stars",
+      "release_date": "2023"
+    },
+    {
+      "title": "Justified: City Primeval",
+      "release_date": "2023"
+    },
+    {
+      "title": "Soul on Fire",
+      "release_date": "2025"
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "composer": "Roy Webb",
+  "filmography": [
+    {
+      "title": "Our Betters",
+      "release_date": "1933"
+    },
+    {
+      "title": "Down to Their Last Yacht",
+      "release_date": "1934"
+    },
+    {
+      "title": "Sylvia Scarlett",
+      "release_date": "1935"
+    },
+    {
+      "title": "Becky Sharp",
+      "release_date": "1935"
+    },
+    {
+      "title": "Enchanted April",
+      "release_date": "1935"
+    },
+    {
+      "title": "Stage Door",
+      "release_date": "1937"
+    },
+    {
+      "title": "The Woman I Love",
+      "release_date": "1937"
+    },
+    {
+      "title": "Quality Street",
+      "release_date": "1937"
+    },
+    {
+      "title": "Room Service",
+      "release_date": "1938"
+    },
+    {
+      "title": "Bringing Up Baby",
+      "release_date": "1938"
+    },
+    {
+      "title": "Arizona Legion",
+      "release_date": "1939"
+    },
+    {
+      "title": "The Great Man Votes",
+      "release_date": "1939"
+    },
+    {
+      "title": "In Name Only",
+      "release_date": "1939"
+    },
+    {
+      "title": "Abe Lincoln in Illinois",
+      "release_date": "1940"
+    },
+    {
+      "title": "My Favorite Wife",
+      "release_date": "1940"
+    },
+    {
+      "title": "Curtain Call",
+      "release_date": "1940"
+    },
+    {
+      "title": "Stranger on the Third Floor",
+      "release_date": "1940"
+    },
+    {
+      "title": "Mr. and Mrs. Smith",
+      "release_date": "1941"
+    },
+    {
+      "title": "I Married a Witch",
+      "release_date": "1942"
+    },
+    {
+      "title": "Joan of Paris",
+      "release_date": "1942"
+    },
+    {
+      "title": "The Magnificent Ambersons",
+      "release_date": "1942"
+    },
+    {
+      "title": "The Big Street",
+      "release_date": "1942"
+    },
+    {
+      "title": "Cat People",
+      "release_date": "1942"
+    },
+    {
+      "title": "Hitler's Children",
+      "release_date": "1943"
+    },
+    {
+      "title": "The Seventh Victim",
+      "release_date": "1943"
+    },
+    {
+      "title": "Journey into Fear",
+      "release_date": "1943"
+    },
+    {
+      "title": "I Walked with a Zombie",
+      "release_date": "1943"
+    },
+    {
+      "title": "The Leopard Man",
+      "release_date": "1943"
+    },
+    {
+      "title": "The Fallen Sparrow",
+      "release_date": "1943"
+    },
+    {
+      "title": "The Falcon in Danger",
+      "release_date": "1943"
+    },
+    {
+      "title": "Gangway for Tomorrow",
+      "release_date": "1943"
+    },
+    {
+      "title": "The Falcon Out West",
+      "release_date": "1944"
+    },
+    {
+      "title": "Experiment Perilous",
+      "release_date": "1944"
+    },
+    {
+      "title": "Tall in the Saddle",
+      "release_date": "1944"
+    },
+    {
+      "title": "The Fighting Seabees",
+      "release_date": "1944"
+    },
+    {
+      "title": "The Curse of the Cat People",
+      "release_date": "1944"
+    },
+    {
+      "title": "Murder, My Sweet",
+      "release_date": "1944"
+    },
+    {
+      "title": "Bride by Mistake",
+      "release_date": "1944"
+    },
+    {
+      "title": "The Seventh Cross",
+      "release_date": "1944"
+    },
+    {
+      "title": "The Enchanted Cottage",
+      "release_date": "1945"
+    },
+    {
+      "title": "The Body Snatcher",
+      "release_date": "1945"
+    },
+    {
+      "title": "Back to Bataan",
+      "release_date": "1945"
+    },
+    {
+      "title": "Two O'Clock Courage",
+      "release_date": "1945"
+    },
+    {
+      "title": "The Spiral Staircase",
+      "release_date": "1945"
+    },
+    {
+      "title": "Notorious",
+      "release_date": "1946"
+    },
+    {
+      "title": "The Locket",
+      "release_date": "1946"
+    },
+    {
+      "title": "Bedlam",
+      "release_date": "1946"
+    },
+    {
+      "title": "Out of the Past",
+      "release_date": "1947"
+    },
+    {
+      "title": "They Won't Believe Me",
+      "release_date": "1947"
+    },
+    {
+      "title": "I Remember Mama",
+      "release_date": "1948"
+    },
+    {
+      "title": "Holiday Affair",
+      "release_date": "1949"
+    },
+    {
+      "title": "Mighty Joe Young",
+      "release_date": "1949"
+    },
+    {
+      "title": "The Window",
+      "release_date": "1949"
+    },
+    {
+      "title": "Easy Living",
+      "release_date": "1949"
+    },
+    {
+      "title": "My Friend Irma",
+      "release_date": "1949"
+    },
+    {
+      "title": "The Secret Fury",
+      "release_date": "1950"
+    },
+    {
+      "title": "The White Tower",
+      "release_date": "1950"
+    },
+    {
+      "title": "Vendetta",
+      "release_date": "1950"
+    },
+    {
+      "title": "Where Danger Lives",
+      "release_date": "1950"
+    },
+    {
+      "title": "Gambling House",
+      "release_date": "1951"
+    },
+    {
+      "title": "Flying Leathernecks",
+      "release_date": "1951"
+    },
+    {
+      "title": "Fixed Bayonets",
+      "release_date": "1951"
+    },
+    {
+      "title": "Sealed Cargo",
+      "release_date": "1951"
+    },
+    {
+      "title": "Operation Secret",
+      "release_date": "1952"
+    },
+    {
+      "title": "This is Cinerama (uncredited)",
+      "release_date": "1952"
+    },
+    {
+      "title": "Second Chance",
+      "release_date": "1953"
+    },
+    {
+      "title": "Split Second",
+      "release_date": "1953"
+    },
+    {
+      "title": "Houdini",
+      "release_date": "1953"
+    },
+    {
+      "title": "The Raid",
+      "release_date": "1954"
+    },
+    {
+      "title": "Dangerous Mission",
+      "release_date": "1954"
+    },
+    {
+      "title": "Track of the Cat",
+      "release_date": "1954"
+    },
+    {
+      "title": "Blood Alley",
+      "release_date": "1955"
+    },
+    {
+      "title": "Marty",
+      "release_date": "1955"
+    },
+    {
+      "title": "The Sea Chase",
+      "release_date": "1955"
+    },
+    {
+      "title": "Our Miss Brooks",
+      "release_date": "1956"
+    },
+    {
+      "title": "The Search for Bridey Murphy",
+      "release_date": "1956"
+    },
+    {
+      "title": "The Girl He Left Behind",
+      "release_date": "1956"
+    },
+    {
+      "title": "The River Changes",
+      "release_date": "1956"
+    },
+    {
+      "title": "The Secret Affair",
+      "release_date": "1957"
+    },
+    {
+      "title": "Shoot-out at Medicine Bend",
+      "release_date": "1957"
+    },
+    {
+      "title": "Teacher's Pet",
+      "release_date": "1958"
+    },
+    {
+      "title": "Use mdy dates from March",
+      "release_date": "2018"
+    }
+  ]
+}

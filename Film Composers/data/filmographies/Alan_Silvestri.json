@@ -1,0 +1,513 @@
+{
+  "composer": "Alan Silvestri",
+  "filmography": [
+    {
+      "title": "The Doberman Gang",
+      "release_date": "1972"
+    },
+    {
+      "title": "Las Vegas Lady",
+      "release_date": "1975"
+    },
+    {
+      "title": "The Amazing Dobermans",
+      "release_date": "1976"
+    },
+    {
+      "title": "The Fifth Floor",
+      "release_date": "1978"
+    },
+    {
+      "title": "Starsky & Hutch",
+      "release_date": "1978"
+    },
+    {
+      "title": "CHiPs",
+      "release_date": "1978"
+    },
+    {
+      "title": "Tiger Man",
+      "release_date": "1983"
+    },
+    {
+      "title": "Manimal",
+      "release_date": "1983"
+    },
+    {
+      "title": "T. J. Hooker",
+      "release_date": "1983"
+    },
+    {
+      "title": "Romancing the Stone",
+      "release_date": "1984"
+    },
+    {
+      "title": "Par o\u00f9 t'es rentr\u00e9\u00a0? On t'a pas vu sortir",
+      "release_date": "1984"
+    },
+    {
+      "title": "Fandango",
+      "release_date": "1985"
+    },
+    {
+      "title": "Cat's Eye",
+      "release_date": "1985"
+    },
+    {
+      "title": "Back to the Future",
+      "release_date": "1985"
+    },
+    {
+      "title": "Summer Rental",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Clan of the Cave Bear",
+      "release_date": "1986"
+    },
+    {
+      "title": "The Delta Force",
+      "release_date": "1986"
+    },
+    {
+      "title": "American Anthem",
+      "release_date": "1986"
+    },
+    {
+      "title": "Flight of the Navigator",
+      "release_date": "1986"
+    },
+    {
+      "title": "No Mercy",
+      "release_date": "1986"
+    },
+    {
+      "title": "Amazing Stories",
+      "release_date": "1986"
+    },
+    {
+      "title": "Critical Condition",
+      "release_date": "1987"
+    },
+    {
+      "title": "Outrageous Fortune",
+      "release_date": "1987"
+    },
+    {
+      "title": "Predator",
+      "release_date": "1987"
+    },
+    {
+      "title": "Overboard",
+      "release_date": "1987"
+    },
+    {
+      "title": "Mac and Me",
+      "release_date": "1988"
+    },
+    {
+      "title": "Who Framed Roger Rabbit",
+      "release_date": "1988"
+    },
+    {
+      "title": "My Stepmother Is an Alien",
+      "release_date": "1988"
+    },
+    {
+      "title": "She's Out of Control",
+      "release_date": "1989"
+    },
+    {
+      "title": "The Abyss",
+      "release_date": "1989"
+    },
+    {
+      "title": "Back to the Future Part II",
+      "release_date": "1989"
+    },
+    {
+      "title": "Tales from the Crypt",
+      "release_date": "1989"
+    },
+    {
+      "title": "Downtown",
+      "release_date": "1990"
+    },
+    {
+      "title": "Back to the Future Part III",
+      "release_date": "1990"
+    },
+    {
+      "title": "Young Guns II",
+      "release_date": "1990"
+    },
+    {
+      "title": "Predator 2",
+      "release_date": "1990"
+    },
+    {
+      "title": "Shattered",
+      "release_date": "1991"
+    },
+    {
+      "title": "Back to the Future: The Ride",
+      "release_date": "1991"
+    },
+    {
+      "title": "Soapdish",
+      "release_date": "1991"
+    },
+    {
+      "title": "Dutch",
+      "release_date": "1991"
+    },
+    {
+      "title": "Ricochet",
+      "release_date": "1991"
+    },
+    {
+      "title": "Father of the Bride",
+      "release_date": "1991"
+    },
+    {
+      "title": "Back to the Future",
+      "release_date": "1991"
+    },
+    {
+      "title": "Two-Fisted Tales",
+      "release_date": "1992"
+    },
+    {
+      "title": "Stop! Or My Mom Will Shoot",
+      "release_date": "1992"
+    },
+    {
+      "title": "FernGully: The Last Rainforest",
+      "release_date": "1992"
+    },
+    {
+      "title": "Death Becomes Her",
+      "release_date": "1992"
+    },
+    {
+      "title": "The Bodyguard",
+      "release_date": "1992"
+    },
+    {
+      "title": "Sidekicks",
+      "release_date": "1992"
+    },
+    {
+      "title": "In Search of the Obelisk",
+      "release_date": "1993"
+    },
+    {
+      "title": "Cop and a Half",
+      "release_date": "1993"
+    },
+    {
+      "title": "Super Mario Bros.",
+      "release_date": "1993"
+    },
+    {
+      "title": "Judgment Night",
+      "release_date": "1993"
+    },
+    {
+      "title": "Grumpy Old Men",
+      "release_date": "1993"
+    },
+    {
+      "title": "Clean Slate",
+      "release_date": "1994"
+    },
+    {
+      "title": "Forrest Gump",
+      "release_date": "1994"
+    },
+    {
+      "title": "Blown Away",
+      "release_date": "1994"
+    },
+    {
+      "title": "Richie Rich",
+      "release_date": "1994"
+    },
+    {
+      "title": "The Quick and the Dead",
+      "release_date": "1995"
+    },
+    {
+      "title": "The Perez Family",
+      "release_date": "1995"
+    },
+    {
+      "title": "Judge Dredd",
+      "release_date": "1995"
+    },
+    {
+      "title": "Father of the Bride Part II",
+      "release_date": "1995"
+    },
+    {
+      "title": "Grumpier Old Men",
+      "release_date": "1995"
+    },
+    {
+      "title": "Sgt. Bilko",
+      "release_date": "1996"
+    },
+    {
+      "title": "Mission: Impossible",
+      "release_date": "1996"
+    },
+    {
+      "title": "Eraser",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Long Kiss Goodnight",
+      "release_date": "1996"
+    },
+    {
+      "title": "Fools Rush In",
+      "release_date": "1997"
+    },
+    {
+      "title": "Volcano",
+      "release_date": "1997"
+    },
+    {
+      "title": "Contact",
+      "release_date": "1997"
+    },
+    {
+      "title": "Mouse Hunt",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Odd Couple II",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Parent Trap",
+      "release_date": "1998"
+    },
+    {
+      "title": "Holy Man",
+      "release_date": "1998"
+    },
+    {
+      "title": "Practical Magic",
+      "release_date": "1998"
+    },
+    {
+      "title": "Siegfried & Roy: The Magic Box",
+      "release_date": "1999"
+    },
+    {
+      "title": "Stuart Little",
+      "release_date": "1999"
+    },
+    {
+      "title": "Reindeer Games",
+      "release_date": "2000"
+    },
+    {
+      "title": "Cast Away",
+      "release_date": "2000"
+    },
+    {
+      "title": "What Lies Beneath",
+      "release_date": "2000"
+    },
+    {
+      "title": "What Women Want",
+      "release_date": "2000"
+    },
+    {
+      "title": "The Mexican",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Mummy Returns",
+      "release_date": "2001"
+    },
+    {
+      "title": "Serendipity",
+      "release_date": "2001"
+    },
+    {
+      "title": "Showtime",
+      "release_date": "2002"
+    },
+    {
+      "title": "Lilo & Stitch",
+      "release_date": "2002"
+    },
+    {
+      "title": "Stuart Little 2",
+      "release_date": "2002"
+    },
+    {
+      "title": "Maid in Manhattan",
+      "release_date": "2002"
+    },
+    {
+      "title": "Identity",
+      "release_date": "2003"
+    },
+    {
+      "title": "Stitch! The Movie",
+      "release_date": "2003"
+    },
+    {
+      "title": "Lara Croft: Tomb Raider \u2013 The Cradle of Life",
+      "release_date": "2003"
+    },
+    {
+      "title": "Van Helsing",
+      "release_date": "2004"
+    },
+    {
+      "title": "The Polar Express",
+      "release_date": "2004"
+    },
+    {
+      "title": "The Wild",
+      "release_date": "2006"
+    },
+    {
+      "title": "Leroy & Stitch",
+      "release_date": "2006"
+    },
+    {
+      "title": "Night at the Museum",
+      "release_date": "2006"
+    },
+    {
+      "title": "Beowulf",
+      "release_date": "2007"
+    },
+    {
+      "title": "Night at the Museum: Battle of the Smithsonian",
+      "release_date": "2009"
+    },
+    {
+      "title": "G.I. Joe: The Rise of Cobra",
+      "release_date": "2009"
+    },
+    {
+      "title": "G.I. Joe: The Invasion of Cobra Island",
+      "release_date": "2009"
+    },
+    {
+      "title": "A Christmas Carol",
+      "release_date": "2009"
+    },
+    {
+      "title": "The A-Team",
+      "release_date": "2010"
+    },
+    {
+      "title": "Predators",
+      "release_date": "2010"
+    },
+    {
+      "title": "Captain America: The First Avenger",
+      "release_date": "2011"
+    },
+    {
+      "title": "The Avengers",
+      "release_date": "2012"
+    },
+    {
+      "title": "Flight",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Croods",
+      "release_date": "2013"
+    },
+    {
+      "title": "Red 2",
+      "release_date": "2013"
+    },
+    {
+      "title": "Night at the Museum: Secret of the Tomb",
+      "release_date": "2014"
+    },
+    {
+      "title": "Avengers: Age of Ultron",
+      "release_date": "2015"
+    },
+    {
+      "title": "The Walk",
+      "release_date": "2015"
+    },
+    {
+      "title": "Allied",
+      "release_date": "2016"
+    },
+    {
+      "title": "Ready Player One",
+      "release_date": "2018"
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "release_date": "2018"
+    },
+    {
+      "title": "Welcome to Marwen",
+      "release_date": "2018"
+    },
+    {
+      "title": "The Predator",
+      "release_date": "2018"
+    },
+    {
+      "title": "Avengers: Endgame",
+      "release_date": "2019"
+    },
+    {
+      "title": "The Witches",
+      "release_date": "2020"
+    },
+    {
+      "title": "Cosmos: Possible Worlds",
+      "release_date": "2020"
+    },
+    {
+      "title": "Pinocchio",
+      "release_date": "2022"
+    },
+    {
+      "title": "Here",
+      "release_date": "2024"
+    },
+    {
+      "title": "The Electric State",
+      "release_date": "2025"
+    },
+    {
+      "title": "Lilo & Stitch",
+      "release_date": "2025"
+    },
+    {
+      "title": "The Fantastic Four: First Steps",
+      "release_date": "2025"
+    },
+    {
+      "title": "Play Dirty",
+      "release_date": "2025"
+    },
+    {
+      "title": "Avengers: Doomsday",
+      "release_date": "2026"
+    },
+    {
+      "title": "Avengers: Secret Wars",
+      "release_date": "2027"
+    }
+  ]
+}

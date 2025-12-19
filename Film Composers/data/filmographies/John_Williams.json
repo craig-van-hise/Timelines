@@ -1,0 +1,457 @@
+{
+    "composer": "John Williams",
+    "filmography": [
+        {
+            "title": "Daddy-O",
+            "release_date": "1958"
+        },
+        {
+            "title": "I Passed for White",
+            "release_date": "1960"
+        },
+        {
+            "title": "Because They're Young",
+            "release_date": "1960"
+        },
+        {
+            "title": "The Secret Ways",
+            "release_date": "1961"
+        },
+        {
+            "title": "Bachelor Flat",
+            "release_date": "1962"
+        },
+        {
+            "title": "Diamond Head",
+            "release_date": "1963"
+        },
+        {
+            "title": "Gidget Goes to Rome",
+            "release_date": "1963"
+        },
+        {
+            "title": "The Killers",
+            "release_date": "1964"
+        },
+        {
+            "title": "None but the Brave",
+            "release_date": "1965"
+        },
+        {
+            "title": "John Goldfarb, Please Come Home!",
+            "release_date": "1965"
+        },
+        {
+            "title": "The Rare Breed",
+            "release_date": "1966"
+        },
+        {
+            "title": "How to Steal a Million",
+            "release_date": "1966"
+        },
+        {
+            "title": "The Plainsman",
+            "release_date": "1966"
+        },
+        {
+            "title": "Not with My Wife, You Don't!",
+            "release_date": "1966"
+        },
+        {
+            "title": "Penelope",
+            "release_date": "1966"
+        },
+        {
+            "title": "Valley of the Dolls",
+            "release_date": "1967"
+        },
+        {
+            "title": "A Guide for the Married Man",
+            "release_date": "1967"
+        },
+        {
+            "title": "Fitzwilly",
+            "release_date": "1967"
+        },
+        {
+            "title": "Sergeant Ryker",
+            "release_date": "1968"
+        },
+        {
+            "title": "Daddy's Gone A-Hunting",
+            "release_date": "1969"
+        },
+        {
+            "title": "Goodbye, Mr. Chips",
+            "release_date": "1969"
+        },
+        {
+            "title": "The Reivers",
+            "release_date": "1969"
+        },
+        {
+            "title": "Story of a Woman",
+            "release_date": "1970"
+        },
+        {
+            "title": "Fiddler on the Roof",
+            "release_date": "1971"
+        },
+        {
+            "title": "The Cowboys",
+            "release_date": "1972"
+        },
+        {
+            "title": "The Poseidon Adventure",
+            "release_date": "1972"
+        },
+        {
+            "title": "Pete 'n' Tillie",
+            "release_date": "1972"
+        },
+        {
+            "title": "Images",
+            "release_date": "1972"
+        },
+        {
+            "title": "The Long Goodbye",
+            "release_date": "1973"
+        },
+        {
+            "title": "Tom Sawyer",
+            "release_date": "1973"
+        },
+        {
+            "title": "The Man Who Loved Cat Dancing",
+            "release_date": "1973"
+        },
+        {
+            "title": "The Paper Chase",
+            "release_date": "1973"
+        },
+        {
+            "title": "Cinderella Liberty",
+            "release_date": "1973"
+        },
+        {
+            "title": "Conrack",
+            "release_date": "1974"
+        },
+        {
+            "title": "The Sugarland Express",
+            "release_date": "1974"
+        },
+        {
+            "title": "Earthquake",
+            "release_date": "1974"
+        },
+        {
+            "title": "The Towering Inferno",
+            "release_date": "1974"
+        },
+        {
+            "title": "The Eiger Sanction",
+            "release_date": "1975"
+        },
+        {
+            "title": "Jaws",
+            "release_date": "1975"
+        },
+        {
+            "title": "Family Plot",
+            "release_date": "1976"
+        },
+        {
+            "title": "The Missouri Breaks",
+            "release_date": "1976"
+        },
+        {
+            "title": "Midway",
+            "release_date": "1976"
+        },
+        {
+            "title": "Black Sunday",
+            "release_date": "1977"
+        },
+        {
+            "title": "Star Wars",
+            "release_date": "1977"
+        },
+        {
+            "title": "Close Encounters of the Third Kind",
+            "release_date": "1977"
+        },
+        {
+            "title": "The Fury",
+            "release_date": "1978"
+        },
+        {
+            "title": "Jaws 2",
+            "release_date": "1978"
+        },
+        {
+            "title": "Superman",
+            "release_date": "1978"
+        },
+        {
+            "title": "Dracula",
+            "release_date": "1979"
+        },
+        {
+            "title": "The Empire Strikes Back",
+            "release_date": "1980"
+        },
+        {
+            "title": "Raiders of the Lost Ark",
+            "release_date": "1981"
+        },
+        {
+            "title": "Heartbeeps",
+            "release_date": "1981"
+        },
+        {
+            "title": "E.T. The Extra-Terrestrial",
+            "release_date": "1982"
+        },
+        {
+            "title": "Yes, Giorgio",
+            "release_date": "1982"
+        },
+        {
+            "title": "Monsignor",
+            "release_date": "1982"
+        },
+        {
+            "title": "Return of the Jedi",
+            "release_date": "1983"
+        },
+        {
+            "title": "Indiana Jones and the Temple of Doom",
+            "release_date": "1984"
+        },
+        {
+            "title": "The River",
+            "release_date": "1984"
+        },
+        {
+            "title": "SpaceCamp",
+            "release_date": "1986"
+        },
+        {
+            "title": "The Witches of Eastwick",
+            "release_date": "1987"
+        },
+        {
+            "title": "Empire of the Sun",
+            "release_date": "1987"
+        },
+        {
+            "title": "Superman IV: The Quest for Peace",
+            "release_date": "1987"
+        },
+        {
+            "title": "The Accidental Tourist",
+            "release_date": "1988"
+        },
+        {
+            "title": "Indiana Jones and the Last Crusade",
+            "release_date": "1989"
+        },
+        {
+            "title": "Born on the Fourth of July",
+            "release_date": "1989"
+        },
+        {
+            "title": "Always",
+            "release_date": "1989"
+        },
+        {
+            "title": "Stanley & Iris",
+            "release_date": "1990"
+        },
+        {
+            "title": "Presumed Innocent",
+            "release_date": "1990"
+        },
+        {
+            "title": "Home Alone",
+            "release_date": "1990"
+        },
+        {
+            "title": "Hook",
+            "release_date": "1991"
+        },
+        {
+            "title": "JFK",
+            "release_date": "1991"
+        },
+        {
+            "title": "Far and Away",
+            "release_date": "1992"
+        },
+        {
+            "title": "Home Alone 2: Lost in New York",
+            "release_date": "1992"
+        },
+        {
+            "title": "Jurassic Park",
+            "release_date": "1993"
+        },
+        {
+            "title": "Schindler's List",
+            "release_date": "1993"
+        },
+        {
+            "title": "Sabrina",
+            "release_date": "1995"
+        },
+        {
+            "title": "Nixon",
+            "release_date": "1995"
+        },
+        {
+            "title": "Sleepers",
+            "release_date": "1996"
+        },
+        {
+            "title": "Rosewood",
+            "release_date": "1997"
+        },
+        {
+            "title": "The Lost World: Jurassic Park",
+            "release_date": "1997"
+        },
+        {
+            "title": "Seven Years in Tibet",
+            "release_date": "1997"
+        },
+        {
+            "title": "Amistad",
+            "release_date": "1997"
+        },
+        {
+            "title": "Saving Private Ryan",
+            "release_date": "1998"
+        },
+        {
+            "title": "Stepmom",
+            "release_date": "1998"
+        },
+        {
+            "title": "Star Wars: Episode I – The Phantom Menace",
+            "release_date": "1999"
+        },
+        {
+            "title": "Angela's Ashes",
+            "release_date": "1999"
+        },
+        {
+            "title": "The Patriot",
+            "release_date": "2000"
+        },
+        {
+            "title": "A.I. Artificial Intelligence",
+            "release_date": "2001"
+        },
+        {
+            "title": "Harry Potter and the Philosopher's Stone",
+            "release_date": "2001"
+        },
+        {
+            "title": "Star Wars: Episode II – Attack of the Clones",
+            "release_date": "2002"
+        },
+        {
+            "title": "Minority Report",
+            "release_date": "2002"
+        },
+        {
+            "title": "Harry Potter and the Chamber of Secrets",
+            "release_date": "2002"
+        },
+        {
+            "title": "Catch Me If You Can",
+            "release_date": "2002"
+        },
+        {
+            "title": "Harry Potter and the Prisoner of Azkaban",
+            "release_date": "2004"
+        },
+        {
+            "title": "The Terminal",
+            "release_date": "2004"
+        },
+        {
+            "title": "Star Wars: Episode III – Revenge of the Sith",
+            "release_date": "2005"
+        },
+        {
+            "title": "War of the Worlds",
+            "release_date": "2005"
+        },
+        {
+            "title": "Memoirs of a Geisha",
+            "release_date": "2005"
+        },
+        {
+            "title": "Munich",
+            "release_date": "2005"
+        },
+        {
+            "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+            "release_date": "2008"
+        },
+        {
+            "title": "The Adventures of Tintin",
+            "release_date": "2011"
+        },
+        {
+            "title": "War Horse",
+            "release_date": "2011"
+        },
+        {
+            "title": "Lincoln",
+            "release_date": "2012"
+        },
+        {
+            "title": "The Book Thief",
+            "release_date": "2013"
+        },
+        {
+            "title": "Star Wars: The Force Awakens",
+            "release_date": "2015"
+        },
+        {
+            "title": "The BFG",
+            "release_date": "2016"
+        },
+        {
+            "title": "Star Wars: The Last Jedi",
+            "release_date": "2017"
+        },
+        {
+            "title": "The Post",
+            "release_date": "2017"
+        },
+        {
+            "title": "Solo: A Star Wars Story",
+            "release_date": "2018"
+        },
+        {
+            "title": "Star Wars: The Rise of Skywalker",
+            "release_date": "2019"
+        },
+        {
+            "title": "The Fabelmans",
+            "release_date": "2022"
+        },
+        {
+            "title": "Indiana Jones and the Dial of Destiny",
+            "release_date": "2023"
+        },
+        {
+            "title": "Disclosure Day",
+            "release_date": "2026"
+        }
+    ]
+}

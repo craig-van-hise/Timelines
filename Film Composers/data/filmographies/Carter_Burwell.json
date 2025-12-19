@@ -1,0 +1,409 @@
+{
+  "composer": "Carter Burwell",
+  "filmography": [
+    {
+      "title": "Blood Simple",
+      "release_date": "1984"
+    },
+    {
+      "title": "Psycho III",
+      "release_date": "1986"
+    },
+    {
+      "title": "Raising Arizona",
+      "release_date": "1987"
+    },
+    {
+      "title": "Pass the Ammo",
+      "release_date": "1987"
+    },
+    {
+      "title": "The Beat",
+      "release_date": "1987"
+    },
+    {
+      "title": "It Takes Two",
+      "release_date": "1988"
+    },
+    {
+      "title": "Checking Out",
+      "release_date": "1988"
+    },
+    {
+      "title": "Miller's Crossing",
+      "release_date": "1990"
+    },
+    {
+      "title": "Clash!",
+      "release_date": "1990"
+    },
+    {
+      "title": "Barton Fink",
+      "release_date": "1991"
+    },
+    {
+      "title": "Doc Hollywood",
+      "release_date": "1991"
+    },
+    {
+      "title": "Scorchers",
+      "release_date": "1991"
+    },
+    {
+      "title": "Buffy the Vampire Slayer",
+      "release_date": "1992"
+    },
+    {
+      "title": "Waterland",
+      "release_date": "1992"
+    },
+    {
+      "title": "Storyville",
+      "release_date": "1992"
+    },
+    {
+      "title": "This Boy's Life",
+      "release_date": "1993"
+    },
+    {
+      "title": "Kalifornia",
+      "release_date": "1993"
+    },
+    {
+      "title": "A Dangerous Woman",
+      "release_date": "1993"
+    },
+    {
+      "title": "Wayne's World 2",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Hudsucker Proxy",
+      "release_date": "1994"
+    },
+    {
+      "title": "It Could Happen to You",
+      "release_date": "1994"
+    },
+    {
+      "title": "Airheads",
+      "release_date": "1994"
+    },
+    {
+      "title": "Bad Company",
+      "release_date": "1995"
+    },
+    {
+      "title": "A Goofy Movie",
+      "release_date": "1995"
+    },
+    {
+      "title": "Rob Roy",
+      "release_date": "1995"
+    },
+    {
+      "title": "Two Bits",
+      "release_date": "1995"
+    },
+    {
+      "title": "Fargo",
+      "release_date": "1996"
+    },
+    {
+      "title": "Fear",
+      "release_date": "1996"
+    },
+    {
+      "title": "Joe's Apartment",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Chamber",
+      "release_date": "1996"
+    },
+    {
+      "title": "Picture Perfect",
+      "release_date": "1997"
+    },
+    {
+      "title": "Assassin(s)",
+      "release_date": "1997"
+    },
+    {
+      "title": "Conspiracy Theory",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Locusts",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Spanish Prisoner",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Jackal",
+      "release_date": "1997"
+    },
+    {
+      "title": "Gods and Monsters",
+      "release_date": "1998"
+    },
+    {
+      "title": "Mercury Rising",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Big Lebowski",
+      "release_date": "1998"
+    },
+    {
+      "title": "Velvet Goldmine",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Hi-Lo Country",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Corruptor",
+      "release_date": "1999"
+    },
+    {
+      "title": "The General's Daughter",
+      "release_date": "1999"
+    },
+    {
+      "title": "Being John Malkovich",
+      "release_date": "1999"
+    },
+    {
+      "title": "Three Kings",
+      "release_date": "1999"
+    },
+    {
+      "title": "Mystery, Alaska",
+      "release_date": "1999"
+    },
+    {
+      "title": "Hamlet",
+      "release_date": "2000"
+    },
+    {
+      "title": "What Planet Are You From?",
+      "release_date": "2000"
+    },
+    {
+      "title": "O Brother, Where Art Thou?",
+      "release_date": "2000"
+    },
+    {
+      "title": "Before Night Falls",
+      "release_date": "2000"
+    },
+    {
+      "title": "Book of Shadows: Blair Witch 2",
+      "release_date": "2000"
+    },
+    {
+      "title": "A Knight's Tale",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Man Who Wasn't There",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Rookie",
+      "release_date": "2002"
+    },
+    {
+      "title": "Searching for Paradise",
+      "release_date": "2002"
+    },
+    {
+      "title": "Simone",
+      "release_date": "2002"
+    },
+    {
+      "title": "Adaptation",
+      "release_date": "2002"
+    },
+    {
+      "title": "Intolerable Cruelty",
+      "release_date": "2003"
+    },
+    {
+      "title": "The Ladykillers",
+      "release_date": "2004"
+    },
+    {
+      "title": "The Alamo",
+      "release_date": "2004"
+    },
+    {
+      "title": "Kinsey",
+      "release_date": "2004"
+    },
+    {
+      "title": "Fur",
+      "release_date": "2006"
+    },
+    {
+      "title": "The Hoax",
+      "release_date": "2006"
+    },
+    {
+      "title": "No Country for Old Men",
+      "release_date": "2007"
+    },
+    {
+      "title": "Before the Devil Knows You're Dead",
+      "release_date": "2007"
+    },
+    {
+      "title": "In Bruges",
+      "release_date": "2008"
+    },
+    {
+      "title": "Burn After Reading",
+      "release_date": "2008"
+    },
+    {
+      "title": "Twilight",
+      "release_date": "2008"
+    },
+    {
+      "title": "A Serious Man",
+      "release_date": "2009"
+    },
+    {
+      "title": "Where the Wild Things Are",
+      "release_date": "2009"
+    },
+    {
+      "title": "The Blind Side",
+      "release_date": "2009"
+    },
+    {
+      "title": "Howl",
+      "release_date": "2010"
+    },
+    {
+      "title": "The Kids Are All Right",
+      "release_date": "2010"
+    },
+    {
+      "title": "True Grit",
+      "release_date": "2010"
+    },
+    {
+      "title": "The Twilight Saga: Breaking Dawn \u2013 Part 1",
+      "release_date": "2011"
+    },
+    {
+      "title": "Enlightened",
+      "release_date": "2011"
+    },
+    {
+      "title": "Seven Psychopaths",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Twilight Saga: Breaking Dawn \u2013 Part 2",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Fifth Estate",
+      "release_date": "2013"
+    },
+    {
+      "title": "Mr. Holmes",
+      "release_date": "2015"
+    },
+    {
+      "title": "Carol",
+      "release_date": "2015"
+    },
+    {
+      "title": "The Family Fang",
+      "release_date": "2015"
+    },
+    {
+      "title": "Legend",
+      "release_date": "2015"
+    },
+    {
+      "title": "Anomalisa",
+      "release_date": "2015"
+    },
+    {
+      "title": "The Finest Hours",
+      "release_date": "2016"
+    },
+    {
+      "title": "Hail, Caesar!",
+      "release_date": "2016"
+    },
+    {
+      "title": "The Founder",
+      "release_date": "2016"
+    },
+    {
+      "title": "Wonderstruck",
+      "release_date": "2017"
+    },
+    {
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "release_date": "2017"
+    },
+    {
+      "title": "Goodbye Christopher Robin",
+      "release_date": "2017"
+    },
+    {
+      "title": "The Ballad of Buster Scruggs",
+      "release_date": "2018"
+    },
+    {
+      "title": "Missing Link",
+      "release_date": "2019"
+    },
+    {
+      "title": "The Good Liar",
+      "release_date": "2019"
+    },
+    {
+      "title": "Space Force",
+      "release_date": "2020"
+    },
+    {
+      "title": "The Tragedy of Macbeth",
+      "release_date": "2021"
+    },
+    {
+      "title": "Catherine Called Birdy",
+      "release_date": "2022"
+    },
+    {
+      "title": "The Banshees of Inisherin",
+      "release_date": "2022"
+    },
+    {
+      "title": "To Catch a Killer",
+      "release_date": "2023"
+    },
+    {
+      "title": "Drive-Away Dolls",
+      "release_date": "2024"
+    },
+    {
+      "title": "Honey Don't!",
+      "release_date": "2025"
+    },
+    {
+      "title": "Good Fortune",
+      "release_date": "2025"
+    }
+  ]
+}

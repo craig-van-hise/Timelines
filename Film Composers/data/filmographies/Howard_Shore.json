@@ -1,0 +1,357 @@
+{
+  "composer": "Howard Shore",
+  "filmography": [
+    {
+      "title": "I Miss You, Hugs and Kisses",
+      "release_date": "1978"
+    },
+    {
+      "title": "The Brood",
+      "release_date": "1979"
+    },
+    {
+      "title": "Scanners",
+      "release_date": "1981"
+    },
+    {
+      "title": "Videodrome",
+      "release_date": "1983"
+    },
+    {
+      "title": "Nothing Lasts Forever",
+      "release_date": "1984"
+    },
+    {
+      "title": "Places in the Heart",
+      "release_date": "1984"
+    },
+    {
+      "title": "After Hours",
+      "release_date": "1985"
+    },
+    {
+      "title": "Fire with Fire",
+      "release_date": "1986"
+    },
+    {
+      "title": "The Fly",
+      "release_date": "1986"
+    },
+    {
+      "title": "Nadine",
+      "release_date": "1987"
+    },
+    {
+      "title": "Moving",
+      "release_date": "1988"
+    },
+    {
+      "title": "Big",
+      "release_date": "1988"
+    },
+    {
+      "title": "Dead Ringers",
+      "release_date": "1988"
+    },
+    {
+      "title": "Signs of Life",
+      "release_date": "1989"
+    },
+    {
+      "title": "An Innocent Man",
+      "release_date": "1989"
+    },
+    {
+      "title": "The Lemon Sisters",
+      "release_date": "1989"
+    },
+    {
+      "title": "She-Devil",
+      "release_date": "1989"
+    },
+    {
+      "title": "Postcards from the Edge",
+      "release_date": "1990"
+    },
+    {
+      "title": "The Local Stigmatic",
+      "release_date": "1990"
+    },
+    {
+      "title": "Quick Change",
+      "release_date": "1990"
+    },
+    {
+      "title": "A Kiss Before Dying",
+      "release_date": "1991"
+    },
+    {
+      "title": "The Silence of the Lambs",
+      "release_date": "1991"
+    },
+    {
+      "title": "Naked Lunch",
+      "release_date": "1991"
+    },
+    {
+      "title": "Prelude to a Kiss",
+      "release_date": "1992"
+    },
+    {
+      "title": "Single White Female",
+      "release_date": "1992"
+    },
+    {
+      "title": "Sliver",
+      "release_date": "1993"
+    },
+    {
+      "title": "Guilty as Sin",
+      "release_date": "1993"
+    },
+    {
+      "title": "M. Butterfly",
+      "release_date": "1993"
+    },
+    {
+      "title": "Mrs. Doubtfire",
+      "release_date": "1993"
+    },
+    {
+      "title": "Philadelphia",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Client",
+      "release_date": "1994"
+    },
+    {
+      "title": "Ed Wood",
+      "release_date": "1994"
+    },
+    {
+      "title": "Nobody's Fool",
+      "release_date": "1994"
+    },
+    {
+      "title": "Seven",
+      "release_date": "1995"
+    },
+    {
+      "title": "Moonlight and Valentino",
+      "release_date": "1995"
+    },
+    {
+      "title": "White Man's Burden",
+      "release_date": "1995"
+    },
+    {
+      "title": "Before and After",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Truth About Cats & Dogs",
+      "release_date": "1996"
+    },
+    {
+      "title": "Ransom",
+      "release_date": "1996"
+    },
+    {
+      "title": "Crash",
+      "release_date": "1996"
+    },
+    {
+      "title": "Striptease",
+      "release_date": "1996"
+    },
+    {
+      "title": "That Thing You Do!",
+      "release_date": "1996"
+    },
+    {
+      "title": "Cop Land",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Game",
+      "release_date": "1997"
+    },
+    {
+      "title": "Gloria",
+      "release_date": "1999"
+    },
+    {
+      "title": "eXistenZ",
+      "release_date": "1999"
+    },
+    {
+      "title": "Analyze This",
+      "release_date": "1999"
+    },
+    {
+      "title": "Dogma",
+      "release_date": "1999"
+    },
+    {
+      "title": "High Fidelity",
+      "release_date": "2000"
+    },
+    {
+      "title": "The Yards",
+      "release_date": "2000"
+    },
+    {
+      "title": "Esther Kahn",
+      "release_date": "2000"
+    },
+    {
+      "title": "The Cell",
+      "release_date": "2000"
+    },
+    {
+      "title": "The Score",
+      "release_date": "2001"
+    },
+    {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "release_date": "2001"
+    },
+    {
+      "title": "Panic Room",
+      "release_date": "2002"
+    },
+    {
+      "title": "Spider",
+      "release_date": "2002"
+    },
+    {
+      "title": "The Lord of the Rings: The Two Towers",
+      "release_date": "2002"
+    },
+    {
+      "title": "Gangs of New York",
+      "release_date": "2002"
+    },
+    {
+      "title": "The Lord of the Rings: The Return of the King",
+      "release_date": "2003"
+    },
+    {
+      "title": "The Aviator",
+      "release_date": "2004"
+    },
+    {
+      "title": "A History of Violence",
+      "release_date": "2005"
+    },
+    {
+      "title": "King Kong",
+      "release_date": "2005"
+    },
+    {
+      "title": "The Departed",
+      "release_date": "2006"
+    },
+    {
+      "title": "The Last Mimzy",
+      "release_date": "2007"
+    },
+    {
+      "title": "To Each His Own Cinema",
+      "release_date": "2007"
+    },
+    {
+      "title": "Eastern Promises",
+      "release_date": "2007"
+    },
+    {
+      "title": "Doubt",
+      "release_date": "2008"
+    },
+    {
+      "title": "Edge of Darkness",
+      "release_date": "2010"
+    },
+    {
+      "title": "The Twilight Saga: Eclipse",
+      "release_date": "2010"
+    },
+    {
+      "title": "A Dangerous Method",
+      "release_date": "2011"
+    },
+    {
+      "title": "Hugo",
+      "release_date": "2011"
+    },
+    {
+      "title": "Cosmopolis",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Hobbit: An Unexpected Journey",
+      "release_date": "2012"
+    },
+    {
+      "title": "Jimmy P: Psychotherapy of a Plains Indian",
+      "release_date": "2013"
+    },
+    {
+      "title": "The Hobbit: The Desolation of Smaug",
+      "release_date": "2013"
+    },
+    {
+      "title": "Maps to the Stars",
+      "release_date": "2014"
+    },
+    {
+      "title": "Rosewater",
+      "release_date": "2014"
+    },
+    {
+      "title": "The Hobbit: The Battle of the Five Armies",
+      "release_date": "2014"
+    },
+    {
+      "title": "Spotlight",
+      "release_date": "2015"
+    },
+    {
+      "title": "Denial",
+      "release_date": "2016"
+    },
+    {
+      "title": "The Catcher Was a Spy",
+      "release_date": "2018"
+    },
+    {
+      "title": "The Song of Names",
+      "release_date": "2019"
+    },
+    {
+      "title": "Le prince oubli\u00e9",
+      "release_date": "2020"
+    },
+    {
+      "title": "Pieces of a Woman",
+      "release_date": "2020"
+    },
+    {
+      "title": "Funny Boy",
+      "release_date": "2020"
+    },
+    {
+      "title": "Crimes of the Future",
+      "release_date": "2022"
+    },
+    {
+      "title": "The Pale Blue Eye",
+      "release_date": "2022"
+    },
+    {
+      "title": "The Shrouds",
+      "release_date": "2025"
+    }
+  ]
+}

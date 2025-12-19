@@ -1,0 +1,425 @@
+{
+  "composer": "David Raksin",
+  "filmography": [
+    {
+      "title": "Thumbs Up!",
+      "release_date": "1934"
+    },
+    {
+      "title": "Parade",
+      "release_date": "1935"
+    },
+    {
+      "title": "At Home Abroad",
+      "release_date": "1935"
+    },
+    {
+      "title": "Modern Times (arranger)",
+      "release_date": "1936"
+    },
+    {
+      "title": "New Faces of 1936",
+      "release_date": "1936"
+    },
+    {
+      "title": "The Adventures of Sherlock Holmes",
+      "release_date": "1939"
+    },
+    {
+      "title": "Stanley and Livingstone",
+      "release_date": "1939"
+    },
+    {
+      "title": "The Hound of the Baskervilles",
+      "release_date": "1939"
+    },
+    {
+      "title": "The Men in Her Life",
+      "release_date": "1941"
+    },
+    {
+      "title": "City Without Men",
+      "release_date": "1943"
+    },
+    {
+      "title": "Laura",
+      "release_date": "1944"
+    },
+    {
+      "title": "Tampico",
+      "release_date": "1944"
+    },
+    {
+      "title": "Fallen Angel",
+      "release_date": "1945"
+    },
+    {
+      "title": "Smoky",
+      "release_date": "1946"
+    },
+    {
+      "title": "If the Shoe Fits",
+      "release_date": "1946"
+    },
+    {
+      "title": "Daisy Kenyon",
+      "release_date": "1947"
+    },
+    {
+      "title": "Forever Amber",
+      "release_date": "1947"
+    },
+    {
+      "title": "The Secret Life of Walter Mitty",
+      "release_date": "1947"
+    },
+    {
+      "title": "Force of Evil",
+      "release_date": "1948"
+    },
+    {
+      "title": "Apartment for Peggy",
+      "release_date": "1948"
+    },
+    {
+      "title": "Fury at Furnace Creek",
+      "release_date": "1948"
+    },
+    {
+      "title": "The Next Voice You Hear...",
+      "release_date": "1950"
+    },
+    {
+      "title": "The Magnificent Yankee",
+      "release_date": "1950"
+    },
+    {
+      "title": "Whirlpool",
+      "release_date": "1950"
+    },
+    {
+      "title": "The Man with a Cloak",
+      "release_date": "1951"
+    },
+    {
+      "title": "Across the Wide Missouri",
+      "release_date": "1951"
+    },
+    {
+      "title": "Kind Lady",
+      "release_date": "1951"
+    },
+    {
+      "title": "The Bad and the Beautiful",
+      "release_date": "1952"
+    },
+    {
+      "title": "Madeline (cartoon)",
+      "release_date": "1952"
+    },
+    {
+      "title": "Carrie",
+      "release_date": "1952"
+    },
+    {
+      "title": "Pat and Mike",
+      "release_date": "1952"
+    },
+    {
+      "title": "The Unicorn in the Garden",
+      "release_date": "1953"
+    },
+    {
+      "title": "Suddenly",
+      "release_date": "1954"
+    },
+    {
+      "title": "Apache",
+      "release_date": "1954"
+    },
+    {
+      "title": "Seven Wonders of the World",
+      "release_date": "1955"
+    },
+    {
+      "title": "The Big Combo",
+      "release_date": "1955"
+    },
+    {
+      "title": "Bigger Than Life",
+      "release_date": "1956"
+    },
+    {
+      "title": "Hilda Crane",
+      "release_date": "1956"
+    },
+    {
+      "title": "Jubal",
+      "release_date": "1956"
+    },
+    {
+      "title": "Until They Sail",
+      "release_date": "1957"
+    },
+    {
+      "title": "Gunsight Ridge",
+      "release_date": "1957"
+    },
+    {
+      "title": "Man on Fire",
+      "release_date": "1957"
+    },
+    {
+      "title": "The Vintage",
+      "release_date": "1957"
+    },
+    {
+      "title": "Separate Tables",
+      "release_date": "1958"
+    },
+    {
+      "title": "Twilight for the Gods",
+      "release_date": "1958"
+    },
+    {
+      "title": "Al Capone",
+      "release_date": "1959"
+    },
+    {
+      "title": "Pay or Die",
+      "release_date": "1960"
+    },
+    {
+      "title": "Too Late Blues",
+      "release_date": "1961"
+    },
+    {
+      "title": "Night Tide",
+      "release_date": "1961"
+    },
+    {
+      "title": "Two Weeks in Another Town",
+      "release_date": "1962"
+    },
+    {
+      "title": "Invitation to a Gunfighter",
+      "release_date": "1964"
+    },
+    {
+      "title": "The Patsy",
+      "release_date": "1964"
+    },
+    {
+      "title": "Love Has Many Faces",
+      "release_date": "1965"
+    },
+    {
+      "title": "Sylvia",
+      "release_date": "1965"
+    },
+    {
+      "title": "A Big Hand for the Little Lady",
+      "release_date": "1966"
+    },
+    {
+      "title": "Will Penny",
+      "release_date": "1968"
+    },
+    {
+      "title": "The Over-the-Hill Gang Rides Again",
+      "release_date": "1970"
+    },
+    {
+      "title": "What's the Matter with Helen?",
+      "release_date": "1971"
+    },
+    {
+      "title": "Glass Houses",
+      "release_date": "1972"
+    },
+    {
+      "title": "Bernard Herrmann",
+      "release_date": "1973"
+    },
+    {
+      "title": "David Raksin",
+      "release_date": "1976"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "1977"
+    },
+    {
+      "title": "The Ghost of Flight 401",
+      "release_date": "1978"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "1978"
+    },
+    {
+      "title": "Mikl\u00f3s R\u00f3zsa",
+      "release_date": "1979"
+    },
+    {
+      "title": "John Barry",
+      "release_date": "1980"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "1981"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "1982"
+    },
+    {
+      "title": "The Day After",
+      "release_date": "1983"
+    },
+    {
+      "title": "James Horner",
+      "release_date": "1983"
+    },
+    {
+      "title": "Jerry Goldsmith",
+      "release_date": "1984"
+    },
+    {
+      "title": "Bruce Broughton",
+      "release_date": "1985"
+    },
+    {
+      "title": "Alan Menken",
+      "release_date": "1986"
+    },
+    {
+      "title": "Alan Silvestri",
+      "release_date": "1987"
+    },
+    {
+      "title": "Streaming audio interview with Raksin, by Charles Amirkhanian, January 28,",
+      "release_date": "1988"
+    },
+    {
+      "title": "David Raksin interview by Bruce Duffie, May",
+      "release_date": "1988"
+    },
+    {
+      "title": "Christopher Young",
+      "release_date": "1988"
+    },
+    {
+      "title": "Loek Dikker",
+      "release_date": "1991"
+    },
+    {
+      "title": "Angelo Badalamenti",
+      "release_date": "1992"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "1993"
+    },
+    {
+      "title": "Howard Shore",
+      "release_date": "1994"
+    },
+    {
+      "title": "John Ottman",
+      "release_date": "1995"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "1996"
+    },
+    {
+      "title": "Dream",
+      "release_date": "1997"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "1997"
+    },
+    {
+      "title": "John Carpenter",
+      "release_date": "1998"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "1999"
+    },
+    {
+      "title": "James Horner",
+      "release_date": "2000"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "2001"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "2002"
+    },
+    {
+      "title": "Howard Shore",
+      "release_date": "2003"
+    },
+    {
+      "title": "Alan Silvestri",
+      "release_date": "2004"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "2005"
+    },
+    {
+      "title": "John Ottman",
+      "release_date": "2006"
+    },
+    {
+      "title": "Alan Menken",
+      "release_date": "2007"
+    },
+    {
+      "title": "James Newton Howard and Hans Zimmer",
+      "release_date": "2008"
+    },
+    {
+      "title": "James Horner",
+      "release_date": "2009"
+    },
+    {
+      "title": "Hans Zimmer",
+      "release_date": "2010"
+    },
+    {
+      "title": "Michael Giacchino",
+      "release_date": "2011"
+    },
+    {
+      "title": "Danny Elfman",
+      "release_date": "2012"
+    },
+    {
+      "title": "Frank Ilfman",
+      "release_date": "2013"
+    },
+    {
+      "title": "Hans Zimmer",
+      "release_date": "2014"
+    },
+    {
+      "title": "John Williams",
+      "release_date": "2015"
+    },
+    {
+      "title": "Justin Hurwitz",
+      "release_date": "2016"
+    },
+    {
+      "title": "Michael Giacchino",
+      "release_date": "2017"
+    }
+  ]
+}

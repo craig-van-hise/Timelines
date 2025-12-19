@@ -1,0 +1,393 @@
+{
+  "composer": "Shirley Walker",
+  "filmography": [
+    {
+      "title": "The Black Stallion",
+      "release_date": "1979"
+    },
+    {
+      "title": "Lou Grant",
+      "release_date": "1980"
+    },
+    {
+      "title": "Murder in Coweta Country (TV)",
+      "release_date": "1980"
+    },
+    {
+      "title": "Amber Waves (TV)",
+      "release_date": "1980"
+    },
+    {
+      "title": "Cagney & Lacey",
+      "release_date": "1981"
+    },
+    {
+      "title": "The End of August",
+      "release_date": "1982"
+    },
+    {
+      "title": "Tucker's Witch",
+      "release_date": "1982"
+    },
+    {
+      "title": "Touched",
+      "release_date": "1983"
+    },
+    {
+      "title": "Right of Way (TV)",
+      "release_date": "1983"
+    },
+    {
+      "title": "Metalstorm: The Destruction of Jared-Syn",
+      "release_date": "1983"
+    },
+    {
+      "title": "Swordkill",
+      "release_date": "1983"
+    },
+    {
+      "title": "Cujo",
+      "release_date": "1983"
+    },
+    {
+      "title": "The Dungeonmaster",
+      "release_date": "1984"
+    },
+    {
+      "title": "Violated",
+      "release_date": "1984"
+    },
+    {
+      "title": "Falcon Crest",
+      "release_date": "1984"
+    },
+    {
+      "title": "Ragewar",
+      "release_date": "1984"
+    },
+    {
+      "title": "Anatomy of an Illness (TV)",
+      "release_date": "1984"
+    },
+    {
+      "title": "Ghoulies",
+      "release_date": "1985"
+    },
+    {
+      "title": "Berrenger's",
+      "release_date": "1985"
+    },
+    {
+      "title": "Fluppy Dogs",
+      "release_date": "1986"
+    },
+    {
+      "title": "Children of a Lesser God",
+      "release_date": "1986"
+    },
+    {
+      "title": "Malone",
+      "release_date": "1987"
+    },
+    {
+      "title": "Knots Landing",
+      "release_date": "1988"
+    },
+    {
+      "title": "The Accused",
+      "release_date": "1988"
+    },
+    {
+      "title": "Scrooged",
+      "release_date": "1988"
+    },
+    {
+      "title": "Ernest Saves Christmas",
+      "release_date": "1988"
+    },
+    {
+      "title": "Little Miss 4th of July (TV)",
+      "release_date": "1988"
+    },
+    {
+      "title": "Nightbreed",
+      "release_date": "1989"
+    },
+    {
+      "title": "National Lampoon's Christmas Vacation",
+      "release_date": "1989"
+    },
+    {
+      "title": "Batman",
+      "release_date": "1989"
+    },
+    {
+      "title": "Fletch Lives",
+      "release_date": "1989"
+    },
+    {
+      "title": "Immediate Family",
+      "release_date": "1989"
+    },
+    {
+      "title": "Red Earth, White Earth (TV)",
+      "release_date": "1989"
+    },
+    {
+      "title": "Paint It Black",
+      "release_date": "1989"
+    },
+    {
+      "title": "Kill Me Again",
+      "release_date": "1989"
+    },
+    {
+      "title": "Black Rain",
+      "release_date": "1989"
+    },
+    {
+      "title": "Chicago Joe and the Showgirl",
+      "release_date": "1990"
+    },
+    {
+      "title": "Pacific Heights",
+      "release_date": "1990"
+    },
+    {
+      "title": "Strike It Rich",
+      "release_date": "1990"
+    },
+    {
+      "title": "Tiny Toons",
+      "release_date": "1990"
+    },
+    {
+      "title": "The Flash",
+      "release_date": "1990"
+    },
+    {
+      "title": "Teenage Mutant Ninja Turtles",
+      "release_date": "1990"
+    },
+    {
+      "title": "Nightbreed",
+      "release_date": "1990"
+    },
+    {
+      "title": "Dick Tracy",
+      "release_date": "1990"
+    },
+    {
+      "title": "Darkman",
+      "release_date": "1990"
+    },
+    {
+      "title": "Edward Scissorhands",
+      "release_date": "1990"
+    },
+    {
+      "title": "Defending Your Life",
+      "release_date": "1990"
+    },
+    {
+      "title": "Arachnophobia",
+      "release_date": "1990"
+    },
+    {
+      "title": "El Diablo (TV)",
+      "release_date": "1990"
+    },
+    {
+      "title": "Child's Play 2",
+      "release_date": "1990"
+    },
+    {
+      "title": "Bird on a Wire",
+      "release_date": "1990"
+    },
+    {
+      "title": "Days of Thunder",
+      "release_date": "1990"
+    },
+    {
+      "title": "Born to Ride",
+      "release_date": "1991"
+    },
+    {
+      "title": "White Fang",
+      "release_date": "1991"
+    },
+    {
+      "title": "The Butcher's Wife",
+      "release_date": "1991"
+    },
+    {
+      "title": "True Identity",
+      "release_date": "1991"
+    },
+    {
+      "title": "Backdraft",
+      "release_date": "1991"
+    },
+    {
+      "title": "Memoirs of an Invisible Man",
+      "release_date": "1992"
+    },
+    {
+      "title": "Batman: The Animated Series",
+      "release_date": "1992"
+    },
+    {
+      "title": "Article 99",
+      "release_date": "1992"
+    },
+    {
+      "title": "Gladiator",
+      "release_date": "1992"
+    },
+    {
+      "title": "Straight Talk",
+      "release_date": "1992"
+    },
+    {
+      "title": "Radio Flyer",
+      "release_date": "1992"
+    },
+    {
+      "title": "A League of Their Own",
+      "release_date": "1992"
+    },
+    {
+      "title": "Toys",
+      "release_date": "1992"
+    },
+    {
+      "title": "Batman: Mask of the Phantasm",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Real McCoy",
+      "release_date": "1993"
+    },
+    {
+      "title": "Striking Distance",
+      "release_date": "1993"
+    },
+    {
+      "title": "True Lies",
+      "release_date": "1994"
+    },
+    {
+      "title": "M.A.N.T.I.S.",
+      "release_date": "1994"
+    },
+    {
+      "title": "Viper",
+      "release_date": "1994"
+    },
+    {
+      "title": "Renaissance Man",
+      "release_date": "1994"
+    },
+    {
+      "title": "Space: Above and Beyond",
+      "release_date": "1995"
+    },
+    {
+      "title": "The Adventures of Captain Zoom in Outer Space",
+      "release_date": "1995"
+    },
+    {
+      "title": "Bad Company",
+      "release_date": "1995"
+    },
+    {
+      "title": "A Goofy Movie",
+      "release_date": "1995"
+    },
+    {
+      "title": "Johnny Mnemonic",
+      "release_date": "1995"
+    },
+    {
+      "title": "Batman Forever",
+      "release_date": "1995"
+    },
+    {
+      "title": "Free Willy 2: The Adventure Home",
+      "release_date": "1995"
+    },
+    {
+      "title": "Escape from L.A.",
+      "release_date": "1996"
+    },
+    {
+      "title": "Superman: The Animated Series",
+      "release_date": "1996"
+    },
+    {
+      "title": "Fear",
+      "release_date": "1996"
+    },
+    {
+      "title": "Eden",
+      "release_date": "1996"
+    },
+    {
+      "title": "Rasputin (TV)",
+      "release_date": "1996"
+    },
+    {
+      "title": "Turbulence",
+      "release_date": "1997"
+    },
+    {
+      "title": "Spawn: The Animated Series",
+      "release_date": "1997"
+    },
+    {
+      "title": "The Love Bug",
+      "release_date": "1997"
+    },
+    {
+      "title": "Baby Monitor: Sound of Fear",
+      "release_date": "1998"
+    },
+    {
+      "title": "Mystery Men",
+      "release_date": "1999"
+    },
+    {
+      "title": "Final Destination",
+      "release_date": "2000"
+    },
+    {
+      "title": "The Others",
+      "release_date": "2000"
+    },
+    {
+      "title": "Ritual",
+      "release_date": "2002"
+    },
+    {
+      "title": "Disappearance",
+      "release_date": "2002"
+    },
+    {
+      "title": "Final Destination 2",
+      "release_date": "2003"
+    },
+    {
+      "title": "Willard",
+      "release_date": "2003"
+    },
+    {
+      "title": "Final Destination 3",
+      "release_date": "2006"
+    },
+    {
+      "title": "Black Christmas",
+      "release_date": "2006"
+    }
+  ]
+}

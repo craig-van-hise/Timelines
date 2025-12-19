@@ -1,0 +1,493 @@
+{
+  "composer": "James Horner",
+  "filmography": [
+    {
+      "title": "The Drought",
+      "release_date": "1978"
+    },
+    {
+      "title": "Fantasies",
+      "release_date": "1978"
+    },
+    {
+      "title": "Gist and Evans",
+      "release_date": "1978"
+    },
+    {
+      "title": "Landscapes",
+      "release_date": "1978"
+    },
+    {
+      "title": "Just for a Laugh",
+      "release_date": "1978"
+    },
+    {
+      "title": "The Watcher",
+      "release_date": "1978"
+    },
+    {
+      "title": "The Lady in Red",
+      "release_date": "1979"
+    },
+    {
+      "title": "Up from the Depths",
+      "release_date": "1979"
+    },
+    {
+      "title": "Humanoids from the Deep",
+      "release_date": "1980"
+    },
+    {
+      "title": "Battle Beyond the Stars",
+      "release_date": "1980"
+    },
+    {
+      "title": "The Hand",
+      "release_date": "1981"
+    },
+    {
+      "title": "Wolfen",
+      "release_date": "1981"
+    },
+    {
+      "title": "Deadly Blessing",
+      "release_date": "1981"
+    },
+    {
+      "title": "The Pursuit of D. B. Cooper",
+      "release_date": "1981"
+    },
+    {
+      "title": "Star Trek II: The Wrath of Khan",
+      "release_date": "1982"
+    },
+    {
+      "title": "48 Hrs.",
+      "release_date": "1982"
+    },
+    {
+      "title": "Space Raiders",
+      "release_date": "1983"
+    },
+    {
+      "title": "Something Wicked This Way Comes",
+      "release_date": "1983"
+    },
+    {
+      "title": "Krull",
+      "release_date": "1983"
+    },
+    {
+      "title": "Brainstorm",
+      "release_date": "1983"
+    },
+    {
+      "title": "Testament",
+      "release_date": "1983"
+    },
+    {
+      "title": "The Dresser",
+      "release_date": "1983"
+    },
+    {
+      "title": "Gorky Park",
+      "release_date": "1983"
+    },
+    {
+      "title": "Uncommon Valor",
+      "release_date": "1983"
+    },
+    {
+      "title": "The Stone Boy",
+      "release_date": "1984"
+    },
+    {
+      "title": "Star Trek III: The Search for Spock",
+      "release_date": "1984"
+    },
+    {
+      "title": "Heaven Help Us",
+      "release_date": "1985"
+    },
+    {
+      "title": "Cocoon",
+      "release_date": "1985"
+    },
+    {
+      "title": "Volunteers",
+      "release_date": "1985"
+    },
+    {
+      "title": "The Journey of Natty Gann",
+      "release_date": "1985"
+    },
+    {
+      "title": "Commando",
+      "release_date": "1985"
+    },
+    {
+      "title": "Off Beat",
+      "release_date": "1986"
+    },
+    {
+      "title": "Aliens",
+      "release_date": "1986"
+    },
+    {
+      "title": "Where the River Runs Black",
+      "release_date": "1986"
+    },
+    {
+      "title": "The Name of the Rose",
+      "release_date": "1986"
+    },
+    {
+      "title": "An American Tail",
+      "release_date": "1986"
+    },
+    {
+      "title": "P.K. and the Kid",
+      "release_date": "1987"
+    },
+    {
+      "title": "Project X",
+      "release_date": "1987"
+    },
+    {
+      "title": "*batteries not included",
+      "release_date": "1987"
+    },
+    {
+      "title": "Willow",
+      "release_date": "1988"
+    },
+    {
+      "title": "Red Heat",
+      "release_date": "1988"
+    },
+    {
+      "title": "Vibes",
+      "release_date": "1988"
+    },
+    {
+      "title": "The Land Before Time",
+      "release_date": "1988"
+    },
+    {
+      "title": "Cocoon: The Return",
+      "release_date": "1988"
+    },
+    {
+      "title": "Field of Dreams",
+      "release_date": "1989"
+    },
+    {
+      "title": "Honey, I Shrunk the Kids",
+      "release_date": "1989"
+    },
+    {
+      "title": "In Country",
+      "release_date": "1989"
+    },
+    {
+      "title": "Dad",
+      "release_date": "1989"
+    },
+    {
+      "title": "Glory",
+      "release_date": "1989"
+    },
+    {
+      "title": "I Love You to Death",
+      "release_date": "1990"
+    },
+    {
+      "title": "Another 48 Hrs.",
+      "release_date": "1990"
+    },
+    {
+      "title": "Once Around",
+      "release_date": "1991"
+    },
+    {
+      "title": "My Heroes Have Always Been Cowboys",
+      "release_date": "1991"
+    },
+    {
+      "title": "Class Action",
+      "release_date": "1991"
+    },
+    {
+      "title": "The Rocketeer",
+      "release_date": "1991"
+    },
+    {
+      "title": "An American Tail: Fievel Goes West",
+      "release_date": "1991"
+    },
+    {
+      "title": "Thunderheart",
+      "release_date": "1992"
+    },
+    {
+      "title": "Sneakers",
+      "release_date": "1992"
+    },
+    {
+      "title": "Unlawful Entry",
+      "release_date": "1992"
+    },
+    {
+      "title": "Patriot Games",
+      "release_date": "1992"
+    },
+    {
+      "title": "Swing Kids",
+      "release_date": "1993"
+    },
+    {
+      "title": "A Far Off Place",
+      "release_date": "1993"
+    },
+    {
+      "title": "Jack the Bear",
+      "release_date": "1993"
+    },
+    {
+      "title": "Once Upon a Forest",
+      "release_date": "1993"
+    },
+    {
+      "title": "House of Cards",
+      "release_date": "1993"
+    },
+    {
+      "title": "Hocus Pocus",
+      "release_date": "1993"
+    },
+    {
+      "title": "Searching for Bobby Fischer",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Man Without a Face",
+      "release_date": "1993"
+    },
+    {
+      "title": "Bopha!",
+      "release_date": "1993"
+    },
+    {
+      "title": "We're Back! A Dinosaur's Story",
+      "release_date": "1993"
+    },
+    {
+      "title": "The Pelican Brief",
+      "release_date": "1993"
+    },
+    {
+      "title": "Clear and Present Danger",
+      "release_date": "1994"
+    },
+    {
+      "title": "The Pagemaster",
+      "release_date": "1994"
+    },
+    {
+      "title": "Legends of the Fall",
+      "release_date": "1994"
+    },
+    {
+      "title": "Braveheart",
+      "release_date": "1995"
+    },
+    {
+      "title": "Casper",
+      "release_date": "1995"
+    },
+    {
+      "title": "Apollo 13",
+      "release_date": "1995"
+    },
+    {
+      "title": "Jade",
+      "release_date": "1995"
+    },
+    {
+      "title": "Jumanji",
+      "release_date": "1995"
+    },
+    {
+      "title": "Balto",
+      "release_date": "1995"
+    },
+    {
+      "title": "The Spitfire Grill",
+      "release_date": "1996"
+    },
+    {
+      "title": "Courage Under Fire",
+      "release_date": "1996"
+    },
+    {
+      "title": "To Gillian on Her 37th Birthday",
+      "release_date": "1996"
+    },
+    {
+      "title": "Ransom",
+      "release_date": "1996"
+    },
+    {
+      "title": "The Devil's Own",
+      "release_date": "1997"
+    },
+    {
+      "title": "Titanic",
+      "release_date": "1997"
+    },
+    {
+      "title": "Deep Impact",
+      "release_date": "1998"
+    },
+    {
+      "title": "The Mask of Zorro",
+      "release_date": "1998"
+    },
+    {
+      "title": "Mighty Joe Young",
+      "release_date": "1998"
+    },
+    {
+      "title": "Bicentennial Man",
+      "release_date": "1999"
+    },
+    {
+      "title": "The Perfect Storm",
+      "release_date": "2000"
+    },
+    {
+      "title": "How the Grinch Stole Christmas",
+      "release_date": "2000"
+    },
+    {
+      "title": "Enemy at the Gates",
+      "release_date": "2001"
+    },
+    {
+      "title": "Iris",
+      "release_date": "2001"
+    },
+    {
+      "title": "A Beautiful Mind",
+      "release_date": "2001"
+    },
+    {
+      "title": "Windtalkers",
+      "release_date": "2002"
+    },
+    {
+      "title": "The Four Feathers",
+      "release_date": "2002"
+    },
+    {
+      "title": "Beyond Borders",
+      "release_date": "2003"
+    },
+    {
+      "title": "Radio",
+      "release_date": "2003"
+    },
+    {
+      "title": "The Missing",
+      "release_date": "2003"
+    },
+    {
+      "title": "House of Sand and Fog",
+      "release_date": "2003"
+    },
+    {
+      "title": "Bobby Jones: Stroke of Genius",
+      "release_date": "2004"
+    },
+    {
+      "title": "Troy",
+      "release_date": "2004"
+    },
+    {
+      "title": "The Forgotten",
+      "release_date": "2004"
+    },
+    {
+      "title": "The Chumscrubber",
+      "release_date": "2005"
+    },
+    {
+      "title": "Flightplan",
+      "release_date": "2005"
+    },
+    {
+      "title": "The Legend of Zorro",
+      "release_date": "2005"
+    },
+    {
+      "title": "The New World",
+      "release_date": "2005"
+    },
+    {
+      "title": "All the King's Men",
+      "release_date": "2006"
+    },
+    {
+      "title": "Apocalypto",
+      "release_date": "2006"
+    },
+    {
+      "title": "The Life Before Her Eyes",
+      "release_date": "2007"
+    },
+    {
+      "title": "The Spiderwick Chronicles",
+      "release_date": "2008"
+    },
+    {
+      "title": "The Boy in the Striped Pyjamas",
+      "release_date": "2008"
+    },
+    {
+      "title": "Avatar",
+      "release_date": "2009"
+    },
+    {
+      "title": "The Karate Kid",
+      "release_date": "2010"
+    },
+    {
+      "title": "Day of the Falcon (also known as Black Gold)",
+      "release_date": "2011"
+    },
+    {
+      "title": "Cristiada",
+      "release_date": "2012"
+    },
+    {
+      "title": "The Amazing Spider-Man",
+      "release_date": "2012"
+    },
+    {
+      "title": "Wolf Totem",
+      "release_date": "2015"
+    },
+    {
+      "title": "Southpaw",
+      "release_date": "2015"
+    },
+    {
+      "title": "The 33",
+      "release_date": "2015"
+    },
+    {
+      "title": "The Magnificent Seven",
+      "release_date": "2016"
+    }
+  ]
+}
