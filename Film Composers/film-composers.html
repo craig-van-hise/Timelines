@@ -178,7 +178,8 @@
             /* Centered on the date point */
             width: 8px;
             height: 8px;
-            background: #fff;
+            background-color: rgba(255, 255, 255, 0.6);
+            /* Use RGBA for transparency */
             border-radius: 50%;
             cursor: pointer;
             z-index: 2;
@@ -189,10 +190,13 @@
 
         /* Show markers on hover of the row OR the self */
         .composer-row:hover .film-marker {
-            opacity: 0.6;
+            opacity: 1;
+            /* Container is fully opaque, so children can be opaque */
         }
 
         .film-marker:hover {
+            background-color: #ffffff;
+            /* Bright white on hover */
             opacity: 1;
             transform: translate(-50%, -50%) scale(1.5);
             z-index: 100;
@@ -267,7 +271,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.4)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.5)</span></h1>
     </header>
 
     <div class="timeline-container">
