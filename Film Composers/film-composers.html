@@ -279,7 +279,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.8.1)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.9)</span></h1>
     </header>
 
     <div class="timeline-container">
@@ -2294,7 +2294,7 @@
                 const bar = document.createElement('div');
                 bar.className = 'bar';
                 const startPct = getPercent(start);
-                const endPct = getPercent(end > 2026 ? 2026 : end);
+                const endPct = getPercent((end + 1) > 2030 ? 2030 : (end + 1));
                 bar.style.left = `${startPct}%`;
                 bar.style.width = `${endPct - startPct}%`;
 
