@@ -131,10 +131,16 @@
             height: var(--row-height);
             position: relative;
             z-index: 1;
+            /* Default layer */
+            transition: z-index 0s;
+            /* Instant pop */
         }
 
+        /* Essential Fix: Lift the entire row on hover to escape stacking context of siblings/header */
         .composer-row:hover {
             background: rgba(255, 255, 255, 0.02);
+            z-index: 2000 !important;
+            /* Above header (1000) and all other rows */
         }
 
         .composer-name {
@@ -271,7 +277,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.5)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.6)</span></h1>
     </header>
 
     <div class="timeline-container">
