@@ -279,7 +279,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.22)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.11)</span></h1>
     </header>
 
     <div class="timeline-container">
@@ -1713,21 +1713,6 @@
                 "composer": "Mikl\u00f3s R\u00f3zsa",
                 "films": [
                     {
-                        "title": "The Thief of Bagdad",
-                        "release_date": "1940-12-25",
-                        "youtube_link": "https://www.youtube.com/watch?v=EtGRJ6z5Np"
-                    },
-                    {
-                        "title": "The Jungle Book",
-                        "release_date": "1942-04-03",
-                        "youtube_link": "https://www.youtube.com/watch?v=4uN0-_2riH"
-                    },
-                    {
-                        "title": "Double Indemnity",
-                        "release_date": "1944-07-03",
-                        "youtube_link": "https://www.youtube.com/watch?v=fJkI0-9yWzQ"
-                    },
-                    {
                         "title": "The Lost Weekend",
                         "release_date": "1945-11-29",
                         "youtube_link": "https://www.youtube.com/watch?v=UXN_sDgNvuw"
@@ -1738,29 +1723,9 @@
                         "youtube_link": "https://www.youtube.com/watch?v=LhQm--SrQ3A"
                     },
                     {
-                        "title": "The Killers",
-                        "release_date": "1946-08-30",
-                        "youtube_link": "https://www.youtube.com/watch?v=K-n9ENt3mf6"
-                    },
-                    {
-                        "title": "Quo Vadis",
-                        "release_date": "1951-11-02",
-                        "youtube_link": "https://www.youtube.com/watch?v=s-iUJkoC0Cs"
-                    },
-                    {
                         "title": "Ben-Hur",
                         "release_date": "1959-11-18",
                         "youtube_link": "https://www.youtube.com/watch?v=fmoWJ4R8c-E"
-                    },
-                    {
-                        "title": "King of Kings",
-                        "release_date": "1961-10-11",
-                        "youtube_link": "https://www.youtube.com/watch?v=5T1Je62QsUO"
-                    },
-                    {
-                        "title": "El Cid",
-                        "release_date": "1961-12-14",
-                        "youtube_link": "https://www.youtube.com/watch?v=FqjRM_MK7Zq"
                     }
                 ]
             },
@@ -2314,8 +2279,7 @@
                 // 1. Name
                 const nameCol = document.createElement('div');
                 nameCol.className = 'name-col composer-name';
-                const profileUrl = `composer_profile.html?name=${encodeURIComponent(name.replace(/ /g, '_'))}`;
-                nameCol.innerHTML = `<a href="${profileUrl}" target="_blank">${name}</a>`;
+                nameCol.innerHTML = `<a href="${url}" target="_blank">${name}</a>`;
 
                 // 2. Track
                 const trackCol = document.createElement('div');
@@ -2337,7 +2301,7 @@
                 // ADD FILM MARKERS
                 const myFilms = filmData.find(f => f.composer === name);
                 if (myFilms && myFilms.films) {
-                    // Sort by Date
+                    // Sort by Date to ensure sequential collision checking
                     myFilms.films.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
 
                     let lastPct = -100;
