@@ -347,7 +347,7 @@
                 html += `</div>`;
                 marker.innerHTML = html;
 
-                // Tooltip Positioning Logic (Default UP)
+                // Tooltip Positioning Logic (Robust Geometry)
                 marker.addEventListener('mouseenter', function () {
                     const tooltip = this.querySelector('.film-tooltip');
 
@@ -358,7 +358,7 @@
                     const rect = this.getBoundingClientRect();
                     const tooltipRect = tooltip.getBoundingClientRect();
                     const viewportHeight = window.innerHeight;
-                    const margin = 10;
+                    const margin = 15;
 
                     const spaceAbove = rect.top - margin;
 
