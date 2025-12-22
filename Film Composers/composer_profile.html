@@ -347,22 +347,44 @@
                 html += `</div>`;
                 marker.innerHTML = html;
 
-                // Tooltip Positioning Logic
+                // Tooltip Positioning Logic (Robust Math)
                 marker.addEventListener('mouseenter', function () {
                     const tooltip = this.querySelector('.film-tooltip');
+                    
+                    // Reset to measure natural size
+                    tooltip.style.maxHeight = 'none';
+                    tooltip.classList.remove('tooltip-up', 'tooltip-down');
+                    
                     const rect = this.getBoundingClientRect();
-                    const tooltipHeight = 350; // Approx max height
-
-                    // Check top edge
-                    if (rect.top < tooltipHeight) {
-                        tooltip.classList.add('tooltip-down');
-                        tooltip.classList.remove('tooltip-up');
-                    } else {
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    const margin = 20; // Safety margin
+                    
+                    const spaceAbove = rect.top - margin;
+                    const spaceBelow = viewportHeight - rect.bottom - margin;
+                    
+                    // Decide where to put it
+                    if (spaceAbove >= tooltipRect.height || spaceAbove >= spaceBelow) {
+                        // Place ABOVE
                         tooltip.classList.add('tooltip-up');
                         tooltip.classList.remove('tooltip-down');
+                        
+                        // Clamp height if needed
+                        if (tooltipRect.height > spaceAbove) {
+                            tooltip.style.maxHeight = `${spaceAbove}px`;
+                            tooltip.style.overflowY = 'auto';
+                        }
+                    } else {
+                        // Place BELOW
+                        tooltip.classList.add('tooltip-down');
+                        tooltip.classList.remove('tooltip-up');
+                        
+                        // Clamp height if needed
+                        if (tooltipRect.height > spaceBelow) {
+                            tooltip.style.maxHeight = `${spaceBelow}px`;
+                            tooltip.style.overflowY = 'auto';
+                        }
                     }
-
-                    // Simple collision for horizontal could be added here if needed
                 });
 
                 track.appendChild(marker);
