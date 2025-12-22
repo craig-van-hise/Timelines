@@ -2314,7 +2314,8 @@
                 // 1. Name
                 const nameCol = document.createElement('div');
                 nameCol.className = 'name-col composer-name';
-                nameCol.innerHTML = `<a href="${url}" target="_blank">${name}</a>`;
+                const profileUrl = `composer_profile.html?name=${encodeURIComponent(name.replace(/ /g, '_'))}`;
+                nameCol.innerHTML = `<a href="${profileUrl}" target="_blank">${name}</a>`;
 
                 // 2. Track
                 const trackCol = document.createElement('div');

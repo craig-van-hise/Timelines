@@ -3,7 +3,7 @@
   "filmography": [
     {
       "title": "Don't Look Now",
-      "release_date": "1973"
+      "release_date": "1973-10-16"
     },
     {
       "title": "Smiling Maniacs(Corruzione al palazzo di giustizia)",
@@ -15,11 +15,11 @@
     },
     {
       "title": "Haunts",
-      "release_date": "1976"
+      "release_date": "1976-08-27"
     },
     {
       "title": "Carrie",
-      "release_date": "1976"
+      "release_date": "1976-11-03"
     },
     {
       "title": "Damned in Venice(Nero veneziano)",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Piranha",
-      "release_date": "1978"
+      "release_date": "1978-07-28"
     },
     {
       "title": "China 9, Liberty 37",
@@ -35,11 +35,11 @@
     },
     {
       "title": "Tourist Trap",
-      "release_date": "1979"
+      "release_date": "1979-03-14"
     },
     {
       "title": "Home Movies",
-      "release_date": "1979"
+      "release_date": "1979-08-28"
     },
     {
       "title": "Skin Deep(Senza buccia)",
@@ -47,7 +47,7 @@
     },
     {
       "title": "Dressed to Kill",
-      "release_date": "1980"
+      "release_date": "1980-07-25"
     },
     {
       "title": "Desire: The Inner Life(Desideria: La vita interiore)",
@@ -55,27 +55,27 @@
     },
     {
       "title": "The Howling",
-      "release_date": "1981"
+      "release_date": "1981-03-13"
     },
     {
       "title": "The Black Cat",
-      "release_date": "1981"
+      "release_date": "1981-04-04"
     },
     {
       "title": "The Fan",
-      "release_date": "1981"
+      "release_date": "1981-05-15"
     },
     {
       "title": "Blow Out",
-      "release_date": "1981"
+      "release_date": "1981-07-24"
     },
     {
       "title": "Tex",
-      "release_date": "1982"
+      "release_date": "1982-07-30"
     },
     {
       "title": "Beyond the Door",
-      "release_date": "1982"
+      "release_date": "1982-09-05"
     },
     {
       "title": "Vatican Conspiracy(Morte in Vaticano)",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Hercules",
-      "release_date": "1983"
+      "release_date": "1983-08-26"
     },
     {
       "title": "The World of Don Camillo",
@@ -95,11 +95,11 @@
     },
     {
       "title": "Over the Brooklyn Bridge",
-      "release_date": "1984"
+      "release_date": "1984-03-02"
     },
     {
       "title": "Body Double",
-      "release_date": "1984"
+      "release_date": "1984-10-26"
     },
     {
       "title": "Nothing Left to Do But Cry(Non ci resta che piangere)",
@@ -123,7 +123,7 @@
     },
     {
       "title": "The Berlin Affair",
-      "release_date": "1985"
+      "release_date": "1985-11-06"
     },
     {
       "title": "Nothing Underneath",
@@ -135,7 +135,7 @@
     },
     {
       "title": "Crawlspace",
-      "release_date": "1986"
+      "release_date": "1986-09-26"
     },
     {
       "title": "The Moro Affair",
@@ -147,15 +147,15 @@
     },
     {
       "title": "Hotel Colonial",
-      "release_date": "1987"
+      "release_date": "1987-09-18"
     },
     {
       "title": "The Barbarians",
-      "release_date": "1987"
+      "release_date": "1987-03-20"
     },
     {
       "title": "Gor",
-      "release_date": "1987"
+      "release_date": "1987-05-09"
     },
     {
       "title": "Jenatsch",
@@ -163,7 +163,7 @@
     },
     {
       "title": "Going Bananas",
-      "release_date": "1987"
+      "release_date": "1987-08-05"
     },
     {
       "title": "Devils of Monza",
@@ -171,11 +171,11 @@
     },
     {
       "title": "Scirocco",
-      "release_date": "1987"
+      "release_date": "1987-08-12"
     },
     {
       "title": "Dancers",
-      "release_date": "1987"
+      "release_date": "1987-10-09"
     },
     {
       "title": "Phantom of Death",
@@ -183,19 +183,19 @@
     },
     {
       "title": "Zelly and Me",
-      "release_date": "1988"
+      "release_date": "1988-04-15"
     },
     {
       "title": "Catacombs",
-      "release_date": "1988"
+      "release_date": "1988-05-14"
     },
     {
       "title": "Appointment with Death",
-      "release_date": "1988"
+      "release_date": "1988-04-15"
     },
     {
       "title": "Kansas",
-      "release_date": "1988"
+      "release_date": "1988-09-23"
     },
     {
       "title": "High Frequency",
@@ -207,15 +207,15 @@
     },
     {
       "title": "Outlaw of Gor",
-      "release_date": "1988"
+      "release_date": "1988-03-21"
     },
     {
       "title": "Night Game",
-      "release_date": "1989"
+      "release_date": "1989-09-15"
     },
     {
       "title": "Indio",
-      "release_date": "1989"
+      "release_date": "1989-09-01"
     },
     {
       "title": "Ritual of Love",
@@ -223,11 +223,11 @@
     },
     {
       "title": "Meridian: Kiss of the Beast",
-      "release_date": "1990"
+      "release_date": "1990-04-13"
     },
     {
       "title": "Two Evil Eyes",
-      "release_date": "1990"
+      "release_date": "1990-01-25"
     },
     {
       "title": "The Devil's Daughter",
@@ -235,7 +235,7 @@
     },
     {
       "title": "Indio 2: The Revolt",
-      "release_date": "1991"
+      "release_date": "1991-04-18"
     },
     {
       "title": "A Demon in My View\u00a0(fr)",
@@ -251,7 +251,7 @@
     },
     {
       "title": "Raising Cain",
-      "release_date": "1992"
+      "release_date": "1992-08-07"
     },
     {
       "title": "A Fine Romance",
@@ -259,7 +259,7 @@
     },
     {
       "title": "Trauma",
-      "release_date": "1993"
+      "release_date": "1993-03-12"
     },
     {
       "title": "Where Are You? I'm Here",
@@ -271,11 +271,11 @@
     },
     {
       "title": "Oblivion",
-      "release_date": "1994"
+      "release_date": "1994-12-14"
     },
     {
       "title": "Troublemakers",
-      "release_date": "1994"
+      "release_date": "1994-11-25"
     },
     {
       "title": "Power and Lovers",
@@ -287,7 +287,7 @@
     },
     {
       "title": "State Secret",
-      "release_date": "1995"
+      "release_date": "1995-03-24"
     },
     {
       "title": "Mollo tutto",
@@ -295,7 +295,7 @@
     },
     {
       "title": "Palermo - Milan One Way",
-      "release_date": "1995"
+      "release_date": "1995-09-08"
     },
     {
       "title": "Soldato ignoto",
@@ -303,11 +303,11 @@
     },
     {
       "title": "Never Talk to Strangers",
-      "release_date": "1995"
+      "release_date": "1995-10-20"
     },
     {
       "title": "Oblivion 2: Backlash",
-      "release_date": "1996"
+      "release_date": "1996-04-02"
     },
     {
       "title": "The Mysterious Enchanter",
@@ -315,7 +315,7 @@
     },
     {
       "title": "Festival",
-      "release_date": "1996"
+      "release_date": "1996-06-06"
     },
     {
       "title": "Marching in Darkness",
@@ -323,7 +323,7 @@
     },
     {
       "title": "Squillo",
-      "release_date": "1996"
+      "release_date": "1996-10-25"
     },
     {
       "title": "The Game Bag",
@@ -335,15 +335,15 @@
     },
     {
       "title": "Snake Eyes",
-      "release_date": "1998"
+      "release_date": "1998-08-07"
     },
     {
       "title": "Monella",
-      "release_date": "1998"
+      "release_date": "1998-06-26"
     },
     {
       "title": "Gunslinger's Revenge",
-      "release_date": "1998"
+      "release_date": "1998-12-18"
     },
     {
       "title": "Prima del tramonto",
@@ -359,11 +359,11 @@
     },
     {
       "title": "Trasgredire",
-      "release_date": "2000"
+      "release_date": "2000-01-28"
     },
     {
       "title": "Up at the Villa",
-      "release_date": "2000"
+      "release_date": "2000-05-05"
     },
     {
       "title": "On the Beach Beyond the Pier",
@@ -375,11 +375,11 @@
     },
     {
       "title": "The Order",
-      "release_date": "2001"
+      "release_date": "2001-12-13"
     },
     {
       "title": "The Bankers of God: The Calvi Affair",
-      "release_date": "2002"
+      "release_date": "2002-03-08"
     },
     {
       "title": "Soul Mate",
@@ -387,11 +387,11 @@
     },
     {
       "title": "Pontormo \u2013 Un amore eretico",
-      "release_date": "2004"
+      "release_date": "2004-05-28"
     },
     {
       "title": "Seed of Chucky",
-      "release_date": "2004"
+      "release_date": "2004-11-11"
     },
     {
       "title": "Do You Like Hitchcock?",
@@ -419,19 +419,19 @@
     },
     {
       "title": "Winter in Wartime",
-      "release_date": "2008"
+      "release_date": "2008-11-17"
     },
     {
       "title": "Sotto il vestito niente \u2013 L'ultima sfilata",
-      "release_date": "2011"
+      "release_date": "2011-03-25"
     },
     {
       "title": "Passion",
-      "release_date": "2012"
+      "release_date": "2012-09-07"
     },
     {
       "title": "Patrick",
-      "release_date": "2013"
+      "release_date": "2013-07-27"
     },
     {
       "title": "La buca",
@@ -447,7 +447,7 @@
     },
     {
       "title": "My Name Is Thomas",
-      "release_date": "2018"
+      "release_date": "2018-04-19"
     },
     {
       "title": "Mare di grano",
@@ -455,11 +455,11 @@
     },
     {
       "title": "Domino",
-      "release_date": "2019"
+      "release_date": "2019-05-31"
     },
     {
       "title": "Spin Me Round",
-      "release_date": "2022"
+      "release_date": "2022-03-12"
     }
   ]
 }

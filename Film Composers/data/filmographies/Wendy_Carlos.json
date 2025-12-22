@@ -3,15 +3,15 @@
   "filmography": [
     {
       "title": "A Clockwork Orange",
-      "release_date": "1971"
+      "release_date": "1971-12-19"
     },
     {
       "title": "The Shining",
-      "release_date": "1980"
+      "release_date": "1980-05-23"
     },
     {
       "title": "Tron",
-      "release_date": "1982"
+      "release_date": "1982-07-09"
     }
   ]
 }
