@@ -443,16 +443,41 @@
                         });
                     };
 
-                    requestAnimationFrame(recalcPortal);
+                    // 5. Continuous Update Loop (Active Polling)
+                    // Instead of relying on specific resize/scroll events which might be throttled,
+                    // we run a recursive RAF loop while the tooltip is active.
+                    // This guarantees 60fps responsiveness to ANY geometry change.
 
-                    // 4. Cleanup
+                    let isActive = true;
+
+                    const updateLoop = () => {
+                        if (!isActive) return;
+                        recalcPortal();
+                        requestAnimationFrame(updateLoop);
+                    };
+
+                    // Start the loop
+                    requestAnimationFrame(updateLoop);
+
+                    // 6. Cleanup
                     const hide = () => {
+                        isActive = false; // Stop the loop
                         portalTooltip.style.opacity = '0';
                         portalTooltip.style.pointerEvents = 'none';
                     };
 
                     marker.addEventListener('mouseleave', hide, { once: true });
-                    window.addEventListener('scroll', hide, { once: true, capture: true });
+                    // We don't strictly *need* scroll/resize listeners now because the loop covers it,
+                    // but keeping a hard scroll hide is often good UX. 
+                    // Let's rely on the loop for positioning, but if they scroll away too far we might hide?
+                    // Actually, the user wants "Adaptive". Continuous loop allows them to scroll and keep it visible if they want.
+                    // But if they scroll the marker off screen, hide it.
+
+                    // Let's add a visibility check to the loop:
+                    // If marker is off screen, hide tooltip? 
+                    // No, let's keep it simple. User asked for resizing.
+                    // We remove the explicit scroll listener to allow them to scroll comfortably.
+                    // Only hide on mouseleave.
                 });
 
                 track.appendChild(marker);
