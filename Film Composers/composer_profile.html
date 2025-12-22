@@ -369,10 +369,14 @@
                     const viewportHeight = window.innerHeight;
 
                     // Calculate available space relative to the viewport
-                    // Space Above: Distance from top of marker to top of viewport (minus buffer)
-                    const spaceAbove = markerRect.top - 20;
-                    // Space Below: Distance from bottom of marker to bottom of viewport (minus buffer)
-                    const spaceBelow = viewportHeight - markerRect.bottom - 20;
+                    // factoring in that the tooltip is offset from the marker by ~35px via CSS.
+                    // We also want some padding from the screen edge (e.g. 20px).
+                    const cssGap = 45; // 35px offset + ~10px marker half-height/buffer
+                    const screenPadding = 15;
+
+                    // Available height for the TOOLTIP ITSELF (excluding the gap)
+                    const spaceAbove = markerRect.top - cssGap - screenPadding;
+                    const spaceBelow = viewportHeight - markerRect.bottom - cssGap - screenPadding;
 
                     // Decision Logic:
                     // 1. If it fits perfectly ABOVE, go UP (Preferred).
@@ -393,15 +397,17 @@
                     // Apply Logic
                     if (goUp) {
                         tooltip.classList.add('tooltip-up');
-                        // Clamp if necessary (handling case 3)
+                        // Clamp if necessary (handling case 3, or if space is weirdly small)
+                        // We must clamp if rect.height > spaceAbove. 
+                        // Even if it "fit" logic-wise (logic meant fits fully), clamping is safe safeguard.
                         if (tooltipRect.height > spaceAbove) {
-                            tooltip.style.maxHeight = spaceAbove + 'px';
+                            tooltip.style.maxHeight = Math.max(100, spaceAbove) + 'px'; // Ensure at least 100px
                         }
                     } else {
                         tooltip.classList.add('tooltip-down');
-                        // Clamp if necessary (handling case 3)
+                        // Clamp if necessary
                         if (tooltipRect.height > spaceBelow) {
-                            tooltip.style.maxHeight = spaceBelow + 'px';
+                            tooltip.style.maxHeight = Math.max(100, spaceBelow) + 'px';
                         }
                     }
                 });
