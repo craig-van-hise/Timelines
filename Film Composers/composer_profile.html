@@ -374,15 +374,6 @@
                     portalTooltip.style.opacity = '1';
                     portalTooltip.style.pointerEvents = 'auto';
 
-                    // DEBUG: Add a persistent debug element if not exists
-                    let debugEl = document.getElementById('tooltip-debug-overlay');
-                    if (!debugEl) {
-                        debugEl = document.createElement('div');
-                        debugEl.id = 'tooltip-debug-overlay';
-                        debugEl.style.cssText = 'position:absolute; top:0; right:0; background:red; color:white; font-size:10px; padding:2px; z-index:9999999;';
-                        portalTooltip.appendChild(debugEl);
-                    }
-
                     const recalcPortal = () => {
                         // Check if marker is still in DOM/visible
                         if (!document.body.contains(marker)) return;
@@ -450,11 +441,6 @@
                                 portalTooltip.style.transform = `translate(calc(-50% - ${diff}px), 0)`;
                             }
                         });
-
-                        // DEBUG UPDATE
-                        if (document.getElementById('tooltip-debug-overlay')) {
-                            document.getElementById('tooltip-debug-overlay').innerText = `H:${window.innerHeight} Mx:${Math.round(goUp ? effectiveAbove : effectiveBelow)}`;
-                        }
                     };
 
                     // 5. Continuous Update Loop (Active Polling) - FORCE MODE
