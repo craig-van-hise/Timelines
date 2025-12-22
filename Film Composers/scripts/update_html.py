@@ -3,7 +3,7 @@ import os
 import re
 
 base_dir = "/Users/vv2024/Documents/AI Projects/Timelines/Film Composers"
-html_path = os.path.join(base_dir, "film-composers.html")
+html_path = os.path.join(base_dir, "composers.html")
 json_path = os.path.join(base_dir, "data/Most important films.json")
 
 # 1. Read Data
@@ -64,10 +64,11 @@ else:
     print("Could not find marker styling line")
 
 # 4. Bump Version
-# v1.7 -> v1.8
-if "(v1.7)" in html_content:
-    html_content = html_content.replace("(v1.7)", "(v1.8)")
-    print("Bumped version to v1.8")
+# 4. Bump Version
+# v1.13 -> v1.14
+if "(v1.13)" in html_content:
+    html_content = html_content.replace("(v1.13)", "(v1.14)")
+    print("Bumped version to v1.14")
 
 # 5. Save
 with open(html_path, 'w') as f:

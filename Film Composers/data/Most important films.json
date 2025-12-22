@@ -1408,6 +1408,21 @@
         "composer": "Mikl\u00f3s R\u00f3zsa",
         "films": [
             {
+                "title": "The Thief of Bagdad",
+                "release_date": "1940-12-25",
+                "youtube_link": "https://www.youtube.com/watch?v=EtGRJ6z5Np"
+            },
+            {
+                "title": "The Jungle Book",
+                "release_date": "1942-04-03",
+                "youtube_link": "https://www.youtube.com/watch?v=4uN0-_2riH"
+            },
+            {
+                "title": "Double Indemnity",
+                "release_date": "1944-07-03",
+                "youtube_link": "https://www.youtube.com/watch?v=fJkI0-9yWzQ"
+            },
+            {
                 "title": "The Lost Weekend",
                 "release_date": "1945-11-29",
                 "youtube_link": "https://www.youtube.com/watch?v=UXN_sDgNvuw"
@@ -1418,9 +1433,29 @@
                 "youtube_link": "https://www.youtube.com/watch?v=LhQm--SrQ3A"
             },
             {
+                "title": "The Killers",
+                "release_date": "1946-08-30",
+                "youtube_link": "https://www.youtube.com/watch?v=K-n9ENt3mf6"
+            },
+            {
+                "title": "Quo Vadis",
+                "release_date": "1951-11-02",
+                "youtube_link": "https://www.youtube.com/watch?v=s-iUJkoC0Cs"
+            },
+            {
                 "title": "Ben-Hur",
                 "release_date": "1959-11-18",
                 "youtube_link": "https://www.youtube.com/watch?v=fmoWJ4R8c-E"
+            },
+            {
+                "title": "King of Kings",
+                "release_date": "1961-10-11",
+                "youtube_link": "https://www.youtube.com/watch?v=5T1Je62QsUO"
+            },
+            {
+                "title": "El Cid",
+                "release_date": "1961-12-14",
+                "youtube_link": "https://www.youtube.com/watch?v=FqjRM_MK7Zq"
             }
         ]
     },
