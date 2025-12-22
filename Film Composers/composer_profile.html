@@ -355,29 +355,53 @@
                     tooltip.style.maxHeight = 'none';
                     tooltip.classList.remove('tooltip-up', 'tooltip-down');
 
-                    const rect = this.getBoundingClientRect();
+                    // --- ROBUST GEOMETRY-AWARE POSITIONING ---
+
+                    // 1. Reset state to measure natural dimensions
+                    tooltip.style.maxHeight = 'none';
+                    tooltip.classList.remove('tooltip-down', 'tooltip-up');
+                    // Add a temporary class to ensure it's positioned (but not visible/transitioning if we want to validly measure)
+                    // Actually, we just need to measure it. 'tooltip-up' is the default CSS positioning (bottom: 35px), so let's check relative to that.
+                    // But to be safe, let's just calculate logic based on the rect *height*, which shouldn't change between up/down if width is fixed.
+
                     const tooltipRect = tooltip.getBoundingClientRect();
+                    const markerRect = marker.getBoundingClientRect();
                     const viewportHeight = window.innerHeight;
-                    const margin = 15;
 
-                    const spaceAbove = rect.top - margin;
+                    // Calculate available space relative to the viewport
+                    // Space Above: Distance from top of marker to top of viewport (minus buffer)
+                    const spaceAbove = markerRect.top - 20;
+                    // Space Below: Distance from bottom of marker to bottom of viewport (minus buffer)
+                    const spaceBelow = viewportHeight - markerRect.bottom - 20;
 
-                    // Rule: Default UP. Only go down if it doesn't fit up.
-                    if (spaceAbove >= tooltipRect.height) {
-                        // Fits ABOVE -> Go Up
-                        tooltip.classList.add('tooltip-up');
-                        tooltip.classList.remove('tooltip-down');
+                    // Decision Logic:
+                    // 1. If it fits perfectly ABOVE, go UP (Preferred).
+                    // 2. If it fits perfectly BELOW but NOT above, go DOWN.
+                    // 3. If it fits NEITHER, choose the side with MORE space.
+
+                    let goUp = true; // Default bias
+
+                    if (tooltipRect.height <= spaceAbove) {
+                        goUp = true;
+                    } else if (tooltipRect.height <= spaceBelow) {
+                        goUp = false;
                     } else {
-                        // Doesn't fit above -> Go DOWN
-                        tooltip.classList.add('tooltip-down');
-                        tooltip.classList.remove('tooltip-up');
+                        // Fits nowhere. Pick the larger side.
+                        goUp = (spaceAbove >= spaceBelow);
+                    }
 
-                        // Check if it fits below
-                        const spaceBelow = viewportHeight - rect.bottom - margin;
+                    // Apply Logic
+                    if (goUp) {
+                        tooltip.classList.add('tooltip-up');
+                        // Clamp if necessary (handling case 3)
+                        if (tooltipRect.height > spaceAbove) {
+                            tooltip.style.maxHeight = spaceAbove + 'px';
+                        }
+                    } else {
+                        tooltip.classList.add('tooltip-down');
+                        // Clamp if necessary (handling case 3)
                         if (tooltipRect.height > spaceBelow) {
-                            // Doesn't fit below either? Clamp to available space below.
-                            tooltip.style.maxHeight = `${spaceBelow}px`;
-                            tooltip.style.overflowY = 'auto';
+                            tooltip.style.maxHeight = spaceBelow + 'px';
                         }
                     }
                 });
