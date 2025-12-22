@@ -354,77 +354,73 @@
                 marker.addEventListener('mouseenter', function () {
                     const tooltip = this.querySelector('.film-tooltip');
 
-                    // 1. Reset Vertical Constraints
-                    tooltip.style.maxHeight = 'none';
-                    tooltip.classList.remove('tooltip-down', 'tooltip-up');
+                    // Define the sizing logic as a reusable function
+                    const recalcPosition = () => {
+                        // 1. Reset Vertical Constraints
+                        tooltip.style.maxHeight = 'none';
+                        tooltip.classList.remove('tooltip-down', 'tooltip-up');
 
-                    // 2. Clear Horizontal Constraints (reset to center)
-                    tooltip.style.left = '50%';
-                    tooltip.style.right = 'auto';
-                    tooltip.style.transform = 'translateX(-50%)'; // We will adjust Y later via class
+                        // 2. Clear Horizontal Constraints
+                        tooltip.style.left = '50%';
+                        tooltip.style.right = 'auto';
+                        tooltip.style.transform = 'translateX(-50%)';
 
-                    // Force reflow/wait for render to ensure natural dimensions are ready
-                    requestAnimationFrame(() => {
-                        const tooltipRect = tooltip.getBoundingClientRect();
-                        const markerRect = marker.getBoundingClientRect();
-                        const viewportWidth = window.innerWidth;
-                        const viewportHeight = window.innerHeight;
+                        requestAnimationFrame(() => {
+                            const tooltipRect = tooltip.getBoundingClientRect();
+                            const markerRect = marker.getBoundingClientRect();
+                            const viewportWidth = window.innerWidth;
+                            const viewportHeight = window.innerHeight;
 
-                        // --- VERTICAL LOGIC ---
-                        const cssGap = 45;
-                        const screenPadding = 15;
-                        const spaceAbove = markerRect.top - cssGap - screenPadding;
-                        const spaceBelow = viewportHeight - markerRect.bottom - cssGap - screenPadding;
+                            // --- VERTICAL LOGIC ---
+                            const cssGap = 45;
+                            const screenPadding = 15;
+                            const spaceAbove = markerRect.top - cssGap - screenPadding;
+                            const spaceBelow = viewportHeight - markerRect.bottom - cssGap - screenPadding;
 
-                        let goUp = true;
-                        if (tooltipRect.height <= spaceAbove) { goUp = true; }
-                        else if (tooltipRect.height <= spaceBelow) { goUp = false; }
-                        else { goUp = (spaceAbove >= spaceBelow); }
+                            let goUp = true;
+                            if (tooltipRect.height <= spaceAbove) { goUp = true; }
+                            else if (tooltipRect.height <= spaceBelow) { goUp = false; }
+                            else { goUp = (spaceAbove >= spaceBelow); }
 
-                        if (goUp) {
-                            tooltip.classList.add('tooltip-up');
-                            // Re-apply X transform (needed because we removed it in CSS via class specificity maybe? No, safe to keep)
-                            // But we need to be careful not to overwrite the X-transform if we change it below.
-                            if (tooltipRect.height > spaceAbove) {
-                                tooltip.style.maxHeight = Math.max(100, spaceAbove) + 'px';
+                            if (goUp) {
+                                tooltip.classList.add('tooltip-up');
+                                if (tooltipRect.height > spaceAbove) {
+                                    tooltip.style.maxHeight = Math.max(100, spaceAbove) + 'px';
+                                }
+                            } else {
+                                tooltip.classList.add('tooltip-down');
+                                if (tooltipRect.height > spaceBelow) {
+                                    tooltip.style.maxHeight = Math.max(100, spaceBelow) + 'px';
+                                }
                             }
-                        } else {
-                            tooltip.classList.add('tooltip-down');
-                            if (tooltipRect.height > spaceBelow) {
-                                tooltip.style.maxHeight = Math.max(100, spaceBelow) + 'px';
+
+                            // --- HORIZONTAL LOGIC ---
+                            const finalRect = tooltip.getBoundingClientRect();
+                            if (finalRect.left < screenPadding) {
+                                tooltip.style.left = '0';
+                                tooltip.style.transform = 'translateX(0)';
                             }
-                        }
+                            else if (finalRect.right > viewportWidth - screenPadding) {
+                                tooltip.style.left = 'auto';
+                                tooltip.style.right = '0';
+                                tooltip.style.transform = 'translateX(0)';
+                            }
+                        });
+                    };
 
-                        // --- HORIZONTAL LOGIC ---
-                        // Re-measure after vertical class application (though width shouldn't change)
-                        const finalRect = tooltip.getBoundingClientRect();
+                    // Initial calculation
+                    recalcPosition();
 
-                        // Check Left Edge
-                        if (finalRect.left < screenPadding) {
-                            // Shift Right
-                            // We can use 'left: 0' relative to marker, or complex calc.
-                            // Easier: Adjust transform or left/margin.
-                            // Since it's absolute relative to marker (center), 
-                            // let's just calculate the shift needed.
-                            tooltip.style.left = '0'; // Align left edge with marker center (rough start)
-                            tooltip.style.transform = 'translateX(0)'; // No centering
-                            // Wait, if we do translateX(0), it starts at marker center and goes right.
-                            // That effectively fixes "Left Clipping" (if marker is not too far left).
-                            // A better generic "Shift" is hard without complex math.
-                            // Simple fix: If near left edge, align-left (0). If near right edge, align-right (auto, right:0).
-                        }
-                        else if (finalRect.right > viewportWidth - screenPadding) {
-                            // Shift Left
-                            tooltip.style.left = 'auto';
-                            tooltip.style.right = '0';
-                            tooltip.style.transform = 'translateX(0)';
-                            // This aligns right edge with marker center?
-                            // marker is small (10px).
-                            // If we align right edge to marker center, it goes Left.
-                            // This fixes "Right Clipping".
-                        }
-                        // Else: Keep default centered (left: 50%, transX(-50%))
+                    // Observe for size changes (e.g. image loading) and re-calc
+                    const observer = new ResizeObserver(() => {
+                        recalcPosition();
                     });
+                    observer.observe(tooltip);
+
+                    // Clean up observer when mouse leaves
+                    marker.addEventListener('mouseleave', () => {
+                        observer.disconnect();
+                    }, { once: true });
                 });
 
                 track.appendChild(marker);
