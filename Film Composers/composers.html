@@ -279,7 +279,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.11)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.12)</span></h1>
     </header>
 
     <div class="timeline-container">
@@ -2301,11 +2301,8 @@
                 // ADD FILM MARKERS
                 const myFilms = filmData.find(f => f.composer === name);
                 if (myFilms && myFilms.films) {
-                    // Sort by Date to ensure sequential collision checking
+                    // Sort by Date
                     myFilms.films.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
-
-                    let lastPct = -100;
-                    let stagger = 0; // 0=Center, 1=Top, -1=Bottom
 
                     myFilms.films.forEach(film => {
                         const date = new Date(film.release_date);
@@ -2317,21 +2314,9 @@
                             const dayOfYear = ((date - startOfYear) / 86400000); // 1 day in ms
                             const filmPct = getPercent(year + (dayOfYear / 366)); // Precise to day
 
-                            // Collision Detection (Threshold 0.8% ~ 10px pixels)
-                            if (Math.abs(filmPct - lastPct) < 0.8) {
-                                stagger = stagger === 1 ? -1 : 1;
-                            } else {
-                                stagger = 0;
-                            }
-                            lastPct = filmPct;
-
                             const marker = document.createElement('div');
                             marker.className = 'film-marker';
                             marker.style.left = `${filmPct}%`;
-
-                            // Apply Stagger
-                            if (stagger === 1) marker.style.top = '25%';
-                            if (stagger === -1) marker.style.top = '75%';
                             // Click to YouTube
                             if (film.youtube_link) {
                                 marker.style.cursor = 'pointer';
