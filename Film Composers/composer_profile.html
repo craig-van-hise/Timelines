@@ -126,15 +126,15 @@
         /* Tooltip */
         .film-tooltip {
             position: absolute;
-            bottom: 30px;
+            bottom: 35px;
             /* Above marker */
             left: 50%;
             transform: translateX(-50%) translateY(10px);
-            width: 220px;
+            width: 200px;
             background: rgba(20, 20, 25, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 12px;
+            padding: 10px;
             opacity: 0;
             pointer-events: none;
             transition: all 0.2s ease;
@@ -198,6 +198,28 @@
         const params = new URLSearchParams(window.location.search);
         const composerName = params.get('name') || "Miklós_Rózsa"; // Default for testing
 
+        // Metadata for filtering (Death Years)
+        const COMPOSER_META = {
+            "Miklós_Rózsa": { death: 1995 },
+            "Bernard_Herrmann": { death: 1975 },
+            "Alfred_Newman": { death: 1970 },
+            "Max_Steiner": { death: 1971 },
+            "Dimitri_Tiomkin": { death: 1979 },
+            "Franz_Waxman": { death: 1967 },
+            "Erich_Wolfgang_Korngold": { death: 1957 },
+            "Jerry_Goldsmith": { death: 2004 },
+            "James_Horner": { death: 2015 },
+            "Michael_Kamen": { death: 2003 },
+            "Elmer_Bernstein": { death: 2004 },
+            "Maurice_Jarre": { death: 2009 },
+            "John_Barry": { death: 2011 },
+            "Henry_Mancini": { death: 1994 },
+            "Nino_Rota": { death: 1979 },
+            "Ennio_Morricone": { death: 2020 },
+            "Vangelis": { death: 2022 },
+            "Ryuichi_Sakamoto": { death: 2023 }
+        };
+
         const jsonPath = `data/filmographies/${composerName}.json`;
         const thumbBase = `thumbnails/${composerName.replace(/_/g, " ")}/`;
 
@@ -215,11 +237,23 @@
             const films = data.filmography;
             // Filter invalid dates AND non-film works
             const concertKeywords = ["Op.", "Concerto", "Sonata", "Symphony", "Quartet", "Trio", "Quintet", "Variations", "Motet", "Cantata", "Mass", "Psalm", "Overture"];
+            const junkKeywords = ["Articles lacking sources", "Category:", "Template:"];
+
+            const meta = COMPOSER_META[composerName] || { death: 9999 };
 
             const validFilms = films.filter(f => {
                 if (!f.release_date || f.release_date.length < 4) return false;
+
                 // Exclude concert works
                 if (concertKeywords.some(kw => f.title.includes(kw))) return false;
+
+                // Exclude junk
+                if (junkKeywords.some(kw => f.title.includes(kw))) return false;
+
+                // Exclude post-death works
+                const year = parseInt(f.release_date.substring(0, 4));
+                if (year > meta.death) return false;
+
                 return true;
             });
 
