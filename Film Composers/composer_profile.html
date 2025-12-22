@@ -342,10 +342,6 @@
                 html += `</div>`;
                 marker.innerHTML = html;
 
-                // Tooltip Positioning Logic (Robust Geometry)
-                // Debug flag for one-time alert
-                let hasDebugged = false;
-
                 marker.addEventListener('mouseenter', function () {
                     const tooltip = this.querySelector('.film-tooltip');
 
@@ -359,8 +355,9 @@
                         const viewportHeight = window.innerHeight;
 
                         // Configuration
-                        const offset = 40; // Pixels away from marker
-                        const safetyMargin = 50; // Pixels from screen edge (aggressive buffer)
+                        // Optimized for small screens (approx 400px height detected)
+                        const offset = 15; // Pixels away from marker
+                        const safetyMargin = 10; // Pixels from screen edge (minimal buffer)
 
                         // Calculate raw space
                         const spaceAbove = markerRect.top;
@@ -379,25 +376,17 @@
                         tooltip.style.maxHeight = 'none';
                         tooltip.classList.remove('tooltip-down', 'tooltip-up'); // Ensure clean state
 
+                        // Helper logic: Maximize available space
                         if (goUp) {
                             // Position ABOVE
-                            tooltip.style.bottom = (offset + 10) + 'px'; // +10 for marker radius compensation
-                            tooltip.style.top = 'auto'; // Explicitly clear top
-                            tooltip.style.maxHeight = Math.max(100, effectiveSpaceAbove) + 'px';
+                            tooltip.style.bottom = (offset + 10) + 'px'; // +10 for marker radius
+                            tooltip.style.top = 'auto';
+                            tooltip.style.maxHeight = Math.max(80, effectiveSpaceAbove) + 'px';
                         } else {
                             // Position BELOW
                             tooltip.style.top = (offset + 10) + 'px';
-                            tooltip.style.bottom = 'auto'; // Explicitly clear bottom
-                            tooltip.style.maxHeight = Math.max(100, effectiveSpaceBelow) + 'px';
-                        }
-
-                        // Debug Alert (Once)
-                        if (!hasDebugged) {
-                            hasDebugged = true;
-                            // Uncomment for production debugging if needed, but user is angry enough.
-                            // keeping it silent but functional for now unless they report "nothing changed" again.
-                            // ACTUALLY, I WILL ENABLE IT. The user NEEDS to see that code has changed.
-                            alert(`DEBUG (v1.32):\nSide: ${goUp ? 'UP' : 'DOWN'}\nSpace Above: ${Math.round(spaceAbove)}\nSpace Below: ${Math.round(spaceBelow)}\nMax Height: ${tooltip.style.maxHeight}`);
+                            tooltip.style.bottom = 'auto';
+                            tooltip.style.maxHeight = Math.max(80, effectiveSpaceBelow) + 'px';
                         }
 
                         // Horizontal Logic (Shift)
