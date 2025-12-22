@@ -359,6 +359,7 @@
                         portalTooltip.style.boxSizing = 'border-box';
                         portalTooltip.style.pointerEvents = 'none'; // Initially none
                         portalTooltip.style.transition = 'opacity 0.2s, transform 0.2s';
+                        portalTooltip.style.display = 'block'; // Override CSS .film-tooltip { display: none }
                         document.body.appendChild(portalTooltip);
                     }
 
@@ -369,6 +370,7 @@
                     }
 
                     // 3. Show and Position
+                    portalTooltip.style.display = 'block'; // Ensure visibility
                     portalTooltip.style.opacity = '1';
                     portalTooltip.style.pointerEvents = 'auto'; // Allow interaction
 
