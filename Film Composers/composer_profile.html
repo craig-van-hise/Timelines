@@ -347,40 +347,35 @@
                 html += `</div>`;
                 marker.innerHTML = html;
 
-                // Tooltip Positioning Logic (Robust Math)
+                // Tooltip Positioning Logic (Default UP)
                 marker.addEventListener('mouseenter', function () {
                     const tooltip = this.querySelector('.film-tooltip');
-                    
-                    // Reset to measure natural size
+
+                    // Reset to measure
                     tooltip.style.maxHeight = 'none';
                     tooltip.classList.remove('tooltip-up', 'tooltip-down');
-                    
+
                     const rect = this.getBoundingClientRect();
                     const tooltipRect = tooltip.getBoundingClientRect();
                     const viewportHeight = window.innerHeight;
-                    const margin = 20; // Safety margin
-                    
+                    const margin = 10;
+
                     const spaceAbove = rect.top - margin;
-                    const spaceBelow = viewportHeight - rect.bottom - margin;
-                    
-                    // Decide where to put it
-                    if (spaceAbove >= tooltipRect.height || spaceAbove >= spaceBelow) {
-                        // Place ABOVE
+
+                    // Rule: Default UP. Only go down if it doesn't fit up.
+                    if (spaceAbove >= tooltipRect.height) {
+                        // Fits ABOVE -> Go Up
                         tooltip.classList.add('tooltip-up');
                         tooltip.classList.remove('tooltip-down');
-                        
-                        // Clamp height if needed
-                        if (tooltipRect.height > spaceAbove) {
-                            tooltip.style.maxHeight = `${spaceAbove}px`;
-                            tooltip.style.overflowY = 'auto';
-                        }
                     } else {
-                        // Place BELOW
+                        // Doesn't fit above -> Go DOWN
                         tooltip.classList.add('tooltip-down');
                         tooltip.classList.remove('tooltip-up');
-                        
-                        // Clamp height if needed
+
+                        // Check if it fits below
+                        const spaceBelow = viewportHeight - rect.bottom - margin;
                         if (tooltipRect.height > spaceBelow) {
+                            // Doesn't fit below either? Clamp to available space below.
                             tooltip.style.maxHeight = `${spaceBelow}px`;
                             tooltip.style.overflowY = 'auto';
                         }
