@@ -342,74 +342,114 @@
                 html += `</div>`;
                 marker.innerHTML = html;
 
+                // Portal Strategy: Use a single global tooltip attached to body
+                // This ensures z-index and overflow are never issues.
+
                 marker.addEventListener('mouseenter', function () {
-                    const tooltip = this.querySelector('.film-tooltip');
+                    // 1. Get or Create Global Tooltip
+                    let portalTooltip = document.getElementById('global-film-tooltip');
+                    if (!portalTooltip) {
+                        portalTooltip = document.createElement('div');
+                        portalTooltip.id = 'global-film-tooltip';
+                        portalTooltip.className = 'film-tooltip';
+                        // Force fixed styling
+                        portalTooltip.style.position = 'fixed';
+                        portalTooltip.style.zIndex = '999999';
+                        portalTooltip.style.boxSizing = 'border-box';
+                        portalTooltip.style.pointerEvents = 'none'; // Initially none
+                        portalTooltip.style.transition = 'opacity 0.2s, transform 0.2s';
+                        document.body.appendChild(portalTooltip);
+                    }
 
-                    // NUCLEAR OPTION: Direct JS Styling to bypass CSS conflicts
-                    tooltip.style.boxSizing = 'border-box';
-                    tooltip.style.zIndex = '9999';
+                    // 2. Populate Content (Clone from internal template)
+                    const localTooltip = this.querySelector('.film-tooltip');
+                    if (localTooltip) {
+                        portalTooltip.innerHTML = localTooltip.innerHTML;
+                    }
 
-                    const recalcPosition = () => {
+                    // 3. Show and Position
+                    portalTooltip.style.opacity = '1';
+                    portalTooltip.style.pointerEvents = 'auto'; // Allow interaction
+
+                    const recalcPortal = () => {
+                        // Check if marker is still in DOM/visible
+                        if (!document.body.contains(marker)) return;
+
                         const markerRect = marker.getBoundingClientRect();
                         const viewportWidth = window.innerWidth;
                         const viewportHeight = window.innerHeight;
 
-                        // Configuration
-                        // Optimized for small screens (approx 400px height detected)
-                        const offset = 15; // Pixels away from marker
-                        const safetyMargin = 10; // Pixels from screen edge (minimal buffer)
+                        // Config
+                        const offset = 15;
+                        const safetyMargin = 10;
 
-                        // Calculate raw space
+                        // Space relative to viewport
                         const spaceAbove = markerRect.top;
                         const spaceBelow = viewportHeight - markerRect.bottom;
 
-                        // Effective space for tooltip content
-                        const effectiveSpaceAbove = spaceAbove - offset - safetyMargin;
-                        const effectiveSpaceBelow = spaceBelow - offset - safetyMargin;
+                        // Effective space
+                        const effectiveAbove = spaceAbove - offset - safetyMargin;
+                        const effectiveBelow = spaceBelow - offset - safetyMargin;
 
-                        // Greedy Logic: Pick the bigger side
-                        const goUp = (effectiveSpaceAbove >= effectiveSpaceBelow);
+                        const goUp = (effectiveAbove >= effectiveBelow);
 
-                        // Reset all positioning
-                        tooltip.style.top = '';
-                        tooltip.style.bottom = '';
-                        tooltip.style.maxHeight = 'none';
-                        tooltip.classList.remove('tooltip-down', 'tooltip-up'); // Ensure clean state
+                        // Reset
+                        portalTooltip.style.top = 'auto';
+                        portalTooltip.style.bottom = 'auto';
+                        portalTooltip.style.left = 'auto';
+                        portalTooltip.style.right = 'auto';
+                        portalTooltip.style.transform = 'translate(-50%, 0)';
+                        portalTooltip.style.maxHeight = 'none';
+                        portalTooltip.classList.remove('tooltip-down', 'tooltip-up');
 
-                        // Helper logic: Maximize available space
+                        // Horizontal Center
+                        const centerX = markerRect.left + (markerRect.width / 2);
+                        portalTooltip.style.left = centerX + 'px';
+
                         if (goUp) {
-                            // Position ABOVE
-                            tooltip.style.bottom = (offset + 10) + 'px'; // +10 for marker radius
-                            tooltip.style.top = 'auto';
-                            tooltip.style.maxHeight = Math.max(80, effectiveSpaceAbove) + 'px';
+                            // Position ABOVE (Fixed Bottom relative to viewport)
+                            // bottom = viewportHeight - (top_of_marker - offset)
+                            portalTooltip.style.bottom = (viewportHeight - markerRect.top + offset) + 'px';
+                            portalTooltip.style.maxHeight = Math.max(80, effectiveAbove) + 'px';
+                            portalTooltip.classList.add('tooltip-up');
                         } else {
-                            // Position BELOW
-                            tooltip.style.top = (offset + 10) + 'px';
-                            tooltip.style.bottom = 'auto';
-                            tooltip.style.maxHeight = Math.max(80, effectiveSpaceBelow) + 'px';
+                            // Position BELOW (Fixed Top relative to viewport)
+                            // top = bottom_of_marker + offset
+                            portalTooltip.style.top = (markerRect.bottom + offset) + 'px';
+                            portalTooltip.style.maxHeight = Math.max(80, effectiveBelow) + 'px';
+                            portalTooltip.classList.add('tooltip-down');
                         }
 
-                        // Horizontal Logic (Shift)
-                        // Reset generic transform then checking bounds
-                        tooltip.style.left = '50%';
-                        tooltip.style.transform = 'translateX(-50%)';
-
+                        // Horizontal Clamping
+                        // We use a RAF to read the width after render, or estimate?
+                        // Better to use RAF to read width of portalTooltip
                         requestAnimationFrame(() => {
-                            const rect = tooltip.getBoundingClientRect();
-                            if (rect.left < safetyMargin) {
-                                const shift = safetyMargin - rect.left;
-                                tooltip.style.transform = `translateX(calc(-50% + ${shift}px))`;
-                            } else if (rect.right > (viewportWidth - safetyMargin)) {
-                                const shift = rect.right - (viewportWidth - safetyMargin);
-                                tooltip.style.transform = `translateX(calc(-50% - ${shift}px))`;
+                            const rect = portalTooltip.getBoundingClientRect();
+                            const halfWidth = rect.width / 2;
+
+                            // If Left Edge < Safety
+                            if ((centerX - halfWidth) < safetyMargin) {
+                                const diff = safetyMargin - (centerX - halfWidth);
+                                portalTooltip.style.transform = `translate(calc(-50% + ${diff}px), 0)`;
+                            }
+                            // If Right Edge > Safety
+                            else if ((centerX + halfWidth) > (viewportWidth - safetyMargin)) {
+                                const diff = (centerX + halfWidth) - (viewportWidth - safetyMargin);
+                                portalTooltip.style.transform = `translate(calc(-50% - ${diff}px), 0)`;
                             }
                         });
                     };
 
-                    recalcPosition();
-                    const observer = new ResizeObserver(() => recalcPosition());
-                    observer.observe(tooltip);
-                    marker.addEventListener('mouseleave', () => observer.disconnect(), { once: true });
+                    requestAnimationFrame(recalcPortal);
+
+                    // 4. Cleanup
+                    const hide = () => {
+                        portalTooltip.style.opacity = '0';
+                        portalTooltip.style.pointerEvents = 'none';
+                    };
+
+                    marker.addEventListener('mouseleave', hide, { once: true });
+                    window.addEventListener('scroll', hide, { once: true, capture: true });
                 });
 
                 track.appendChild(marker);
