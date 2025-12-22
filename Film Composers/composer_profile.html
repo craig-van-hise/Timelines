@@ -370,9 +370,18 @@
                     }
 
                     // 3. Show and Position
-                    portalTooltip.style.display = 'block'; // Ensure visibility
+                    portalTooltip.style.display = 'block';
                     portalTooltip.style.opacity = '1';
-                    portalTooltip.style.pointerEvents = 'auto'; // Allow interaction
+                    portalTooltip.style.pointerEvents = 'auto';
+
+                    // DEBUG: Add a persistent debug element if not exists
+                    let debugEl = document.getElementById('tooltip-debug-overlay');
+                    if (!debugEl) {
+                        debugEl = document.createElement('div');
+                        debugEl.id = 'tooltip-debug-overlay';
+                        debugEl.style.cssText = 'position:absolute; top:0; right:0; background:red; color:white; font-size:10px; padding:2px; z-index:9999999;';
+                        portalTooltip.appendChild(debugEl);
+                    }
 
                     const recalcPortal = () => {
                         // Check if marker is still in DOM/visible
@@ -441,27 +450,31 @@
                                 portalTooltip.style.transform = `translate(calc(-50% - ${diff}px), 0)`;
                             }
                         });
+
+                        // DEBUG UPDATE
+                        if (document.getElementById('tooltip-debug-overlay')) {
+                            document.getElementById('tooltip-debug-overlay').innerText = `H:${window.innerHeight} Mx:${Math.round(goUp ? effectiveAbove : effectiveBelow)}`;
+                        }
                     };
 
-                    // 5. Continuous Update Loop (Active Polling)
-                    // Instead of relying on specific resize/scroll events which might be throttled,
-                    // we run a recursive RAF loop while the tooltip is active.
-                    // This guarantees 60fps responsiveness to ANY geometry change.
-
+                    // 5. Continuous Update Loop (Active Polling) - FORCE MODE
+                    // Using setInterval instead of RAF to survive aggressive window dragging constraints
                     let isActive = true;
+                    // Clear any existing interval just in case
+                    if (marker._interval) clearInterval(marker._interval);
 
-                    const updateLoop = () => {
-                        if (!isActive) return;
+                    marker._interval = setInterval(() => {
+                        if (!isActive) {
+                            clearInterval(marker._interval);
+                            return;
+                        }
                         recalcPortal();
-                        requestAnimationFrame(updateLoop);
-                    };
-
-                    // Start the loop
-                    requestAnimationFrame(updateLoop);
+                    }, 16); // ~60fps
 
                     // 6. Cleanup
                     const hide = () => {
-                        isActive = false; // Stop the loop
+                        isActive = false;
+                        clearInterval(marker._interval);
                         portalTooltip.style.opacity = '0';
                         portalTooltip.style.pointerEvents = 'none';
                     };
