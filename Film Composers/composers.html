@@ -279,7 +279,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.23)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.24)</span></h1>
     </header>
 
     <div class="timeline-container">
@@ -2279,7 +2279,9 @@
                 // 1. Name
                 const nameCol = document.createElement('div');
                 nameCol.className = 'name-col composer-name';
-                nameCol.innerHTML = `<a href="${url}" target="_blank">${name}</a>`;
+                // Force link to internal profile, not external URL
+                const profileUrl = `composer_profile.html?name=${encodeURIComponent(name.replace(/ /g, '_'))}`;
+                nameCol.innerHTML = `<a href="${profileUrl}" target="_blank">${name}</a>`;
 
                 // 2. Track
                 const trackCol = document.createElement('div');
