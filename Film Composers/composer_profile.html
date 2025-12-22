@@ -213,8 +213,15 @@
 
         function initTimeline(data) {
             const films = data.filmography;
-            // Filter invalid dates
-            const validFilms = films.filter(f => f.release_date && f.release_date.length >= 4);
+            // Filter invalid dates AND non-film works
+            const concertKeywords = ["Op.", "Concerto", "Sonata", "Symphony", "Quartet", "Trio", "Quintet", "Variations", "Motet", "Cantata", "Mass", "Psalm", "Overture"];
+
+            const validFilms = films.filter(f => {
+                if (!f.release_date || f.release_date.length < 4) return false;
+                // Exclude concert works
+                if (concertKeywords.some(kw => f.title.includes(kw))) return false;
+                return true;
+            });
 
             // Sort
             validFilms.sort((a, b) => a.release_date.localeCompare(b.release_date));
