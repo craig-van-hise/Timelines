@@ -279,7 +279,7 @@
     <header>
         <a href="../index.html" class="back-link">&larr; Back to Menu</a>
         <h1>Film Composers: Active Years <span
-                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.9)</span></h1>
+                style="font-size:0.6rem; opacity:0.5; vertical-align:middle;">(v1.10)</span></h1>
     </header>
 
     <div class="timeline-container">
@@ -2311,7 +2311,10 @@
                             // If relative to Track: left = getPercent(year)
                             // Use absolute on track is safer.
 
-                            const filmPct = getPercent(year + (date.getMonth() / 12)); // Precise
+                            // Date precision: Include Day of Year
+                            const startOfYear = new Date(year, 0, 1);
+                            const dayOfYear = ((date - startOfYear) / 86400000); // 1 day in ms
+                            const filmPct = getPercent(year + (dayOfYear / 366)); // Precise to day
 
                             const marker = document.createElement('div');
                             marker.className = 'film-marker';
@@ -2327,10 +2330,17 @@
                             const tooltip = document.createElement('div');
                             tooltip.className = 'film-tooltip';
 
-                            // Check if this row is near the top (e.g. first 6 rows), if so, flip tooltip down
-                            if (index < 6) {
-                                tooltip.classList.add('tooltip-down');
-                            }
+                            // Dynamic Tooltip Positioning
+                            marker.addEventListener('mouseenter', function () {
+                                const rect = this.getBoundingClientRect();
+                                const tooltip = this.querySelector('.film-tooltip');
+                                // If near top of viewport (< 200px), show below
+                                if (rect.top < 200) {
+                                    tooltip.classList.add('tooltip-down');
+                                } else {
+                                    tooltip.classList.remove('tooltip-down');
+                                }
+                            });
 
                             // Thumb
                             const thumb = document.createElement('img');
