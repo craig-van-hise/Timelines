@@ -174,8 +174,10 @@
             background: #000;
             align-self: center;
             /* Center if width < 100% due to height constraint */
-            flex-shrink: 0;
-            /* Prevent image from shrinking */
+            flex-shrink: 1;
+            /* ALLOW image to shrink if text needs space */
+            min-height: 60px;
+            /* Prevent total collapse */
         }
 
         .tooltip-title {
