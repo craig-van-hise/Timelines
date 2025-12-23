@@ -269,25 +269,25 @@
         fetch(jsonPath)
             .then(r => r.json())
             .then(data => initTimeline(data))
-            .catch(async e => { // Added async here
+            .catch(e => {
                 document.getElementById('composer-stats').textContent = "Error loading data.";
                 console.error(e);
-
-                // Load Lifespan Data (v1.50)
-                try {
-                    const lifespanRes = await fetch('data/composer_lifespans.json');
-                    const lifespanData = await lifespanRes.json();
-                    const lifeEntry = lifespanData.find(c => c.composer === composerName);
-
-                    if (lifeEntry) {
-                        const birthYear = lifeEntry.birth.split('/')[2];
-                        let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
-                        document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
-                    }
-                } catch (e) {
-                    console.error("Could not load lifespans:", e);
-                }
             });
+
+        // Load Lifespan Data (v1.50/v1.51 Fix)
+        fetch('data/composer_lifespans.json')
+            .then(r => r.json())
+            .then(lifespanData => {
+                const displayName = composerName.replace(/_/g, " ");
+                const lifeEntry = lifespanData.find(c => c.composer === displayName);
+
+                if (lifeEntry) {
+                    const birthYear = lifeEntry.birth.split('/')[2];
+                    let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
+                    document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
+                }
+            })
+            .catch(e => console.error("Could not load lifespans:", e));
 
         function initTimeline(data) {
             const films = data.filmography;
