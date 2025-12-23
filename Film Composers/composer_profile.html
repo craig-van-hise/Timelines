@@ -333,7 +333,8 @@
             initTimeline(filmData, importantTitles);
 
         }).catch(e => {
-            document.getElementById('composer-stats').textContent = "Error loading data.";
+            // Debugging: Show exact error on screen
+            document.getElementById('composer-stats').innerHTML = `<span style="color:red">Error: ${e.message}</span>`;
             console.error(e);
         });
 
