@@ -219,6 +219,37 @@
         }
 
         /* Vertical Staggering will set different 'top' values inline */
+
+        /* Feature v1.60: Important Film Highlights */
+        .marker-imp-container {
+            /* Container for pole + label inside marker */
+            position: absolute;
+            bottom: 10px;
+            /* Start from center of marker (approx) */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            pointer-events: none;
+            /* Let clicks pass to marker */
+        }
+
+        .marker-pole {
+            width: 1px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            margin-bottom: 2px;
+        }
+
+        .marker-label {
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.9);
+            white-space: nowrap;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            letter-spacing: 0.03em;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -266,30 +297,38 @@
 
         document.getElementById('composer-name').textContent = composerName.replace(/_/g, " ");
 
-        fetch(jsonPath)
-            .then(r => r.json())
-            .then(data => initTimeline(data))
-            .catch(e => {
-                document.getElementById('composer-stats').textContent = "Error loading data.";
-                console.error(e);
-            });
+        // Load Data (Parallel)
+        Promise.all([
+            fetch(jsonPath).then(r => r.json()),
+            fetch('data/composer_lifespans.json').then(r => r.json()),
+            fetch('data/Most important films.json').then(r => r.json())
+        ]).then(([filmData, lifespanData, importantData]) => {
+            // 1. Setup Lifespan (from v1.50)
+            const displayName = composerName.replace(/_/g, " ");
+            const lifeEntry = lifespanData.find(c => c.composer === displayName);
+            if (lifeEntry) {
+                const birthYear = lifeEntry.birth.split('/')[2];
+                let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
+                document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
+            }
 
-        // Load Lifespan Data (v1.50/v1.51 Fix)
-        fetch('data/composer_lifespans.json')
-            .then(r => r.json())
-            .then(lifespanData => {
-                const displayName = composerName.replace(/_/g, " ");
-                const lifeEntry = lifespanData.find(c => c.composer === displayName);
+            // 2. Setup Important Films List (v1.60)
+            // JSON structure: [{ composer: "Name", films: [{title: "X"}, ...] }]
+            // Find entry, map to array of titles.
+            const importantEntry = importantData.find(c => c.composer === displayName);
+            const importantTitles = importantEntry ? importantEntry.films.map(f => f.title) : [];
 
-                if (lifeEntry) {
-                    const birthYear = lifeEntry.birth.split('/')[2];
-                    let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
-                    document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
-                }
-            })
-            .catch(e => console.error("Could not load lifespans:", e));
+            // 3. Init Timeline
+            initTimeline(filmData, importantTitles);
 
-        function initTimeline(data) {
+        }).catch(e => {
+            document.getElementById('composer-stats').textContent = "Error loading data.";
+            console.error(e);
+        });
+
+        // Removed the old separate fetch blocks to consolidate into Promise.all
+
+        function initTimeline(data, importantTitles) {
             const films = data.filmography;
             // Filter invalid dates AND non-film works
             const concertKeywords = ["Op.", "Concerto", "Sonata", "Symphony", "Quartet", "Trio", "Quintet", "Variations", "Motet", "Cantata", "Mass", "Psalm", "Overture"];
@@ -523,9 +562,22 @@
                     // Only hide on mouseleave.
                 });
 
-                track.appendChild(marker);
+                marker.appendChild(dot);
 
-                // Basic Staggering?
+                // Feature v1.60: Highlight Important Films
+                if (importantTitles.includes(film.title)) {
+                    const highlight = document.createElement('div');
+                    highlight.className = 'marker-imp-container';
+                    highlight.innerHTML = `
+                        <div class="marker-label">${film.title}</div>
+                        <div class="marker-pole"></div>
+                    `;
+                    marker.appendChild(highlight);
+                    // Add z-index boost to important markers
+                    marker.style.zIndex = "50";
+                }
+
+                // Tooltip Logic (Portal)ggering?
                 // For this dedicated view, we can just alternate top/bottom heavily or use random
                 // Let's use simple Collision logic like before
                 markers.push({ el: marker, pct: pct, row: 0 });
