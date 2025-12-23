@@ -50,6 +50,17 @@
             font-size: 3rem;
             margin: 0;
             letter-spacing: -0.02em;
+            letter-spacing: -0.02em;
+        }
+
+        .lifespan {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            letter-spacing: 0.05em;
+            opacity: 0.9;
         }
 
         .stats {
@@ -215,6 +226,7 @@
 
     <header>
         <h1 id="composer-name">Composer Name</h1>
+        <div id="composer-lifespan" class="lifespan"></div>
         <div class="stats" id="composer-stats">Loading...</div>
     </header>
 
@@ -257,9 +269,24 @@
         fetch(jsonPath)
             .then(r => r.json())
             .then(data => initTimeline(data))
-            .catch(e => {
+            .catch(async e => { // Added async here
                 document.getElementById('composer-stats').textContent = "Error loading data.";
                 console.error(e);
+
+                // Load Lifespan Data (v1.50)
+                try {
+                    const lifespanRes = await fetch('data/composer_lifespans.json');
+                    const lifespanData = await lifespanRes.json();
+                    const lifeEntry = lifespanData.find(c => c.composer === composerName);
+
+                    if (lifeEntry) {
+                        const birthYear = lifeEntry.birth.split('/')[2];
+                        let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
+                        document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
+                    }
+                } catch (e) {
+                    console.error("Could not load lifespans:", e);
+                }
             });
 
         function initTimeline(data) {
