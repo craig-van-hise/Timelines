@@ -144,6 +144,8 @@
             z-index: 1000;
             text-align: center;
             overflow-y: auto;
+            display: flex;
+            flex-direction: column;
             scrollbar-width: thin;
             scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
         }
@@ -385,7 +387,7 @@
 
                         // Config
                         const offset = 15;
-                        const safetyMargin = 10;
+                        const safetyMargin = 25; // Increased to prevent edge touching
 
                         // Space relative to viewport
                         const spaceAbove = markerRect.top;
