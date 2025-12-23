@@ -297,26 +297,37 @@
 
         document.getElementById('composer-name').textContent = composerName.replace(/_/g, " ");
 
-        // Load Data (Parallel)
-        Promise.all([
-            fetch(jsonPath).then(r => r.json()),
-            fetch('data/composer_lifespans.json').then(r => r.json()),
-            fetch('data/Most important films.json').then(r => r.json())
-        ]).then(([filmData, lifespanData, importantData]) => {
-            // 1. Setup Lifespan (from v1.50)
-            const displayName = composerName.replace(/_/g, " ");
-            const lifeEntry = lifespanData.find(c => c.composer === displayName);
-            if (lifeEntry) {
-                const birthYear = lifeEntry.birth.split('/')[2];
-                let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
-                document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
+        // Load Data (Parallel & Robust)
+        // We catch errors on individual optional fetches so the main timeline never breaks.
+        const pFilms = fetch(jsonPath).then(r => r.json());
+
+        const pLifespan = fetch('data/composer_lifespans.json')
+            .then(r => r.json())
+            .catch(e => { console.warn("Lifespan fetch failed", e); return []; });
+
+        const pImportant = fetch('data/Most%20important%20films.json')
+            .then(r => r.json())
+            .catch(e => { console.warn("Important films fetch failed", e); return []; });
+
+        Promise.all([pFilms, pLifespan, pImportant]).then(([filmData, lifespanData, importantData]) => {
+            // 1. Setup Lifespan (Safe access)
+            if (lifespanData && lifespanData.length > 0) {
+                const displayName = composerName.replace(/_/g, " ");
+                const lifeEntry = lifespanData.find(c => c.composer === displayName);
+                if (lifeEntry) {
+                    const birthYear = lifeEntry.birth.split('/')[2];
+                    let deathYear = lifeEntry.death === '-' ? 'Present' : lifeEntry.death.split('/')[2];
+                    document.getElementById('composer-lifespan').textContent = `${birthYear} – ${deathYear}`;
+                }
             }
 
-            // 2. Setup Important Films List (v1.60)
-            // JSON structure: [{ composer: "Name", films: [{title: "X"}, ...] }]
-            // Find entry, map to array of titles.
-            const importantEntry = importantData.find(c => c.composer === displayName);
-            const importantTitles = importantEntry ? importantEntry.films.map(f => f.title) : [];
+            // 2. Setup Important Films List (Safe access)
+            const displayName = composerName.replace(/_/g, " ");
+            let importantTitles = [];
+            if (importantData && importantData.length > 0) {
+                const importantEntry = importantData.find(c => c.composer === displayName);
+                importantTitles = importantEntry ? importantEntry.films.map(f => f.title) : [];
+            }
 
             // 3. Init Timeline
             initTimeline(filmData, importantTitles);
