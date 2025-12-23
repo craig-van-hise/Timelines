@@ -162,9 +162,6 @@
             scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
         }
 
-        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-        }
-
 
 
         .film-marker:hover .film-tooltip {
@@ -224,7 +221,8 @@
         .marker-imp-container {
             /* Container for pole + label inside marker */
             position: absolute;
-            bottom: 10px;
+            bottom: 40px;
+            /* Lifted significantly higher above timeline */
             /* Start from center of marker (approx) */
             left: 50%;
             transform: translateX(-50%);
@@ -237,18 +235,33 @@
 
         .marker-pole {
             width: 1px;
-            height: 25px;
+            height: 60px;
+            /* Much taller pole to reach up */
             background: rgba(255, 255, 255, 0.4);
             margin-bottom: 2px;
         }
 
         .marker-label {
-            font-size: 0.6rem;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            /* Larger font */
+            font-weight: 700;
+            /* Bold */
+            color: #fff;
+            background: rgba(30, 30, 30, 0.95);
+            /* Opaque dark card */
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            /* Visible border */
+            padding: 4px 8px;
+            border-radius: 4px;
             white-space: nowrap;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
             letter-spacing: 0.03em;
-            font-weight: 500;
+            text-shadow: none;
+            /* Removed shadow in favor of card opacity */
+            z-index: 100;
+        }
+
+        font-weight: 500;
         }
     </style>
 </head>
