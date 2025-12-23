@@ -620,6 +620,9 @@
                 // row 2: lower (70%)
                 const offsets = ["50%", "25%", "75%"];
                 m.el.style.top = offsets[m.row];
+
+                // CRITICAL: Append to DOM
+                track.appendChild(m.el);
             });
         }
     </script>
