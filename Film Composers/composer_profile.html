@@ -340,7 +340,7 @@
 
         // Removed the old separate fetch blocks to consolidate into Promise.all
 
-        function initTimeline(data, importantTitles) {
+        function initTimeline(data, importantTitles = []) {
             const films = data.filmography;
             // Filter invalid dates AND non-film works
             const concertKeywords = ["Op.", "Concerto", "Sonata", "Symphony", "Quartet", "Trio", "Quintet", "Variations", "Motet", "Cantata", "Mass", "Psalm", "Overture"];
