@@ -637,7 +637,129 @@
                 // CRITICAL: Append to DOM
                 track.appendChild(m.el);
             });
+
+            // v1.70: Resolve Collisions for Highlights
+            // Use setTimeout to allow DOM reflow for correct width calculation
+            setTimeout(resolveSmartCollisions, 50);
         }
+
+        /* v1.70 Collision Resolution Engine */
+        function resolveSmartCollisions() {
+            const containers = Array.from(document.querySelectorAll('.marker-imp-container'));
+            if (containers.length === 0) return;
+
+            // 1. Sort by DOM order (which is effectively time order due to markers.push loop)
+            // But let's be safe and sort by left offset
+            containers.sort((a, b) => {
+                return a.getBoundingClientRect().left - b.getBoundingClientRect().left;
+            });
+
+            // 2. Track occupied zones per lane (row)
+            // Lanes[0] = [ {left: 100, right: 200}, ... ]
+            const lanes = [];
+
+            containers.forEach(box => {
+                const label = box.querySelector('.marker-label');
+                const pole = box.querySelector('.marker-pole');
+
+                // Get dimensions
+                const rect = label.getBoundingClientRect();
+                const width = rect.width;
+                const left = rect.left; // Current screen X
+                const right = left + width;
+
+                // Gap between labels
+                const gap = 10;
+
+                // Find a lane
+                let laneIndex = 0;
+                let found = false;
+
+                while (!found) {
+                    if (!lanes[laneIndex]) {
+                        lanes[laneIndex] = [];
+                    }
+
+                    // Check overlapping with ANY item in this lane
+                    const hasCollision = lanes[laneIndex].some(zone => {
+                        // Collision if intervals overlap
+                        // [zone.left, zone.right] vs [left, right]
+                        return !(right + gap < zone.left || left > zone.right + gap);
+                    });
+
+                    if (!hasCollision) {
+                        found = true;
+                    } else {
+                        laneIndex++;
+                    }
+                }
+
+                // Register occupancy
+                lanes[laneIndex].push({ left, right });
+
+                // Apply Styles
+                // Base bottom = 40px
+                // Lane Height = 40px (approx label height + margin)
+                const baseBottom = 40;
+                const step = 38;
+                const newBottom = baseBottom + (laneIndex * step);
+
+                box.style.bottom = `${newBottom}px`;
+
+                // Adjust pole height to reach the dot
+                // dot is at bottom:0 relative to marker (which has height ~16px) ??
+                // No, marker is just a point?
+                // .marker-pole height needs to equal newBottom + some offset?
+                // The pole is inside .marker-imp-container which is at 'bottom: X'.
+                // NO. The container moves UP. The pole is INSIDE the container. 
+                // So if we move the container UP, the pole moves UP and DETACHES from the dot.
+                // WE MUST INCREASE POLE HEIGHT, NOT MOVE CONTAINER BOTTOM.
+
+                // WAIT.
+                // Structure:
+                // Marker (relative)
+                //   -> Dot
+                //   -> Container (absolute, bottom: 40px)
+                //      -> Label
+                //      -> Pole
+
+                // If I increase Container bottom, the whole thing flies up.
+                // If I want the pole to stay connected to the dot, the bottom must stay fixed (at 0 or near dot), 
+                // and I should increase the pole height?
+
+                // Current CSS: .marker-imp-container { bottom: 40px }
+                // .marker-pole { height: 60px }
+
+                // Strategy Rewrite:
+                // Keep .marker-imp-container anchored at bottom: 10px (near dot).
+                // Increase .marker-pole height.
+                // The flexbox layout (column) puts Label on Top, Pole on Bottom.
+                // So if Pole gets taller, Label gets pushed up.
+
+                // Let's reset the container bottom to fixed low value.
+                box.style.bottom = '15px'; // Fixed near dot
+
+                // Calculate required pole height
+                // Lane 0: Label at 40px. Pole ~25px?
+                // Lane 1: Label at 80px. Pole ~65px.
+
+                const basePole = 25;
+                const newPoleHeight = basePole + (laneIndex * step);
+                pole.style.height = `${newPoleHeight}px`;
+
+                // Add z-index to ensure higher cards are on top?
+                // Actually, lower cards might cover pole of higher cards... 
+                // Let's boost z-index by lane
+                box.style.zIndex = 100 + laneIndex;
+            });
+        }
+
+        // Re-run on resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resolveSmartCollisions, 100);
+        });
     </script>
 </body>
 
