@@ -25,10 +25,11 @@
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            display: flex;
+            padding: 10px;
+            display: none;
+            /* Hidden by default, Portal overrides to flex */
             flex-direction: column;
+            pointer-events: none;
             align-items: center;
             min-height: 100vh;
         }
@@ -362,7 +363,7 @@
                         portalTooltip.style.boxSizing = 'border-box';
                         portalTooltip.style.pointerEvents = 'none'; // Initially none
                         portalTooltip.style.transition = 'opacity 0.2s, transform 0.2s';
-                        portalTooltip.style.display = 'block'; // Override CSS .film-tooltip { display: none }
+                        portalTooltip.style.display = 'flex'; // Override CSS hide
                         document.body.appendChild(portalTooltip);
                     }
 
@@ -373,7 +374,7 @@
                     }
 
                     // 3. Show and Position
-                    portalTooltip.style.display = 'block';
+                    portalTooltip.style.display = 'flex';
                     portalTooltip.style.opacity = '1';
                     portalTooltip.style.pointerEvents = 'auto';
 
