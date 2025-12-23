@@ -340,7 +340,8 @@
 
         // Removed the old separate fetch blocks to consolidate into Promise.all
 
-        function initTimeline(data, importantTitles = []) {
+        function initTimeline(data, highlightList = []) {
+            console.log("Timeline init v1.65. Highlights:", highlightList);
             const films = data.filmography;
             // Filter invalid dates AND non-film works
             const concertKeywords = ["Op.", "Concerto", "Sonata", "Symphony", "Quartet", "Trio", "Quintet", "Variations", "Motet", "Cantata", "Mass", "Psalm", "Overture"];
@@ -581,7 +582,7 @@
                 marker.appendChild(dot);
 
                 // Feature v1.60: Highlight Important Films
-                if (importantTitles.includes(film.title)) {
+                if (highlightList.includes(film.title)) {
                     const highlight = document.createElement('div');
                     highlight.className = 'marker-imp-container';
                     highlight.innerHTML = `
