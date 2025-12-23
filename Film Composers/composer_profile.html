@@ -173,6 +173,8 @@
             background: #000;
             align-self: center;
             /* Center if width < 100% due to height constraint */
+            flex-shrink: 0;
+            /* Prevent image from shrinking */
         }
 
         .tooltip-title {
@@ -181,11 +183,14 @@
             color: #fff;
             margin-bottom: 2px;
             line-height: 1.2;
+            flex-shrink: 0;
+            /* Critical: Prevent text clipping */
         }
 
         .tooltip-year {
             font-size: 0.75rem;
             color: var(--text-muted);
+            flex-shrink: 0;
         }
 
         .tooltip-meta {
@@ -193,6 +198,10 @@
             color: var(--primary);
             margin-top: 4px;
             display: block;
+            font-style: italic;
+            flex-shrink: 0;
+            padding-bottom: 5px;
+            /* Ensure margin at bottom */
         }
 
         /* Vertical Staggering will set different 'top' values inline */
@@ -454,36 +463,30 @@
                         });
                     };
 
-                    // 5. Continuous Update Loop (Active Polling) - FORCE MODE
-                    // Using setInterval instead of RAF to survive aggressive window dragging constraints
-                    let isActive = true;
-                    // Clear any existing interval just in case
-                    if (marker._interval) clearInterval(marker._interval);
-
-                    marker._interval = setInterval(() => {
-                        if (!isActive) {
-                            clearInterval(marker._interval);
-                            return;
+                    // 5. Event-Based Updates (No Loop = No Flicker)
+                    // We attach listeners only while the tooltip is active.
+                    const onUpdate = () => {
+                        if (portalTooltip.style.opacity === '1') {
+                            recalcPortal();
                         }
-                        recalcPortal();
-                    }, 16); // ~60fps
+                    };
+
+                    window.addEventListener('resize', onUpdate, { passive: true });
+                    window.addEventListener('scroll', onUpdate, { passive: true });
+
+                    // Initial Position
+                    recalcPortal();
 
                     // 6. Cleanup
                     const hide = () => {
-                        isActive = false;
-                        clearInterval(marker._interval);
                         portalTooltip.style.opacity = '0';
                         portalTooltip.style.pointerEvents = 'none';
+                        // Remove listeners to save resources
+                        window.removeEventListener('resize', onUpdate);
+                        window.removeEventListener('scroll', onUpdate);
                     };
 
                     marker.addEventListener('mouseleave', hide, { once: true });
-                    // We don't strictly *need* scroll/resize listeners now because the loop covers it,
-                    // but keeping a hard scroll hide is often good UX. 
-                    // Let's rely on the loop for positioning, but if they scroll away too far we might hide?
-                    // Actually, the user wants "Adaptive". Continuous loop allows them to scroll and keep it visible if they want.
-                    // But if they scroll the marker off screen, hide it.
-
-                    // Let's add a visibility check to the loop:
                     // If marker is off screen, hide tooltip? 
                     // No, let's keep it simple. User asked for resizing.
                     // We remove the explicit scroll listener to allow them to scroll comfortably.
