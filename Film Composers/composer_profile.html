@@ -133,7 +133,8 @@
             background: rgba(20, 20, 25, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 10px;
+            padding: 12px 12px 20px 12px;
+            /* Extra bottom padding to prevent clipping */
             display: none;
             /* Hidden by default */
             flex-direction: column;
@@ -164,8 +165,8 @@
         .tooltip-img {
             width: 100%;
             height: auto;
-            max-height: 35vh;
-            /* Prevent image from dominating vertical space */
+            max-height: 32vh;
+            /* Reduced further to ensure text visibility */
             border-radius: 8px;
             margin-bottom: 8px;
             object-fit: contain;
@@ -200,8 +201,8 @@
             display: block;
             font-style: italic;
             flex-shrink: 0;
-            padding-bottom: 5px;
-            /* Ensure margin at bottom */
+            padding-bottom: 10px;
+            /* Extra spacer for bottom edge */
         }
 
         /* Vertical Staggering will set different 'top' values inline */
