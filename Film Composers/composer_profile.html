@@ -137,18 +137,22 @@
             border-radius: 12px;
             padding: 10px;
             display: none;
-            /* Hidden by default, cloned by Portal Strategy */
+            /* Hidden by default */
+            flex-direction: column;
+            /* Kept for Portal using flex */
             pointer-events: none;
             transition: all 0.2s ease;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(12px);
             z-index: 1000;
             text-align: center;
+            text-align: center;
             overflow-y: auto;
-            display: flex;
-            flex-direction: column;
             scrollbar-width: thin;
             scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+        }
+
+        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
         }
 
 
