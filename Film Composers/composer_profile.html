@@ -374,7 +374,7 @@
             document.getElementById('composer-stats').textContent = `${validFilms.length} Films | Active ${startYear} - ${endYear - 1}`;
 
             drawAxis(startYear, endYear);
-            drawMarkers(validFilms, startYear, endYear);
+            drawMarkers(validFilms, startYear, endYear, highlightList);
         }
 
         function drawAxis(start, end) {
@@ -418,7 +418,7 @@
             return t.replace(/['":\.\?!]/g, "").trim();
         }
 
-        function drawMarkers(films, start, end) {
+        function drawMarkers(films, start, end, highlightList = []) {
             const track = document.getElementById('track');
             const markers = []; // Store for collision detection
 
