@@ -163,11 +163,16 @@
 
         .tooltip-img {
             width: 100%;
+            height: auto;
+            max-height: 35vh;
+            /* Prevent image from dominating vertical space */
             border-radius: 8px;
             margin-bottom: 8px;
-            aspect-ratio: 2/3;
-            object-fit: cover;
+            object-fit: contain;
+            /* Ensure image fits without cropping if constrained */
             background: #000;
+            align-self: center;
+            /* Center if width < 100% due to height constraint */
         }
 
         .tooltip-title {
